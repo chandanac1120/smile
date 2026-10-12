@@ -521,11 +521,333 @@ button{font:inherit}
 .why-grid i{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff5d2;color:#c99a00;font-size:18px;margin-bottom:15px}
 .why-grid h3{font-size:17px;margin-bottom:7px;color:var(--navy)}
 .why-grid p{font-size:14px;color:#7d8796;line-height:1.7}
-.booking{border-top:3px solid var(--gold);background:#050d1c;color:#fff;padding:65px max(calc((100% - 1120px)/2),40px);display:flex;justify-content:space-between;align-items:center;gap:36px}
-.booking>div:first-child>span{font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:800}
-.booking h2{font-size:clamp(28px,3vw,39px);line-height:1.15;margin-top:10px}
-.booking h2 em{color:var(--gold);font:italic clamp(28px,3vw,39px) "Playfair Display",Georgia,serif}
-.booking p{font-size:14px;color:#b3bdcb;margin-top:12px;line-height:1.7}
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.st-cta {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 30px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(18, 27, 48, .55),
+            transparent 55%
+        ),
+        #020716;
+}
+
+
+/* SUBTLE LIGHT */
+
+.st-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70px;
+    height: 40px;
+
+    top: -200px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(255,255,255,.025);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* CONTENT */
+
+.st-cta-inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    text-align: center;
+
+    margin: auto;
+}
+
+
+/* HEADING */
+
+.st-cta h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: clamp(52px, 6vw, 58px);
+
+    line-height: 1.03;
+
+    letter-spacing: -4px;
+
+    font-weight: 800;
+}
+
+
+.st-cta h2 span {
+    display: block;
+    
+font-size: 71px;
+    color: #f5bd00;
+
+    font-style: italic;
+
+    font-weight: 800;
+}
+
+
+/* DESCRIPTION */
+
+.st-cta p {
+    max-width: 800px;
+
+    margin: 42px auto 0;
+
+    color: #a6adbd;
+
+    font-size: 21px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.st-cta-buttons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 36px;
+
+    margin-top: 55px;
+}
+
+
+/* PRIMARY */
+
+.st-cta-primary {
+    min-width: 330px;
+
+    height: 52px;
+
+    padding: 0 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    border-radius: 24px;
+
+    background: #f5bd00;
+
+    color: #07152d;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 15px 40px rgba(245,189,0,.15);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.st-cta-primary i {
+    font-size: 22px;
+
+    transition: transform .3s ease;
+}
+
+
+.st-cta-primary:hover {
+    background: #ffd33d;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(245,189,0,.25);
+}
+
+
+.st-cta-primary:hover i {
+    transform: translateX(6px);
+}
+
+
+/* SECONDARY */
+
+.st-cta-secondary {
+    min-width: 330px;
+
+    height: 92px;
+
+    padding: 0 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    background: rgba(2,7,22,.35);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+
+.st-cta-secondary i {
+    font-size: 22px;
+}
+
+
+.st-cta-secondary:hover {
+    background: rgba(255,255,255,.07);
+
+    border-color: rgba(255,255,255,.4);
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .st-cta {
+        min-height: 600px;
+
+        padding: 90px 20px;
+    }
+
+    .st-cta h2 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .st-cta p {
+        font-size: 17px;
+
+        margin-top: 30px;
+    }
+
+    .st-cta-buttons {
+        flex-direction: column;
+
+        gap: 18px;
+
+        margin-top: 50px;
+    }
+
+    .st-cta-primary,
+    .st-cta-secondary {
+        width: 100%;
+
+        max-width: 360px;
+
+        min-width: 0;
+
+        height: 75px;
+
+        border-radius: 20px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .st-cta {
+        padding: 75px 18px;
+    }
+
+    .st-cta h2 {
+        font-size: 39px;
+
+        line-height: 1.05;
+    }
+
+    .st-cta p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .st-cta-primary,
+    .st-cta-secondary {
+        height: 68px;
+
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+    }
+
+}
 .booking-actions{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
 .booking-actions a{display:flex;align-items:center;gap:9px;border:1px solid #465064;border-radius:28px;padding:14px 19px;font-size:11px;font-weight:800;white-space:nowrap}
 .booking-actions a:first-child{background:var(--gold);border-color:var(--gold);color:#111}
