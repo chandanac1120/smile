@@ -7,18 +7,350 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%;height:auto}
 button{font:inherit}
 .section{width:100%}
-.site-header{position:absolute;z-index:50;top:0;left:0;width:100%;color:#fff;background:linear-gradient(180deg,rgba(3,10,22,.78),transparent)}
-.header-inner{max-width:1240px;min-height:88px;margin:auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.brand{flex:0 0 150px;width:150px;min-height:60px;display:flex;align-items:center;justify-content:flex-start}
-.logo-img{width:145px;height:64px;object-fit:contain;object-position:left center}
-.desktop-nav{display:flex;align-items:center;justify-content:center;gap:4px;padding:6px;border:1px solid rgba(255,255,255,.13);border-radius:40px;background:rgba(7,18,36,.72);backdrop-filter:blur(12px)}
-.desktop-nav a{font-size:12px;font-weight:700;letter-spacing:.35px;padding:11px 15px;border-radius:30px;color:#f0f3f7;white-space:nowrap;transition:.2s}
-.desktop-nav a:hover,.desktop-nav a.active{background:#fff;color:var(--navy)}
-.header-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.header-phone{height:44px;width:44px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--navy);font-size:16px}
-.book-top{display:flex;align-items:center;gap:10px;background:var(--gold);color:#111827;padding:13px 19px;border-radius:30px;font-size:12px;font-weight:800;white-space:nowrap;transition:.2s}
-.book-top:hover{transform:translateY(-2px);background:#ffd34c}
-.mobile-menu{display:none;border:0;background:var(--gold);color:#111827;width:42px;height:42px;border-radius:10px;font-size:19px;cursor:pointer}
+/* =========================================
+   SMILE TAXI HEADER
+========================================= */
+
+.st-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999 !important;
+
+
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* HEADER CONTAINER */
+
+.st-header-inner {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100px;
+
+    margin: 0 auto;
+    padding: 10px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* LOGO CONTAINER */
+
+.st-logo {
+    flex: 0 0 200px;
+    width: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-decoration: none;
+}
+
+/* LOGO IMAGE — INCREASE SIZE HERE */
+
+.st-logo img {
+    display: block;
+
+    width: 195px;
+    height: 85px;
+
+    max-width: none;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* DESKTOP NAVIGATION */
+
+.st-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    padding: 6px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+
+    background: rgba(7, 18, 36, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.st-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 13px;
+
+    color: #f0f3f7;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+    border-radius: 30px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.st-nav a:hover,
+.st-nav a.active {
+    background: #ffffff;
+    color: #08172c;
+}
+
+/* RIGHT-SIDE HEADER BUTTONS */
+
+.st-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+/* PHONE BUTTON */
+
+.st-phone {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    color: #08172c;
+
+    border-radius: 50%;
+    font-size: 16px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.st-phone:hover {
+    background: #f5bd18;
+    transform: translateY(-2px);
+}
+
+/* BOOK NOW BUTTON */
+
+.st-book {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 13px 19px;
+
+    background: #f5bd18;
+    color: #111827;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.st-book:hover {
+    background: #ffd34c;
+    transform: translateY(-2px);
+}
+
+/* MOBILE MENU BUTTON */
+
+.st-mobile-menu {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #f5bd18;
+    color: #08172c;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+    .st-header-inner {
+        padding: 10px 20px;
+        gap: 15px;
+    }
+
+    .st-logo {
+        flex: 0 0 165px;
+        width: 165px;
+    }
+
+    .st-logo img {
+        width: 165px;
+        height: 75px;
+    }
+
+    .st-nav {
+        gap: 0;
+    }
+
+    .st-nav a {
+        padding: 10px 9px;
+        font-size: 10px;
+    }
+
+    .st-book {
+        padding: 12px 14px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+    .st-header {
+        background: rgba(3, 10, 22, 0.94);
+    }
+
+    .st-header-inner {
+        min-height: 82px;
+        padding: 8px 16px;
+        gap: 12px;
+    }
+
+    .st-logo {
+        flex: 0 0 150px;
+        width: 150px;
+    }
+
+    .st-logo img {
+        width: 150px;
+        height: 66px;
+    }
+
+    .st-header-actions {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .st-phone {
+        width: 39px;
+        height: 39px;
+        font-size: 14px;
+    }
+
+    .st-book {
+        padding: 11px 13px;
+        font-size: 10px;
+        gap: 6px;
+    }
+
+    .st-mobile-menu {
+        display: flex;
+        flex-shrink: 0;
+
+        width: 39px;
+        height: 39px;
+    }
+
+    .st-nav {
+        display: none;
+
+        position: absolute;
+        top: 82px;
+        left: 16px;
+        right: 16px;
+
+        padding: 12px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+
+        border-radius: 14px;
+        background: #08172c;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .st-nav a {
+        justify-content: flex-start;
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+    /* Add the .open class using JavaScript to show the menu */
+    .st-nav.open {
+        display: flex;
+    }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 420px) {
+    .st-header-inner {
+        padding: 8px 10px;
+        gap: 7px;
+    }
+
+    .st-logo {
+        flex-basis: 115px;
+        width: 115px;
+    }
+
+    .st-logo img {
+        width: 125px;
+        height: 60px;
+    }
+
+    .st-header-actions {
+        gap: 6px;
+    }
+
+    .st-phone {
+        width: 34px;
+        height: 34px;
+    }
+
+    .st-book {
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    .st-mobile-menu {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+}.mobile-menu{display:none;border:0;background:var(--gold);color:#111827;width:42px;height:42px;border-radius:10px;font-size:19px;cursor:pointer}
 .hero{height:min(760px,100vh);min-height:650px;background:#050d1c;position:relative;overflow:hidden;isolation:isolate}
 .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,13,28,.99) 0%,rgba(5,13,28,.94) 27%,rgba(5,13,28,.72) 46%,rgba(5,13,28,.28) 72%,rgba(5,13,28,.12) 100%),linear-gradient(0deg,rgba(5,13,28,.52),transparent 48%)}
 .hero-copy{position:absolute;z-index:5;left:max(calc((100% - 1160px)/2),5.8%);top:clamp(145px,19vh,195px);width:min(500px,43%)}
@@ -27,21 +359,212 @@ button{font:inherit}
 .hero-copy p{color:#d0d6e0;font-size:15px;line-height:1.8;max-width:390px;margin-top:20px}
 .hero-vehicle{position:absolute;z-index:-2;inset:0;width:100%;height:100%}
 .hero-vehicle img{width:100%;height:100%;object-fit:cover;object-position:center 56%}
-.hero-card{position:absolute;z-index:6;right:11%;top:clamp(145px,19vh,190px);width:210px;padding:10px;border-radius:18px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(14px);color:#fff;box-shadow:0 16px 40px rgba(0,0,0,.15)}
-.hero-card img{height:120px;width:100%;object-fit:cover;border-radius:11px}
-.hero-card div{padding:9px 5px 4px}
-.hero-card small{font-size:10px;letter-spacing:1.5px;color:#e0e5ed}
-.hero-card strong{display:block;font-size:19px;line-height:1.1;margin-top:5px}
-.hero-card span{position:absolute;right:17px;bottom:18px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#111;font-size:13px}
-.hero-call,.hero-wa{display:none}
+
+/* HERO PREVIEW CARD */
+
+.hero-card {
+    position: absolute;
+    z-index: 6;
+
+    right: 11%;
+    top: clamp(145px, 19vh, 190px);
+
+    width: 280px;
+    padding: 14px;
+
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    color: #fff;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* FIT THE COMPLETE CAR IMAGE */
+
+.hero-card img,
+.st-preview-img {
+    display: block;
+
+    width: 100%;
+    height: 300px;
+
+    object-fit: contain;
+    object-position: center center;
+
+    background: #fff;
+    border-radius: 14px;
+
+    transform: scale(1);
+    transition: opacity 0.3s ease;
+}
+
+/* CARD TEXT */
+
+.hero-card div {
+    padding: 12px 8px 10px;
+}
+
+.hero-card small {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #e0e5ed;
+}
+
+.hero-card strong {
+    display: block;
+    font-size: 19px;
+    line-height: 1.2;
+    margin-top: 5px;
+}
+
+/* NEXT BUTTON */
+
+.hero-card span {
+    position: absolute;
+    right: 18px;
+    bottom: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    background: var(--gold);
+    color: #111;
+    font-size: 15px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .hero-card {
+        width: 220px;
+        right: 5%;
+        top: 150px;
+        padding: 10px;
+    }
+
+    .hero-card img,
+    .st-preview-img {
+        height: 200px;
+    }
+}
+
+/* HERO PREVIEW IMAGE — FULL CAR VISIBLE */
+
+.st-preview-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+
+    transform: scale(1);
+    transition: opacity 0.3s ease;
+
+    background: #ffffff;
+}
+
+/* PREVIEW IMAGE CONTAINER */
+
+.st-preview,
+.st-preview-card {
+    overflow: hidden;
+}
+
+/* Keep the image from being cropped */
+
+.st-preview img {
+    object-fit: contain;
+    object-position: center;
+}
+
 .fleet{background:var(--cream);padding:88px 0 76px}
-.section-head{text-align:center;max-width:720px;margin:0 auto 44px;padding:0 22px}
-.section-head>span,.about-copy>span{display:inline-block;font-size:12px;letter-spacing:2.5px;color:#b58a00;font-weight:800}
-.section-head h2{font-size:clamp(32px,3vw,43px);line-height:1.13;color:var(--navy);margin-top:12px;font-weight:800}
-.section-head h3{font-size:clamp(29px,3vw,41px);line-height:1.1;margin-top:0;font-weight:400;color:var(--navy)}
-.section-head h3 em{font:italic clamp(29px,3vw,41px) "Playfair Display",Georgia,serif}
-.section-head>i{display:block;width:70px;height:3px;background:var(--gold);margin:19px auto}
-.section-head p{font-size:15px;line-height:1.8;color:var(--muted);max-width:600px;margin:0 auto}/* =========================================
+/* =========================================
+   FLEET SECTION
+========================================= */
+
+.fleet {
+    background: var(--cream);
+    padding: 88px 0 76px;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-head {
+    max-width: 720px;
+    margin: 0 auto 44px;
+    padding: 0 22px;
+    text-align: center;
+}
+
+/* SECTION LABEL */
+
+.section-head > span,
+.about-copy > span {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #b58a00;
+}
+
+/* MAIN HEADING */
+
+.section-head h2 {
+    margin-top: 12px;
+    color: var(--navy);
+    font-size: clamp(32px, 3vw, 43px);
+    font-weight: 800;
+    line-height: 1.13;
+}
+
+/* SECONDARY HEADING */
+
+.section-head h3 {
+    margin-top: 0;
+    color: var(--navy);
+    font-size: clamp(29px, 3vw, 41px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+/* ITALIC HEADING TEXT */
+
+.section-head h3 em {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(29px, 3vw, 41px);
+    font-style: italic;
+}
+
+/* GOLD DIVIDER */
+
+.section-head > i {
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 19px auto;
+    background: var(--gold);
+}
+
+/* SECTION DESCRIPTION */
+
+.section-head p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}/* =========================================
    PREMIUM FLEET SECTION
 ========================================= */
 
@@ -185,7 +708,7 @@ button{font:inherit}
 .fleet-image {
     position: relative;
 
-    height: 430px;
+    height: 250px;
 
     overflow: hidden;
 
@@ -193,23 +716,7 @@ button{font:inherit}
 }
 
 
-.fleet-bg {
-    position: absolute;
 
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform .7s ease;
-}
-
-
-.fleet-card:hover .fleet-bg {
-    transform: scale(1.04);
-}
 
 
 /* DARK IMAGE OVERLAY */
@@ -293,7 +800,7 @@ button{font:inherit}
     right: 0;
     bottom: 0;
 
-    height: 190px;
+    height: 100px;
 
     z-index: 3;
 
@@ -426,7 +933,6 @@ button{font:inherit}
     margin-top: 30px;
 }
 
-
 .explore-btn,
 .reserve-btn {
     height: 62px;
@@ -446,7 +952,6 @@ button{font:inherit}
 
     transition: .3s ease;
 }
-
 
 .explore-btn {
     background: #fff;

@@ -1,455 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Us | Smile Taxi - Bangalore Taxi & Travel Services</title>
-
-    <meta
-        name="description"
-        content="Learn more about Smile Taxi, a trusted travel and taxi service in Bangalore offering airport transfers, local rides, outstation cabs, car rentals and group travel."
-    >
+    <title>About Us | Smile Taxi</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet"
-    >
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    >
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- Main CSS -->
-  <link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="/about.css">
 </head>
 
 <body>
 
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-<header class="navbar">
+<header class="about-header">
 
-    <div class="container nav-container">
+    <div class="about-header-inner">
 
-        <a href="index.html" class="logo">
-            <img src="../assets/images/smile.png" alt="Smile Taxi">
+        <a href="index.html" class="about-logo">
+            <img src="/assets/images/smile.png" alt="Smile Taxi">
         </a>
 
-        <nav class="nav-menu" id="navMenu">
+        <nav class="about-nav">
 
-            <a href="index.html">Home</a>
+            <a href="index.html">HOME</a>
 
-            <a href="about.html" class="active">About</a>
+            <a href="pages/about.html" class="active">ABOUT</a>
 
-            <div class="nav-dropdown">
-                <a href="#" class="dropdown-toggle">
-                    Services
-                    <i class="fa-solid fa-chevron-down"></i>
-                </a>
+            <a href="pages/services.html">SERVICES</a>
 
-                <div class="dropdown-menu">
+            <a href="index.html#fleet">FLEET</a>
 
-                    <a href="services.html#airport">
-                        Airport Transfers
-                    </a>
+            <a href="tours.html">TOURS</a>
 
-                    <a href="services.html#local">
-                        Local Taxi
-                    </a>
-
-                    <a href="services.html#outstation">
-                        Outstation Cabs
-                    </a>
-
-                    <a href="services.html#rental">
-                        Car Rental
-                    </a>
-
-                    <a href="services.html#tempo">
-                        Tempo Traveller
-                    </a>
-
-                    <a href="services.html#bus">
-                        Bus Rental
-                    </a>
-
-                    <a href="services.html#corporate">
-                        Corporate Travel
-                    </a>
-
-                </div>
-            </div>
-
-            <a href="fleet.html">Fleet</a>
-
-            <a href="destinations.html">Destinations</a>
-
-            <a href="tour-packages.html">Tour Packages</a>
-
-            <a href="corporate.html">Corporate</a>
-
-            <a href="contact.html">Contact</a>
+            <a href="areas.html">AREAS WE SERVE</a>
 
         </nav>
 
-        <a href="tel:+919019993283" class="nav-book-btn">
-            <i class="fa-solid fa-phone"></i>
-            Book Now
-        </a>
+        <div class="about-header-actions">
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+            <a href="tel:+919019993283" class="about-phone">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+
+            <a href="index.html#booking" class="about-book">
+                BOOK NOW
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
 
     </div>
 
 </header>
 
 
-<!-- =========================================================
-     PAGE HERO
-========================================================= -->
+<!-- =====================================================
+     ABOUT HERO
+===================================================== -->
 
-<section class="page-hero">
+<section class="about-hero">
 
-    <div class="page-hero-overlay"></div>
+    <div class="about-hero-image"></div>
 
-    <div class="container page-hero-content">
+    <div class="about-hero-overlay"></div>
 
-        <span class="page-eyebrow">
+    <div class="about-hero-content">
+
+        <span class="about-label">
             ABOUT SMILE TAXI
         </span>
 
         <h1>
-            Your Journey,
-            <span>Our Responsibility</span>
+            Your Journey.<br>
+            <em>Our Responsibility.</em>
         </h1>
 
         <p>
-            Reliable taxi and travel services designed to make
-            every journey comfortable, safe and stress-free.
+            Smile Taxi provides comfortable, reliable and
+            premium transportation solutions for city rides,
+            airport transfers, outstation journeys and
+            corporate travel.
         </p>
 
-        <div class="breadcrumb">
-
-            <a href="index.html">Home</a>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-            <span>About Us</span>
-
-        </div>
-
     </div>
 
 </section>
 
 
-<!-- =========================================================
-     ABOUT INTRODUCTION
-========================================================= -->
+<!-- =====================================================
+     ABOUT COMPANY
+===================================================== -->
 
-<section class="about-intro section-padding">
+<section class="about-company">
 
-    <div class="container">
+    <div class="about-company-grid">
 
-        <div class="about-intro-grid">
-
-            <!-- IMAGE -->
-
-            <div class="about-image-wrapper">
-
-                <div class="about-image-main">
-
-                    <img
-                        src="../assets/images/about-taxi.png"
-                        alt="Smile Taxi travel service"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <!-- CONTENT -->
-
-            <div class="about-intro-content">
-
-                <span class="section-label">
-                    WHO WE ARE
-                </span>
-
-                <h2>
-                    Making Every Journey
-                    <span>Comfortable & Memorable</span>
-                </h2>
-
-                <p class="lead-text">
-                    Smile Taxi is a Bangalore-based taxi and travel
-                    service focused on providing comfortable and
-                    dependable transportation for individuals,
-                    families, groups and businesses.
-                </p>
-
-                <p>
-                    Whether you need a convenient airport transfer,
-                    a local cab for your daily travel, an outstation
-                    vehicle for a weekend trip or transportation for
-                    a larger group, we aim to make your journey
-                    simple from pickup to destination.
-                </p>
-
-                <p>
-                    We believe that good travel is more than simply
-                    reaching a destination. It is about punctual
-                    service, comfortable vehicles, professional
-                    assistance and a smooth overall experience.
-                </p>
-
-                <div class="about-check-list">
-
-                    <div>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Comfortable travel experience</span>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Professional service</span>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Flexible travel options</span>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Customer-focused support</span>
-                    </div>
-
-                </div>
-
-                <a href="contact.html" class="primary-btn">
-                    Plan Your Journey
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     STATS
-========================================================= -->
-
-<section class="about-stats">
-
-    <div class="container">
-
-        <div class="about-stats-grid">
-
-            <div class="about-stat-item">
-
-                <div class="about-stat-icon">
-                    <i class="fa-solid fa-road"></i>
-                </div>
-
-                <div>
-                    <strong>24/7</strong>
-                    <span>Travel Assistance</span>
-                </div>
-
-            </div>
-
-
-            <div class="about-stat-item">
-
-                <div class="about-stat-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
-
-                <div>
-                    <strong>Multiple</strong>
-                    <span>Travel Destinations</span>
-                </div>
-
-            </div>
-
-
-            <div class="about-stat-item">
-
-                <div class="about-stat-icon">
-                    <i class="fa-solid fa-car"></i>
-                </div>
-
-                <div>
-                    <strong>Flexible</strong>
-                    <span>Vehicle Options</span>
-                </div>
-
-            </div>
-
-
-            <div class="about-stat-item">
-
-                <div class="about-stat-icon">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-
-                <div>
-                    <strong>Quick</strong>
-                    <span>Customer Support</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     WHAT WE DO
-========================================================= -->
-
-<section class="what-we-do section-padding">
-
-    <div class="container">
-
-        <div class="section-heading center">
+        <div class="about-company-content">
 
             <span class="section-label">
-                WHAT WE DO
+                WHO WE ARE
             </span>
 
             <h2>
-                Travel Solutions
-                <span>For Every Journey</span>
+                Travel with
+                <em>Comfort &amp; Confidence.</em>
             </h2>
 
             <p>
-                From short city rides to long-distance road trips,
-                Smile Taxi provides convenient transportation
-                options for different travel needs.
+                Smile Taxi is a trusted travel and transportation
+                service dedicated to making every journey smooth,
+                comfortable and memorable.
+            </p>
+
+            <p>
+                From everyday city travel to airport transfers,
+                outstation trips, weddings, corporate journeys
+                and group transportation, we provide well-maintained
+                vehicles and professional service.
+            </p>
+
+            <p>
+                Our goal is simple — to make every ride safe,
+                convenient and comfortable while giving our
+                customers a travel experience they can depend on.
+            </p>
+
+            <a href="services.html" class="about-outline-btn">
+                EXPLORE OUR SERVICES
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="about-company-image">
+
+            <img
+                src="/assets/images/about-taxi.png"
+                alt="Smile Taxi">
+
+        </div>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="about-stats">
+
+        <div class="about-stat">
+
+            <strong>10+</strong>
+
+            <span>
+                YEARS OF<br>
+                EXPERIENCE
+            </span>
+
+        </div>
+
+        <div class="about-stat">
+
+            <strong>500+</strong>
+
+            <span>
+                HAPPY<br>
+                CUSTOMERS
+            </span>
+
+        </div>
+
+        <div class="about-stat">
+
+            <strong>50+</strong>
+
+            <span>
+                TRAVEL<br>
+                DESTINATIONS
+            </span>
+
+        </div>
+
+        <div class="about-stat">
+
+            <strong>24/7</strong>
+
+            <span>
+                CUSTOMER<br>
+                SUPPORT
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MISSION & VISION
+===================================================== -->
+
+<section class="mission-section">
+
+    <div class="mission-heading">
+
+        <span class="section-label">
+            WHAT DRIVES US
+        </span>
+
+        <h2>
+            Moving People.
+            <em>Creating Experiences.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="mission-grid">
+
+        <div class="mission-card mission-light">
+
+            <div class="mission-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <span>OUR MISSION</span>
+
+            <h3>
+                Making Every Journey
+                <em>Comfortable.</em>
+            </h3>
+
+            <p>
+                To provide safe, reliable and comfortable
+                transportation while delivering a smooth
+                and enjoyable experience to every customer.
             </p>
 
         </div>
 
 
-        <div class="about-services-grid">
+        <div class="mission-card mission-dark">
 
-            <!-- CARD 1 -->
-
-            <div class="about-service-card">
-
-                <div class="about-service-icon">
-                    <i class="fa-solid fa-plane-arrival"></i>
-                </div>
-
-                <h3>Airport Transfers</h3>
-
-                <p>
-                    Convenient pickup and drop services for
-                    airport travel with a focus on timely and
-                    comfortable journeys.
-                </p>
-
-                <a href="services.html#airport">
-                    Explore Service
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
+            <div class="mission-icon">
+                <i class="fa-solid fa-eye"></i>
             </div>
 
+            <span>OUR VISION</span>
 
-            <!-- CARD 2 -->
+            <h3>
+                Becoming a Trusted
+                <em>Travel Partner.</em>
+            </h3>
 
-            <div class="about-service-card">
-
-                <div class="about-service-icon">
-                    <i class="fa-solid fa-city"></i>
-                </div>
-
-                <h3>Local Taxi</h3>
-
-                <p>
-                    Comfortable transportation for city travel,
-                    meetings, shopping, appointments and
-                    everyday journeys.
-                </p>
-
-                <a href="services.html#local">
-                    Explore Service
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-
-            <!-- CARD 3 -->
-
-            <div class="about-service-card">
-
-                <div class="about-service-icon">
-                    <i class="fa-solid fa-route"></i>
-                </div>
-
-                <h3>Outstation Travel</h3>
-
-                <p>
-                    Plan comfortable one-way or round trips
-                    from Bangalore to popular destinations
-                    and cities.
-                </p>
-
-                <a href="services.html#outstation">
-                    Explore Service
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-
-            <!-- CARD 4 -->
-
-            <div class="about-service-card">
-
-                <div class="about-service-icon">
-                    <i class="fa-solid fa-users"></i>
-                </div>
-
-                <h3>Group Travel</h3>
-
-                <p>
-                    Spacious travel options for families,
-                    friends, corporate groups and larger
-                    travel requirements.
-                </p>
-
-                <a href="services.html#tempo">
-                    Explore Service
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
+            <p>
+                To become a preferred transportation partner
+                known for quality service, professional drivers,
+                comfortable vehicles and customer satisfaction.
+            </p>
 
         </div>
 
@@ -458,132 +284,223 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      WHY SMILE TAXI
-========================================================= -->
+===================================================== -->
 
-<section class="why-smile-section section-padding">
+<section class="values-section">
 
-    <div class="container">
+    <div class="values-heading">
 
-        <div class="why-smile-grid">
+        <span class="section-label">
+            WHY SMILE TAXI
+        </span>
 
-            <!-- LEFT -->
+        <h2>
+            More Than a Ride.
+            <em>It's Your Journey.</em>
+        </h2>
 
-            <div class="why-smile-content">
+        <p>
+            Everything we do is focused on making your travel
+            experience easier, safer and more comfortable.
+        </p>
 
-                <span class="section-label">
-                    WHY SMILE TAXI
-                </span>
-
-                <h2>
-                    Travel With
-                    <span>Confidence</span>
-                </h2>
-
-                <p>
-                    Choosing the right travel partner can make
-                    your journey easier. At Smile Taxi, our focus
-                    is on providing a dependable experience from
-                    the moment you enquire until you reach your
-                    destination.
-                </p>
-
-                <div class="why-feature-list">
-
-                    <div class="why-feature">
-
-                        <div class="why-feature-icon">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-
-                        <div>
-                            <h3>Safe & Reliable</h3>
-
-                            <p>
-                                We focus on providing a comfortable
-                                and dependable travel experience.
-                            </p>
-                        </div>
-
-                    </div>
+    </div>
 
 
-                    <div class="why-feature">
+    <div class="values-grid">
 
-                        <div class="why-feature-icon">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
+        <div class="value-card">
 
-                        <div>
-                            <h3>Timely Service</h3>
+            <div class="value-number">01</div>
 
-                            <p>
-                                We understand that reaching your
-                                destination on time matters.
-                            </p>
-                        </div>
+            <i class="fa-solid fa-shield-halved"></i>
 
-                    </div>
+            <h3>Safe &amp; Reliable</h3>
 
+            <p>
+                Your safety and comfort are always our
+                highest priorities.
+            </p>
 
-                    <div class="why-feature">
-
-                        <div class="why-feature-icon">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-
-                        <div>
-                            <h3>Travel Options</h3>
-
-                            <p>
-                                Choose from vehicle options suited
-                                to different journeys and group sizes.
-                            </p>
-                        </div>
-
-                    </div>
+        </div>
 
 
-                    <div class="why-feature">
+        <div class="value-card">
 
-                        <div class="why-feature-icon">
-                            <i class="fa-solid fa-comments"></i>
-                        </div>
+            <div class="value-number">02</div>
 
-                        <div>
-                            <h3>Friendly Support</h3>
+            <i class="fa-solid fa-car"></i>
 
-                            <p>
-                                Our team is available to help with
-                                travel enquiries and bookings.
-                            </p>
-                        </div>
+            <h3>Premium Vehicles</h3>
 
-                    </div>
+            <p>
+                Choose from comfortable cars, SUVs,
+                Urbania and group travel vehicles.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-number">03</div>
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <h3>Professional Service</h3>
+
+            <p>
+                Friendly and professional service designed
+                around your travel requirements.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-number">04</div>
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>On-Time Travel</h3>
+
+            <p>
+                We value your time and work to make every
+                journey smooth and punctual.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
+
+<section class="journey-section">
+
+    <div class="journey-heading">
+
+        <span class="section-label">
+            OUR JOURNEY
+        </span>
+
+        <h2>
+            Growing with
+            <em>Every Journey.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="journey-layout">
+
+        <!-- LEFT IMAGE -->
+        <div class="journey-image">
+
+            <img
+                src="../assets/images/why-taxi.png"
+                alt="Smile Taxi Journey">
+
+            <div class="journey-image-overlay">
+                <span>TRAVEL WITH SMILE</span>
+                <strong>Every journey<br>matters.</strong>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT TIMELINE -->
+        <div class="journey-timeline">
+
+            <div class="journey-item">
+
+                <div class="journey-year">
+                    01
+                </div>
+
+                <div class="journey-dot"></div>
+
+                <div class="journey-content">
+
+                    <h3>Smile Taxi Begins</h3>
+
+                    <p>
+                        Started with a simple vision of providing
+                        dependable and comfortable travel solutions.
+                    </p>
 
                 </div>
 
             </div>
 
 
-            <!-- RIGHT IMAGE -->
+            <div class="journey-item">
 
-            <div class="why-smile-image">
+                <div class="journey-year">
+                    02
+                </div>
 
-                <img
-                    src="../assets/images/why-taxi.jpg"
-                    alt="Professional Smile Taxi service"
-                >
+                <div class="journey-dot"></div>
 
-                <div class="why-image-card">
+                <div class="journey-content">
 
-                    <i class="fa-solid fa-star"></i>
+                    <h3>Expanding Our Fleet</h3>
 
-                    <div>
-                        <strong>Travel Better</strong>
-                        <span>Travel with Smile</span>
-                    </div>
+                    <p>
+                        Added premium cars, SUVs and spacious
+                        vehicles to serve different travel needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <div class="journey-year">
+                    03
+                </div>
+
+                <div class="journey-dot"></div>
+
+                <div class="journey-content">
+
+                    <h3>Growing Across Destinations</h3>
+
+                    <p>
+                        Expanded our services for Bangalore,
+                        Mysore, Coorg, Chikmagalur, Ooty and
+                        other destinations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="journey-item">
+
+                <div class="journey-year">
+                    04
+                </div>
+
+                <div class="journey-dot"></div>
+
+                <div class="journey-content">
+
+                    <h3>Building Long-Term Trust</h3>
+
+                    <p>
+                        Continuing to create memorable journeys
+                        through reliable service and customer care.
+                    </p>
 
                 </div>
 
@@ -595,139 +512,37 @@
 
 </section>
 
-
-<!-- =========================================================
-     MISSION & VISION
-========================================================= -->
-
-<section class="mission-section section-padding">
-
-    <div class="container">
-
-        <div class="section-heading center">
-
-            <span class="section-label">
-                OUR PURPOSE
-            </span>
-
-            <h2>
-                Driven By Service,
-                <span>Focused On You</span>
-            </h2>
-
-        </div>
-
-
-        <div class="mission-grid">
-
-            <!-- MISSION -->
-
-            <div class="mission-card">
-
-                <div class="mission-card-icon">
-                    <i class="fa-solid fa-bullseye"></i>
-                </div>
-
-                <div>
-
-                    <span>OUR MISSION</span>
-
-                    <h3>
-                        Making Travel Simple
-                    </h3>
-
-                    <p>
-                        Our mission is to provide convenient,
-                        comfortable and dependable travel
-                        solutions while keeping customer needs
-                        at the heart of our service.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- VISION -->
-
-            <div class="mission-card">
-
-                <div class="mission-card-icon">
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-
-                <div>
-
-                    <span>OUR VISION</span>
-
-                    <h3>
-                        A Trusted Travel Partner
-                    </h3>
-
-                    <p>
-                        Our vision is to grow as a trusted taxi
-                        and travel partner by consistently
-                        delivering quality service and creating
-                        better travel experiences.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =====================================================
      CTA
-========================================================= -->
+===================================================== -->
 
 <section class="about-cta">
 
-    <div class="container">
+    <div class="about-cta-inner">
 
-        <div class="about-cta-inner">
+        <h2>
+            Ready to Start
+            <br>
+            <em>Your Journey?</em>
+        </h2>
 
-            <div>
+        <p>
+            Whether it's a city ride, airport transfer,
+            outstation trip or group journey, Smile Taxi
+            is ready to take you there.
+        </p>
 
-                <span>
-                    READY FOR YOUR NEXT JOURNEY?
-                </span>
+        <div class="about-cta-buttons">
 
-                <h2>
-                    Let's Make Your
-                    <strong>Journey Comfortable.</strong>
-                </h2>
+            <a href="index.html#booking" class="cta-yellow">
+                BOOK YOUR RIDE
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
-                <p>
-                    Book a taxi or talk to our team about
-                    your travel requirements.
-                </p>
-
-            </div>
-
-
-            <div class="about-cta-buttons">
-
-                <a href="tel:+919019993283" class="cta-btn-light">
-                    <i class="fa-solid fa-phone"></i>
-                    Call Now
-                </a>
-
-                <a
-                    href="https://wa.me/919019993283"
-                    target="_blank"
-                    class="cta-btn-whatsapp"
-                >
-                    <i class="fa-brands fa-whatsapp"></i>
-                    WhatsApp Us
-                </a>
-
-            </div>
+            <a href="tel:+919019993283" class="cta-outline">
+                <i class="fa-solid fa-phone"></i>
+                SPEAK TO US
+            </a>
 
         </div>
 
@@ -736,245 +551,239 @@
 </section>
 
 
+<!-- =====================================================
+     FLOATING BUTTONS
+===================================================== -->
+
+<a
+    href="tel:+919019993283"
+    class="floating-phone">
+
+    <i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+<a
+    href="https://wa.me/919019993283"
+    target="_blank"
+    class="floating-whatsapp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
 <!-- =========================================================
-     FOOTER
+     9. FOOTER
 ========================================================= -->
 
 <footer class="footer">
 
-    <div class="container">
 
-        <div class="footer-grid">
+    <div class="footer-grid">
 
-            <!-- BRAND -->
 
-            <div class="footer-brand">
+        <!-- FOOTER BRAND -->
 
-                <a href="index.html" class="footer-logo">
-                    <img
-                        src="../assets/images/smile.png"
-                        alt="Smile Taxi"
-                    >
-                </a>
+        <div>
 
-                <p>
-                    Comfortable, reliable and convenient taxi
-                    and travel services from Bangalore to
-                    destinations across Karnataka and beyond.
-                </p>
+            <div class="footer-logo">
 
-                <div class="footer-socials">
-
-                    <a href="#">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
-                </div>
+             
+    <!-- LOGO -->
+    <a href="index.html" class="st-logo">
+      <img src="/assets/images/smile.png" alt="Smile Taxi">
+    </a>
 
             </div>
 
 
-            <!-- QUICK LINKS -->
-
-            <div class="footer-column">
-
-                <h3>Quick Links</h3>
-
-                <a href="index.html">Home</a>
-
-                <a href="about.html">About Us</a>
-
-                <a href="fleet.html">Our Fleet</a>
-
-                <a href="destinations.html">Destinations</a>
-
-                <a href="tour-packages.html">Tour Packages</a>
-
-                <a href="contact.html">Contact</a>
-
-            </div>
+            <p>
+                Your trusted partner for premium car
+                and travel services. We deliver comfort,
+                safety, and reliability on every journey
+                across India.
+            </p>
 
 
-            <!-- SERVICES -->
+            <div class="social">
 
-            <div class="footer-column">
+                <a href="#">
 
-                <h3>Our Services</h3>
+                    <i class="fa-brands fa-facebook-f"></i>
 
-                <a href="services.html#airport">
-                    Airport Transfers
                 </a>
 
-                <a href="services.html#local">
-                    Local Taxi
+
+                <a href="#">
+
+                    <i class="fa-brands fa-instagram"></i>
+
                 </a>
-
-                <a href="services.html#outstation">
-                    Outstation Cabs
-                </a>
-
-                <a href="services.html#rental">
-                    Car Rental
-                </a>
-
-                <a href="services.html#tempo">
-                    Tempo Traveller
-                </a>
-
-                <a href="services.html#corporate">
-                    Corporate Travel
-                </a>
-
-            </div>
-
-
-            <!-- CONTACT -->
-
-            <div class="footer-column footer-contact">
-
-                <h3>Contact Us</h3>
-
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    Bangalore, Karnataka
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-
-                    <a href="tel:+919019993283">
-                        +91 90199 93283
-                    </a>
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <a href="mailto:Smiletaxiservicetravelguru@gmail.com">
-                        Smiletaxiservicetravelguru@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                    <a
-                        href="https://wa.me/919019993283"
-                        target="_blank"
-                    >
-                        WhatsApp Us
-                    </a>
-                </p>
 
             </div>
 
         </div>
 
 
-        <div class="footer-bottom">
 
-            <p>
-                © 2026 Smile Taxi. All Rights Reserved.
-            </p>
+        <!-- QUICK LINKS -->
 
-            <p>
-                Taxi & Travel Services in Bangalore
-            </p>
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="services.html">
+                Our Services
+            </a>
+
+            <a href="areas.html">
+                Areas We Serve
+            </a>
+
+            <a href="#fleet">
+                Our Fleet
+            </a>
+
+            <a href="tours.html">
+                Tour Packages
+            </a>
+
+            <a href="#">
+                Corporate Travel
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
 
         </div>
+
+
+
+        <!-- SERVICES -->
+
+        <div>
+
+            <h3>
+                Our Services
+            </h3>
+
+
+            <a href="#">
+                Airport Transfers
+            </a>
+
+            <a href="#">
+                Outstation Cabs
+            </a>
+
+            <a href="#">
+                City Rides
+            </a>
+
+            <a href="#">
+                Corporate Travel
+            </a>
+
+            <a href="#">
+                Event Transport
+            </a>
+
+            <a href="#">
+                Tour Packages
+            </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="contact">
+
+            <h3>
+                Contact Us
+            </h3>
+
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                
+
+            </p>
+
+
+            <b>
+                Our Branches
+            </b>
+
+
+            <p>
+                M
+            </p>
+
+
+            <a href="tel:+91">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 
+
+            </a>
+
+
+            <a href="tel:+919916777769">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 
+
+            </a>
+
+
+            <a href="mailto:urbanrentalstblr@gmail.com">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                rentalstblr@gmail.com
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 SmileTaxiService.
+            All Rights Reserved.
+        </span>
+
+
+        <span>
+            Privacy Policy
+        </span>
 
     </div>
 
 </footer>
 
-
-<!-- =========================================================
-     FLOATING BUTTONS
-========================================================= -->
-
-<a
-    href="https://wa.me/919019993283"
-    class="floating-whatsapp"
-    target="_blank"
-    aria-label="Chat on WhatsApp"
->
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-
-<a
-    href="tel:+919019993283"
-    class="floating-call"
-    aria-label="Call Smile Taxi"
->
-    <i class="fa-solid fa-phone"></i>
-</a>
-
-
-<!-- =========================================================
-     MOBILE MENU SCRIPT
-========================================================= -->
-
-<script>
-
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const navMenu = document.getElementById("navMenu");
-
-if (mobileMenuBtn) {
-
-    mobileMenuBtn.addEventListener("click", function () {
-
-        navMenu.classList.toggle("active");
-
-        const icon = mobileMenuBtn.querySelector("i");
-
-        if (navMenu.classList.contains("active")) {
-
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
-    });
-
-}
-
-
-/* Close mobile menu when clicking a normal link */
-
-document.querySelectorAll(".nav-menu a").forEach(function(link) {
-
-    link.addEventListener("click", function() {
-
-        if (!link.classList.contains("dropdown-toggle")) {
-
-            navMenu.classList.remove("active");
-
-            const icon = mobileMenuBtn.querySelector("i");
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
-    });
-
-});
-
-</script>
 
 </body>
 </html>
