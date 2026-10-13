@@ -41,31 +41,31 @@ button{font:inherit}
 }
 
 /* LOGO CONTAINER */
-
 .st-logo {
-    flex: 0 0 200px;
-    width: 200px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
 }
-
-/* LOGO IMAGE — INCREASE SIZE HERE */
 
 .st-logo img {
-    display: block;
-
-    width: 195px;
-    height: 85px;
-
-    max-width: none;
-    object-fit: contain;
-    object-position: left center;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
 }
 
+.st-logo-text {
+  display: block;
+  margin-top: 2px;
+  color: #f5bf00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-align: center;
+}
 /* DESKTOP NAVIGATION */
 
 .st-nav {
