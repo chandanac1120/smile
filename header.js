@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!placeholder) return;
 
   try {
-    const response = await fetch("/header.html");
+    const response = await fetch("./header.html");
 
     if (!response.ok) {
       throw new Error("Could not load header.html");
