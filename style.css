@@ -7,350 +7,6 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%;height:auto}
 button{font:inherit}
 .section{width:100%}
-/* =========================================
-   SMILE TAXI HEADER
-========================================= */
-
-.st-header {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999999 !important;
-
-
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-}
-
-/* HEADER CONTAINER */
-
-.st-header-inner {
-    width: 100%;
-    max-width: 1400px;
-    min-height: 100px;
-
-    margin: 0 auto;
-    padding: 10px 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-/* LOGO CONTAINER */
-.st-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.st-logo img {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-}
-
-.st-logo-text {
-  display: block;
-  margin-top: 2px;
-  color: #f5bf00;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 1.2;
-  text-align: center;
-}
-/* DESKTOP NAVIGATION */
-
-.st-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-
-    padding: 6px;
-
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 40px;
-
-    background: rgba(7, 18, 36, 0.78);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-.st-nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 11px 13px;
-
-    color: #f0f3f7;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-
-    white-space: nowrap;
-    border-radius: 30px;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
-}
-
-.st-nav a:hover,
-.st-nav a.active {
-    background: #ffffff;
-    color: #08172c;
-}
-
-/* RIGHT-SIDE HEADER BUTTONS */
-
-.st-header-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-
-    flex-shrink: 0;
-}
-
-/* PHONE BUTTON */
-
-.st-phone {
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #ffffff;
-    color: #08172c;
-
-    border-radius: 50%;
-    font-size: 16px;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-.st-phone:hover {
-    background: #f5bd18;
-    transform: translateY(-2px);
-}
-
-/* BOOK NOW BUTTON */
-
-.st-book {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-
-    padding: 13px 19px;
-
-    background: #f5bd18;
-    color: #111827;
-
-    border-radius: 30px;
-
-    font-size: 12px;
-    font-weight: 800;
-    white-space: nowrap;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-.st-book:hover {
-    background: #ffd34c;
-    transform: translateY(-2px);
-}
-
-/* MOBILE MENU BUTTON */
-
-.st-mobile-menu {
-    display: none;
-
-    width: 44px;
-    height: 44px;
-
-    align-items: center;
-    justify-content: center;
-
-    border: none;
-    border-radius: 10px;
-
-    background: #f5bd18;
-    color: #08172c;
-
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* =========================================
-   TABLET RESPONSIVE
-========================================= */
-
-@media (max-width: 1100px) {
-    .st-header-inner {
-        padding: 10px 20px;
-        gap: 15px;
-    }
-
-    .st-logo {
-        flex: 0 0 165px;
-        width: 165px;
-    }
-
-    .st-logo img {
-        width: 165px;
-        height: 75px;
-    }
-
-    .st-nav {
-        gap: 0;
-    }
-
-    .st-nav a {
-        padding: 10px 9px;
-        font-size: 10px;
-    }
-
-    .st-book {
-        padding: 12px 14px;
-    }
-}
-
-/* =========================================
-   MOBILE RESPONSIVE
-========================================= */
-
-@media (max-width: 768px) {
-    .st-header {
-        background: rgba(3, 10, 22, 0.94);
-    }
-
-    .st-header-inner {
-        min-height: 82px;
-        padding: 8px 16px;
-        gap: 12px;
-    }
-
-    .st-logo {
-        flex: 0 0 150px;
-        width: 150px;
-    }
-
-    .st-logo img {
-        width: 150px;
-        height: 66px;
-    }
-
-    .st-header-actions {
-        margin-left: auto;
-        gap: 8px;
-    }
-
-    .st-phone {
-        width: 39px;
-        height: 39px;
-        font-size: 14px;
-    }
-
-    .st-book {
-        padding: 11px 13px;
-        font-size: 10px;
-        gap: 6px;
-    }
-
-    .st-mobile-menu {
-        display: flex;
-        flex-shrink: 0;
-
-        width: 39px;
-        height: 39px;
-    }
-
-    .st-nav {
-        display: none;
-
-        position: absolute;
-        top: 82px;
-        left: 16px;
-        right: 16px;
-
-        padding: 12px;
-
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
-
-        border-radius: 14px;
-        background: #08172c;
-
-        border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .st-nav a {
-        justify-content: flex-start;
-        padding: 12px 15px;
-        font-size: 12px;
-    }
-
-    /* Add the .open class using JavaScript to show the menu */
-    .st-nav.open {
-        display: flex;
-    }
-}
-
-/* SMALL MOBILE SCREENS */
-
-@media (max-width: 420px) {
-    .st-header-inner {
-        padding: 8px 10px;
-        gap: 7px;
-    }
-
-    .st-logo {
-        flex-basis: 115px;
-        width: 115px;
-    }
-
-    .st-logo img {
-        width: 125px;
-        height: 60px;
-    }
-
-    .st-header-actions {
-        gap: 6px;
-    }
-
-    .st-phone {
-        width: 34px;
-        height: 34px;
-    }
-
-    .st-book {
-        padding: 10px;
-        font-size: 9px;
-    }
-
-    .st-mobile-menu {
-        width: 34px;
-        height: 34px;
-        font-size: 17px;
-    }
-}.mobile-menu{display:none;border:0;background:var(--gold);color:#111827;width:42px;height:42px;border-radius:10px;font-size:19px;cursor:pointer}
 .hero{height:min(760px,100vh);min-height:650px;background:#050d1c;position:relative;overflow:hidden;isolation:isolate}
 .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,13,28,.99) 0%,rgba(5,13,28,.94) 27%,rgba(5,13,28,.72) 46%,rgba(5,13,28,.28) 72%,rgba(5,13,28,.12) 100%),linear-gradient(0deg,rgba(5,13,28,.52),transparent 48%)}
 .hero-copy{position:absolute;z-index:5;left:max(calc((100% - 1160px)/2),5.8%);top:clamp(145px,19vh,195px);width:min(500px,43%)}
@@ -1358,9 +1014,9 @@ font-size: 71px;
 .booking-actions a:first-child{background:var(--gold);border-color:var(--gold);color:#111}
 .footer{background:var(--navy);color:#fff;padding:58px 0 18px}
 .footer-grid{width:min(1160px,calc(100% - 48px));margin:auto;display:grid;grid-template-columns:1.25fr .8fr .9fr 1.35fr;gap:38px}
-.footer-logo{display:flex;flex-direction:column;color:#e3ae00;line-height:1}
-.footer-logo span{font:14px "Playfair Display",Georgia,serif;letter-spacing:1.5px}.footer-logo b{font:26px "Playfair Display",Georgia,serif}.footer-logo small{font-size:9px;letter-spacing:1px;color:#fff;margin-top:7px}
-.footer-grid>div>p{font-size:12px;color:#b4bdcb;line-height:1.8;margin-top:18px}
+
+
+ .footer-grid>div>p{font-size:12px;color:#b4bdcb;line-height:1.8;margin-top:18px}
 .footer-grid h3{font-size:16px;color:var(--gold);margin-bottom:17px}
 .footer-grid>div:not(:first-child)>a{display:block;font-size:12px;color:#b4bdcb;margin:10px 0;line-height:1.6;transition:color .2s}.footer-grid>div:not(:first-child)>a:hover{color:var(--gold)}
 .social{display:flex;gap:9px;margin-top:18px}.social a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#22314a;font-size:14px}.social a:hover{background:var(--gold);color:#111}
@@ -1369,9 +1025,6 @@ font-size: 71px;
 .floating{position:fixed;right:18px;bottom:18px;z-index:99;display:flex;flex-direction:column;gap:10px}
 .floating a{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:20px;box-shadow:0 5px 18px rgba(0,0,0,.23)}
 .floating .call{background:#2474ed}.floating .whatsapp{background:#16c66c}
-@media(max-width:1100px){.header-inner{gap:15px;padding-inline:22px}.brand{flex-basis:120px;width:120px}.logo-img{width:120px}.desktop-nav a{padding:10px 9px;font-size:11px}.book-top{padding:12px 14px}.hero-card{right:6%}.about{gap:38px}.tour-image{height:190px}.footer-grid{gap:25px}}
-@media(max-width:850px){.header-inner{min-height:78px}.desktop-nav{display:none;position:absolute;top:76px;left:20px;right:20px;flex-direction:column;align-items:stretch;border-radius:16px;padding:10px;background:rgba(7,18,36,.97)}.desktop-nav.open{display:flex}.desktop-nav a{font-size:13px;padding:12px 15px}.mobile-menu{display:block}.header-actions{margin-left:auto}.hero{height:680px;min-height:620px}.hero:before{background:linear-gradient(90deg,rgba(5,13,28,.98) 0%,rgba(5,13,28,.86) 48%,rgba(5,13,28,.38) 100%),linear-gradient(0deg,rgba(5,13,28,.5),transparent 50%)}.hero-copy{left:6%;top:155px;width:52%}.hero-copy h1{font-size:clamp(40px,6.5vw,58px)}.hero-vehicle{width:100%;height:100%;opacity:.9}.hero-card{top:auto;right:6%;bottom:35px;width:180px}.hero-card img{height:95px}.fleet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about{padding:75px 28px;grid-template-columns:1fr;gap:35px}.about-pics{height:380px;width:min(600px,100%);margin:auto}.service-grid,.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tour-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tour-image{height:230px}.booking{padding:50px 28px;align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.header-inner{padding:10px 16px;gap:10px}.brand{flex-basis:100px;width:100px;min-height:48px}.logo-img{width:100px;height:48px}.header-phone{width:38px;height:38px}.book-top{font-size:10px;padding:11px 12px;gap:6px}.mobile-menu{width:38px;height:38px}.hero{height:690px;min-height:690px}.hero:before{background:linear-gradient(180deg,rgba(5,13,28,.98) 0%,rgba(5,13,28,.88) 43%,rgba(5,13,28,.35) 100%)}.hero-copy{top:132px;left:22px;right:22px;width:auto}.hero-copy h1{font-size:43px;letter-spacing:-1.5px}.hero-copy h2{font-size:31px}.hero-copy p{font-size:14px;max-width:340px}.hero-vehicle{width:100%;height:100%;right:0;opacity:.8}.hero-card{right:20px;bottom:20px;width:145px;padding:7px}.hero-card img{height:75px}.hero-card small{font-size:8px}.hero-card strong{font-size:15px}.hero-card span{width:28px;height:28px;right:12px;bottom:12px}.fleet,.services,.tours,.why{padding:62px 0}.section-head{margin-bottom:30px}.section-head>span,.about-copy>span{font-size:10px;letter-spacing:1.7px}.section-head h2{font-size:30px}.section-head h3,.section-head h3 em{font-size:29px}.section-head p{font-size:13px}.fleet-grid{width:calc(100% - 32px);grid-template-columns:1fr;gap:18px}.fleet-card>img{height:235px}.fleet-card>div{padding:18px}.fleet-card h3{font-size:18px;min-height:0}.fleet-card strong{font-size:17px}.card-actions a{font-size:10px}.about{padding:62px 22px}.about-copy h2{font-size:30px}.about-copy h2 em{font-size:28px}.about-copy p{font-size:14px}.stats{gap:24px}.stats b{font-size:24px}.stats small{font-size:9px}.about-pics{height:300px}.about-pics img{height:78%;width:52%;border-radius:16px}.service-grid,.why-grid{width:calc(100% - 32px);grid-template-columns:1fr;gap:14px}.service-grid article,.why-grid article{padding:22px;min-height:0}.service-grid h3,.why-grid h3{font-size:17px}.service-grid p,.why-grid p{font-size:13px}.tour-grid{width:calc(100% - 32px);grid-template-columns:1fr;gap:18px}.tour-image{height:230px}.tour-image span{font-size:10px}.tour-image h3{font-size:21px}.tour-body p{font-size:12px}.tour-body a{font-size:11px}.booking{padding:45px 22px;gap:25px}.booking h2,.booking h2 em{font-size:29px}.booking p{font-size:13px}.booking-actions{width:100%;flex-direction:column}.booking-actions a{justify-content:center;padding:13px}.footer{padding-top:45px}.footer-grid{width:calc(100% - 36px);grid-template-columns:1fr;gap:27px}.footer-grid h3{font-size:16px}.footer-grid>div>p{font-size:12px}.footer-grid>div:not(:first-child)>a{font-size:12px}.footer-bottom{width:calc(100% - 36px);flex-direction:column;font-size:10px;gap:8px}.floating{right:12px;bottom:12px}.floating a{width:43px;height:43px;font-size:18px}}
 /* ===== HERO SECTION FIX ===== */
 
 .hero {
@@ -1454,208 +1107,6 @@ font-size: 71px;
 /* =========================================================
    SMILE TAXI - REFERENCE HERO
    ========================================================= */
-
-.st-header {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: #fff;
-}
-
-.st-header-inner {
-    width: 100%;
-    max-width: 1750px;
-    margin: auto;
-
-    min-height: 125px;
-
-    padding: 20px 45px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 25px;
-}
-
-
-/* ================= LOGO ================= */
-
-.st-logo {
-    width: 170px;
-    height: 75px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-}
-
-.st-logo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-}
-
-
-/* ================= NAVIGATION ================= */
-
-.st-nav {
-    height: 68px;
-
-    padding: 6px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 4px;
-
-    background: rgba(5, 16, 38, 0.94);
-
-    border-radius: 45px;
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,.18);
-
-    backdrop-filter: blur(15px);
-}
-
-.st-nav a {
-    height: 54px;
-
-    padding: 0 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #fff;
-
-    border-radius: 35px;
-
-    font-family: "DM Sans", sans-serif;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    letter-spacing: .3px;
-
-    white-space: nowrap;
-
-    transition:
-        background .3s ease,
-        color .3s ease,
-        transform .3s ease;
-}
-
-.st-nav a:hover {
-    background: rgba(255,255,255,.1);
-}
-
-.st-nav a.active {
-    background: #fff;
-    color: #101827;
-}
-
-
-/* ================= HEADER RIGHT ================= */
-
-.st-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.st-phone {
-    width: 66px;
-    height: 54px;
-
-    border-radius: 50%;
-
-    display: grid;
-    place-items: center;
-
-    background: rgba(255,255,255,.85);
-
-    color: #263248;
-
-    font-size: 20px;
-
-    transition: .3s ease;
-}
-
-.st-phone:hover {
-    transform: translateY(-3px) scale(1.04);
-    background: #fff;
-}
-
-
-.st-book {
-    height: 66px;
-
-    padding: 0 34px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 13px;
-
-    border-radius: 40px;
-
-    background: #f5bd18;
-
-    color: #101010;
-
-    font-family: "DM Sans", sans-serif;
-
-    font-size: 14px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    transition:
-        transform .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
-}
-
-.st-book:hover {
-    background: #ffd43f;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 30px rgba(245,189,24,.25);
-}
-
-
-/* ================= MOBILE MENU ================= */
-
-.st-mobile-menu {
-    display: none;
-
-    width: 48px;
-    height: 48px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: #f5bd18;
-
-    color: #111;
-
-    font-size: 20px;
-
-    cursor: pointer;
-}
-
 
 /* =========================================================
    HERO
@@ -2149,6 +1600,9 @@ font-size: 71px;
 }
 
 
+
+
+
 /* =========================================================
    ANIMATIONS
    ========================================================= */
@@ -2205,287 +1659,655 @@ font-size: 71px;
 }
 
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
 
-@media (max-width: 1200px) {
 
-    .st-header-inner {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
 
-    .st-nav a {
-        padding: 0 16px;
-    }
 
-    .st-logo {
-        width: 135px;
-    }
+/* =====================================================
+   SMILE TAXI — COMPLETE MOBILE RESPONSIVE CSS
+   Paste at the VERY BOTTOM of your existing CSS file
+===================================================== */
 
-    .st-preview {
-        right: 2%;
-        width: 29%;
-        min-width: 320px;
-    }
-
-    .st-preview-image {
-        height: 470px;
-    }
-
-    .st-title {
-        font-size: clamp(55px, 6vw, 82px);
-    }
-
-    .st-description {
-        font-size: 18px;
-    }
+/* Prevent horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+}
+
+
+
+/* =====================================================
+   TABLET — 900px
+===================================================== */
 
 @media (max-width: 900px) {
 
-    .st-header-inner {
-        min-height: 90px;
+   
+
+    /* Homepage hero */
+    .hero {
+        height: auto;
+        min-height: 900px;
     }
 
-    .st-nav {
-        display: none;
+    .hero-copy {
+        top: 130px;
+        left: 6%;
+        width: 65%;
     }
 
-    .st-mobile-menu {
-        display: block;
+    .hero-copy h1 {
+        font-size: clamp(36px, 6vw, 54px);
+        letter-spacing: -1.5px;
     }
 
-    .st-header-actions {
-        margin-left: auto;
+    .hero-copy h2 {
+        font-size: clamp(27px, 4vw, 36px);
     }
 
-    .st-hero {
-        min-height: 800px;
+    .hero-copy p {
+        font-size: 14px;
     }
 
-    .st-hero-content {
-        left: 5%;
-        top: 18%;
-
-        width: 70%;
-    }
-
-    .st-title {
-        font-size: 62px;
-    }
-
-    .st-description {
-        max-width: 560px;
-
-        margin-top: 30px;
-
-        font-size: 17px;
-    }
-
-    .st-preview {
-        right: 5%;
+    .hero-card {
         top: auto;
-        bottom: 45px;
-
-        width: 300px;
-        min-width: 0;
-    }
-
-    .st-preview-image {
-        height: 330px;
-    }
-
-    .st-call {
-        right: 4%;
-        bottom: 120px;
-    }
-
-    .st-whatsapp {
-        right: 4%;
+        right: 5%;
         bottom: 35px;
+        width: 260px;
     }
 
-    .st-prev {
-        right: 36%;
-        bottom: 45px;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .st-header-inner {
-        padding: 12px 15px;
+    .hero-card img,
+    .hero-card .st-preview-img {
+        height: 220px;
     }
 
-    .st-logo {
-        width: 105px;
-        height: 55px;
-    }
-
-    .st-phone {
-        width: 43px;
-        height: 43px;
-
-        font-size: 15px;
-    }
-
-    .st-book {
-        height: 43px;
-
-        padding: 0 15px;
-
-        font-size: 10px;
-    }
-
-    .st-mobile-menu {
-        width: 43px;
-        height: 43px;
-
-        font-size: 17px;
-    }
-
+    /* Alternate hero layout */
     .st-hero {
-        height: 850px;
+        height: auto;
         min-height: 850px;
     }
 
-    .st-overlay {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(3,10,27,.97) 0%,
-                rgba(3,10,27,.82) 43%,
-                rgba(3,10,27,.55) 100%
-            );
-    }
-
     .st-hero-content {
-        left: 22px;
-        right: 22px;
-
         top: 125px;
-
-        width: auto;
+        left: 5%;
+        width: 65%;
     }
 
     .st-title {
-        font-size: 48px;
-
-        line-height: 1;
-
+        font-size: clamp(44px, 6vw, 62px);
         letter-spacing: -2px;
     }
 
     .st-description {
         margin-top: 25px;
+        font-size: 16px;
+    }
 
+    .st-preview {
+        top: auto;
+        right: 5%;
+        bottom: 35px;
+        width: 280px;
+        min-width: 0;
+    }
+
+    .st-preview-image {
+        height: 280px;
+    }
+
+    /* Fleet */
+    .fleet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .fleet-section {
+        padding: 90px 4% 75px;
+    }
+
+    .fleet-content {
+        padding: 25px;
+    }
+
+    .fleet-content h3 {
+        font-size: 26px;
+    }
+
+    .fleet-buttons {
+        gap: 10px;
+    }
+
+    .explore-btn,
+    .reserve-btn {
+        height: 52px;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    /* About */
+    .about {
+        padding: 75px 30px;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .about-pics {
+        height: 360px;
+    }
+
+    /* Services and reasons */
+    .service-grid,
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Tours */
+    .tour-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+}
+
+/* =====================================================
+   MOBILE — 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    
+    /* Homepage hero */
+    .hero {
+        height: auto;
+        min-height: 850px;
+    }
+
+    .hero-copy {
+        top: 115px;
+        left: 22px;
+        right: 22px;
+        width: auto;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(34px, 9vw, 46px);
+        line-height: 1.04;
+        letter-spacing: -1.4px;
+    }
+
+    .hero-copy h2 {
+        margin-top: 10px;
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    .hero-copy p {
+        max-width: 100%;
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .hero-vehicle img {
+        object-position: 60% center;
+    }
+
+    .hero:before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5,13,28,.96) 0%,
+                rgba(5,13,28,.82) 48%,
+                rgba(5,13,28,.42) 100%
+            );
+    }
+
+    .hero-card {
+        top: auto;
+        left: 22px;
+        right: 22px;
+        bottom: 25px;
+        width: auto;
+        padding: 10px;
+        border-radius: 18px;
+    }
+
+    .hero-card img,
+    .hero-card .st-preview-img {
+        height: 210px;
+    }
+
+    .hero-card div {
+        padding: 10px 6px;
+    }
+
+    .hero-card strong {
+        font-size: 16px;
+    }
+
+    .hero-card span {
+        width: 34px;
+        height: 34px;
+        bottom: 15px;
+    }
+
+    /* Alternate hero layout */
+    .st-hero {
+        height: auto;
+        min-height: 850px;
+    }
+
+    .st-hero-content {
+        top: 105px;
+        left: 22px;
+        right: 22px;
+        width: auto;
+    }
+
+    .st-title {
+        font-size: clamp(38px, 10vw, 49px);
+        line-height: 1.03;
+        letter-spacing: -1.5px;
+    }
+
+    .st-description {
+        margin-top: 18px;
         font-size: 14px;
-
         line-height: 1.65;
     }
 
     .st-slider-info {
-        margin-top: 25px;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .st-progress {
+        width: 120px;
     }
 
     .st-preview {
         left: 22px;
         right: 22px;
-
         bottom: 85px;
-
         width: auto;
-
         max-width: none;
-
-        border-radius: 22px;
+        border-radius: 18px;
     }
 
     .st-preview-image {
-        height: 250px;
+        height: 230px;
     }
 
     .st-preview-info {
-        left: 15px;
-        right: 15px;
-
-        bottom: 15px;
-
-        min-height: 80px;
-
-        padding: 15px 17px;
-
-        border-radius: 15px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        min-height: 70px;
+        padding: 12px;
+        border-radius: 13px;
     }
 
     .st-preview-info strong {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .st-preview-info small {
         font-size: 8px;
+        letter-spacing: 1px;
     }
 
     .st-next {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 
     .st-prev {
         display: none;
     }
 
-    .st-call {
-        width: 55px;
-        height: 55px;
-
-        right: 20px;
-        bottom: 25px;
-
+    .st-call,
+    .st-whatsapp {
+        position: fixed;
+        width: 46px;
+        height: 46px;
+        bottom: 14px;
         font-size: 20px;
     }
 
+    .st-call {
+        right: 14px;
+    }
+
     .st-whatsapp {
-        width: 55px;
-        height: 55px;
+        right: 68px;
+    }
 
-        right: 88px;
-        bottom: 25px;
+    /* Section headings */
+    .section-head {
+        margin-bottom: 30px;
+        padding: 0 18px;
+    }
 
+    .section-head h2 {
+        font-size: 30px;
+    }
+
+    .section-head h3,
+    .section-head h3 em {
+        font-size: 27px;
+    }
+
+    .section-head p {
+        font-size: 13px;
+    }
+
+    /* Fleet */
+    .fleet,
+    .fleet-section {
+        padding: 65px 18px;
+    }
+
+    .fleet-heading {
+        margin-bottom: 35px;
+    }
+
+    .fleet-label {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+        margin-bottom: 14px;
+    }
+
+    .fleet-heading h2 {
+        font-size: clamp(34px, 9vw, 46px);
+        letter-spacing: -1.5px;
+        line-height: 1.05;
+    }
+
+    .fleet-heading h2 em {
+        font-size: clamp(31px, 8vw, 43px);
+        letter-spacing: -1px;
+    }
+
+    .fleet-line {
+        width: 100%;
+        max-width: 180px;
+        height: 4px;
+        margin: 22px auto;
+    }
+
+    .fleet-heading p {
+        font-size: 14px;
+    }
+
+    .fleet-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .fleet-card {
+        border-radius: 22px;
+    }
+
+    .fleet-image {
+        height: 230px;
+    }
+
+    .fleet-car {
+        width: 75%;
+        max-width: 270px;
+        bottom: 20px;
+    }
+
+    .seat-badge {
+        top: 15px;
+        right: 15px;
+        padding: 9px 12px;
+        font-size: 10px;
+        gap: 7px;
+    }
+
+    .fleet-content {
+        padding: 22px 20px 25px;
+    }
+
+    .fleet-content h3 {
+        min-height: 0;
         font-size: 25px;
+    }
+
+    .fleet-divider {
+        margin: 18px 0;
+    }
+
+    .fleet-price {
+        font-size: 24px;
+    }
+
+    .fleet-buttons {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .explore-btn,
+    .reserve-btn {
+        height: 48px;
+        padding: 0 8px;
+        font-size: 10px;
+        letter-spacing: .5px;
+        border-radius: 12px;
+    }
+
+    /* About */
+    .about {
+        padding: 65px 22px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-copy h2 {
+        font-size: 31px;
+    }
+
+    .about-copy h2 em {
+        font-size: 28px;
+    }
+
+    .about-copy p {
+        font-size: 14px;
+    }
+
+    .stats {
+        gap: 24px;
+        margin-top: 25px;
+    }
+
+    .stats b {
+        font-size: 24px;
+    }
+
+    .about-pics {
+        height: 300px;
+    }
+
+    .about-pics img {
+        width: 55%;
+        height: 80%;
+        border-radius: 16px;
+    }
+
+    /* Services */
+    .services,
+    .why {
+        padding: 65px 0;
+    }
+
+    .service-grid,
+    .why-grid {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-grid article,
+    .why-grid article {
+        padding: 22px;
+        min-height: auto;
+    }
+
+    .service-grid h3,
+    .why-grid h3 {
+        font-size: 17px;
+    }
+
+    /* Tours */
+    .tours {
+        padding: 65px 0;
+    }
+
+    .tour-grid {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tour-image {
+        height: 220px;
+    }
+
+    .tour-body {
+        padding: 16px;
+    }
+
+    .tour-more {
+        margin-top: 28px;
+        font-size: 11px;
+    }
+
+    /* CTA */
+    .st-cta {
+        min-height: 0;
+        padding: 65px 18px;
+    }
+
+    .st-cta h2 {
+        font-size: clamp(32px, 9vw, 42px);
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    .st-cta h2 span {
+        font-size: clamp(35px, 10vw, 45px);
+    }
+
+    .st-cta p {
+        margin-top: 22px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .st-cta-buttons {
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 30px;
+    }
+
+    .st-cta-primary,
+    .st-cta-secondary {
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+        height: 58px;
+        padding: 0 14px;
+        gap: 12px;
+        border-radius: 15px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    /* Booking actions */
+    .booking-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .booking-actions a {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 45px 0 18px;
+    }
+
+    .footer-grid {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-grid h3 {
+        margin-bottom: 12px;
+    }
+
+    .footer-grid > div > p {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 36px);
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    /* Floating contact buttons */
+    .floating {
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
+    }
+
+    .floating a {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
     }
 }
 
-@media (max-width: 900px) {
+/* =====================================================
+   VERY SMALL MOBILE — 380px
+===================================================== */
 
-    .st-nav.mobile-open {
-        position: absolute;
+@media (max-width: 380px) {
 
-        display: flex;
 
-        flex-direction: column;
-
-        align-items: stretch;
-
-        top: 82px;
-        left: 20px;
-        right: 20px;
-
-        height: auto;
-
-        padding: 10px;
-
-        border-radius: 18px;
-
-        background: rgba(5,16,38,.98);
+    .hero-copy h1 {
+        font-size: 33px;
     }
 
-    .st-nav.mobile-open a {
-        height: 48px;
+    .hero-card img,
+    .hero-card .st-preview-img {
+        height: 180px;
     }
 
+    .fleet-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .st-cta-primary,
+    .st-cta-secondary {
+        font-size: 11px;
+    }
 }

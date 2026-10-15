@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Service Areas | Smile Taxi Service Bangalore</title>
+  <meta name="description" content="Book Smile Taxi for local travel, airport transfers and outstation journeys across Bangalore and South India.">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/areas.css">
+          <link rel="stylesheet" href="/header.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+<div id="siteHeader"></div>
+<script src="/header.js"></script>
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="areas-hero">
+    <div class="areas-hero-overlay"></div>
+
+    <div class="areas-hero-content">
+      <span class="areas-eyebrow">
+        <i class="fa-solid fa-location-dot"></i>
+        OUR SERVICE NETWORK
+      </span>
+
+      <h1>Areas <em>We Serve</em></h1>
+
+      <p>
+        Reliable taxi services across Bangalore and beyond.
+        Wherever your journey begins, Smile Taxi is ready to take you there.
+      </p>
+
+      <div class="areas-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Areas We Serve</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="areas-intro">
+    <div class="areas-intro-inner">
+      <div>
+        <span class="areas-label">YOUR JOURNEY STARTS HERE</span>
+        <h2>Taxi Service Across <em>Bangalore</em></h2>
+      </div>
+
+      <p>
+        From everyday city rides to airport transfers, business travel
+        and outstation trips, we offer convenient pickup options across
+        major Bangalore neighbourhoods and popular South Indian destinations.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEARCH AND AREAS -->
+  <section class="areas-directory">
+    <div class="areas-section-heading">
+      <span class="areas-label">FIND YOUR LOCATION</span>
+      <h2>Explore Our <em>Service Areas</em></h2>
+      <p>Search for your neighbourhood or choose a region below.</p>
+    </div>
+
+    <div class="areas-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="search"
+        id="areaSearch"
+        placeholder="Search your area..."
+        aria-label="Search service areas"
+      >
+      <button type="button" id="clearSearch" aria-label="Clear search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="area-filters">
+      <button class="area-filter active" data-region="all">All Areas</button>
+      <button class="area-filter" data-region="central">Central</button>
+      <button class="area-filter" data-region="east">East Bangalore</button>
+      <button class="area-filter" data-region="south">South Bangalore</button>
+      <button class="area-filter" data-region="north">North Bangalore</button>
+      <button class="area-filter" data-region="west">West Bangalore</button>
+      <button class="area-filter" data-region="outstation">Outstation</button>
+    </div>
+
+    <div class="areas-results">
+      <div>
+        <span class="areas-label">OUR COVERAGE</span>
+        <h3>Popular Pickup Locations</h3>
+      </div>
+      <span id="areaCount" class="area-count">Loading areas...</span>
+    </div>
+
+    <div class="areas-grid" id="areasGrid">
+
+      <!-- CENTRAL -->
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>MG Road</h3>
+          <p>Cab pickups for shopping, business meetings and city travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>Indiranagar</h3>
+          <p>Convenient local rides, airport drops and outstation trips.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-train"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>Shivajinagar</h3>
+          <p>Reliable transport for city destinations and transit connections.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-train"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>Koramangala</h3>
+          <p>Reliable transport for city destinations and transit connections.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-train"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>Brigade Road</h3>
+          <p>Reliable transport for city destinations and transit connections.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-train"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>Commercial Street</h3>
+          <p>Reliable transport for city destinations and transit connections.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-train"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>Vidhana Soudha / High Court Zone</h3>
+          <p>Reliable transport for city destinations and transit connections.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-train"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>UB City / Vittal Mallya Road</h3>
+          <p>Reliable transport for city destinations and transit connections.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="central">
+        <div class="area-card-icon"><i class="fa-solid fa-train"></i></div>
+        <div class="area-card-content">
+          <span>Central Bangalore</span>
+          <h3>Lavelle Road & Richmond Road</h3>
+          <p>Reliable transport for city destinations and transit connections.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- EAST -->
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-laptop"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>Whitefield</h3>
+          <p>Business travel, office commutes and airport transfers.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-road"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>Marathahalli</h3>
+          <p>Local rentals, corporate travel and comfortable city rides.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>KR Puram</h3>
+          <p>Pickup options for airport journeys and outstation travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>Bellandur</h3>
+          <p>Pickup options for airport journeys and outstation travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>Kadugodi</h3>
+          <p>Pickup options for airport journeys and outstation travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>Mahadevapura</h3>
+          <p>Pickup options for airport journeys and outstation travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>CV Raman Nagar</h3>
+          <p>Pickup options for airport journeys and outstation travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="east">
+        <div class="area-card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="area-card-content">
+          <span>East Bangalore</span>
+          <h3>Indiranagar </h3>
+          <p>Pickup options for airport journeys and outstation travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- SOUTH -->
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-house"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Jayanagar</h3>
+          <p>Comfortable cabs for family trips, shopping and daily travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>JP Nagar</h3>
+          <p>Local cab rentals, airport pickups and weekend getaways.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Electronic City</h3>
+          <p>Corporate transportation and long-distance cab bookings.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>BTM Layout</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Banashankari</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Basavanagudi</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>B.T.M. Layout</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Koramangala</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Bannerghatta Road</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Uttarahalli</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Kanakapura Road</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="south">
+        <div class="area-card-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="area-card-content">
+          <span>South Bangalore</span>
+          <h3>Kumaraswamy Layout</h3>
+          <p>Convenient city travel and airport transfer arrangements.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- NORTH -->
+      <article class="area-card" data-region="north">
+        <div class="area-card-icon"><i class="fa-solid fa-plane"></i></div>
+        <div class="area-card-content">
+          <span>North Bangalore</span>
+          <h3>Yelahanka</h3>
+          <p>Airport transfers, local rentals and outstation journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="north">
+        <div class="area-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="area-card-content">
+          <span>North Bangalore</span>
+          <h3>Hebbal</h3>
+          <p>Convenient cab bookings for city and airport travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="north">
+        <div class="area-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="area-card-content">
+          <span>North Bangalore</span>
+          <h3>Jakkur</h3>
+          <p>Convenient cab bookings for city and airport travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="north">
+        <div class="area-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="area-card-content">
+          <span>North Bangalore</span>
+          <h3>Nagawara</h3>
+          <p>Convenient cab bookings for city and airport travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="north">
+        <div class="area-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="area-card-content">
+          <span>North Bangalore</span>
+          <h3>Thanisandra & Hennur Road </h3>
+          <p>Convenient cab bookings for city and airport travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="north">
+        <div class="area-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="area-card-content">
+          <span>North Bangalore</span>
+          <h3>Jalahalli, Yeshwanthpur & Peenya</h3>
+          <p>Convenient cab bookings for city and airport travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="north">
+        <div class="area-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="area-card-content">
+          <span>North Bangalore</span>
+          <h3>Devanahalli & Bagalur</h3>
+          <p>Convenient cab bookings for city and airport travel.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- WEST -->
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Rajajinagar</h3>
+          <p>Family travel, local rides and outstation cab services.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Nagarbhavi</h3>
+          <p>Doorstep pickup options for local and long-distance journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Malleshwaram</h3>
+          <p>Doorstep pickup options for local and long-distance journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Vijayanagar</h3>
+          <p>Doorstep pickup options for local and long-distance journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Basaveshwaranagar</h3>
+          <p>Doorstep pickup options for local and long-distance journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Chandra Layout </h3>
+          <p>Doorstep pickup options for local and long-distance journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Mahalakshmi Layout</h3>
+          <p>Doorstep pickup options for local and long-distance journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="west">
+        <div class="area-card-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="area-card-content">
+          <span>West Bangalore</span>
+          <h3>Magadi Road</h3>
+          <p>Doorstep pickup options for local and long-distance journeys.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- OUTSTATION -->
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-landmark"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Mysore</h3>
+          <p>Book a comfortable cab for heritage visits and family trips.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Coorg</h3>
+          <p>Plan a scenic getaway with a chauffeur-driven vehicle.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Chikmagalur</h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Nandi Hills</h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Kabini / Nagarhole  </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Shivanasamudra Falls  </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Srirangapatna </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Sakleshpur </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Ooty & Coonoor</h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Wayanad </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Pondicherry </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Hampi  </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Badami, Aihole, and Pattadakal </h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Gokarna</h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Dandeli</h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="area-card-content">
+          <span>Karnataka</span>
+          <h3>Udupi & Murudeshwar</h3>
+          <p>Travel to hill stations and coffee estates in comfort.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-mountain"></i></div>
+        <div class="area-card-content">
+          <span>Tamil Nadu</span>
+          <h3>Ooty</h3>
+          <p>Book an outstation cab for a relaxing hill-station holiday.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-mountain"></i></div>
+        <div class="area-card-content">
+          <span>Tamil Nadu</span>
+          <h3>Kodaikanal</h3>
+          <p>Book an outstation cab for a relaxing hill-station holiday.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-mountain"></i></div>
+        <div class="area-card-content">
+          <span>Tamil Nadu</span>
+          <h3>Rameswaram</h3>
+          <p>Book an outstation cab for a relaxing hill-station holiday.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-mountain"></i></div>
+        <div class="area-card-content">
+          <span>Tamil Nadu</span>
+          <h3>Thanjavur</h3>
+          <p>Book an outstation cab for a relaxing hill-station holiday.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-mountain"></i></div>
+        <div class="area-card-content">
+          <span>Tamil Nadu</span>
+          <h3>Mahabalipuram</h3>
+          <p>Book an outstation cab for a relaxing hill-station holiday.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="area-card" data-region="outstation">
+        <div class="area-card-icon"><i class="fa-solid fa-mountain"></i></div>
+        <div class="area-card-content">
+          <span>Tamil Nadu</span>
+          <h3>Kanchipuram</h3>
+          <p>Book an outstation cab for a relaxing hill-station holiday.</p>
+          <a href="tel:+919019993283">Book a Taxi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="areas-empty" id="areasEmpty" hidden>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <h3>No matching areas found</h3>
+      <p>Try another location or contact us to ask about your pickup area.</p>
+      <a href="tel:+919019993283">Contact Smile Taxi</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="areas-services">
+    <div class="areas-section-heading">
+      <span class="areas-label">TRAVEL YOUR WAY</span>
+      <h2>One Taxi Service, <em>Many Journeys</em></h2>
+      <p>Choose a travel option that works for your plans.</p>
+    </div>
+
+    <div class="areas-service-grid">
+      <article>
+        <i class="fa-solid fa-plane-departure"></i>
+        <h3>Airport Transfers</h3>
+        <p>Airport pickup and drop arrangements.</p>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-car-side"></i>
+        <h3>Local Rentals</h3>
+        <p>City travel, shopping and business trips.</p>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-route"></i>
+        <h3>Outstation Cabs</h3>
+        <p>Travel between cities and tourist destinations.</p>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-van-shuttle"></i>
+        <h3>Group Travel</h3>
+        <p>Vehicle options for families and groups.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="areas-cta">
+    <div>
+      <span>YOUR NEXT JOURNEY BEGINS WITH A SMILE</span>
+      <h2>Need a Taxi from Your Area?</h2>
+      <p>Contact us to discuss your pickup location and travel requirements.</p>
+    </div>
+
+    <div class="areas-cta-buttons">
+      <a href="tel:+919019993283" class="areas-call">
+        <i class="fa-solid fa-phone"></i> CALL NOW
+      </a>
+      <a href="https://wa.me/919019993283" class="areas-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WHATSAPP US
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="areas-footer">
+  <a href="index.html" class="st-logo">
+    <img src="/assets/images/taxi.png" alt="Smile Taxi">
+  </a>
+  <p>Your trusted partner for comfortable journeys across Bangalore and beyond.</p>
+  <a href="index.html">Home</a>
+  <span>© 2026 Smile Taxi Service. All rights reserved.</span>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNavigation = document.getElementById("mainNavigation");
+
+    if (menuToggle && mainNavigation) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen = mainNavigation.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+    }
+});
+</script>
+</body>
+</html>

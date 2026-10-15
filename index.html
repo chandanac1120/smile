@@ -10,7 +10,9 @@
     <title>Smile Taxi Service | Premium Car Rental in Bangalore</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+            <link rel="stylesheet" href="/header.css">
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,46 +31,8 @@
 
 
 <body>
-
-
-<header class="st-header">
-  <div class="st-header-inner">
-
-    <!-- LOGO -->
-     <a href="index.html" class="st-logo">
-  <img src="assets/images/taxi.png" alt="Smile Taxi">
-  <span class="st-logo-text">TAXI SERVICE</span>
-</a>
-
-    <!-- NAVIGATION -->
-    <nav class="st-nav">
-      <a href="index.html" class="active">HOME</a>
-      <a href="pages/about.html">ABOUT</a>
-      <a href="pages/services.html">SERVICES</a>
-      <a href="#fleet">FLEET</a>
-      <a href="tours.html">TOURS</a>
-      <a href="areas.html">AREAS WE SERVE</a>
-    </nav>
-
-    <!-- RIGHT BUTTONS -->
-    <div class="st-header-actions">
-
-      
-
-      <a href="#booking" class="st-book">
-        BOOK NOW
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </a>
-
-    </div>
-
-    <button class="st-mobile-menu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-
-  </div>
-</header>
-
+<div id="siteHeader"></div>
+<script src="/header.js"></script>
 
 <!-- ================= HERO ================= -->
 
@@ -1462,22 +1426,31 @@
 
 </div>
 
-
-<!-- MOBILE MENU SCRIPT -->
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const mobileMenu = document.querySelector(".mobile-menu");
-    const navigation = document.querySelector(".desktop-nav");
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNavigation = document.getElementById("mainNavigation");
 
-    if (mobileMenu && navigation) {
-        mobileMenu.addEventListener("click", function () {
-            navigation.classList.toggle("open");
-        });
-    }
+  if (!menuToggle || !mainNavigation) return;
+
+  menuToggle.addEventListener("click", function () {
+    const isOpen = mainNavigation.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+
+  mainNavigation.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      mainNavigation.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+  });
 });
 </script>
-
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {

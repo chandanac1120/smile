@@ -1,636 +1,95 @@
-/* =========================================================
-   SMILE TAXI - RESPONSIVE STYLES
-   ========================================================= */
-
-
-/* =========================================================
-   LARGE TABLETS / SMALL LAPTOPS
-   ========================================================= */
-
-@media (max-width: 1200px) {
-
-    .container {
-        width: min(1100px, 92%);
-    }
-
-    .nav-menu {
-        gap: 18px;
-    }
-
-    .nav-menu > a,
-    .nav-dropdown > a {
-        font-size: 13px;
-    }
-
-    .hero-content {
-        gap: 45px;
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .destinations-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+/* LOGO */
+.st-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  line-height: 1;
 }
 
-
-/* =========================================================
-   TABLETS
-   ========================================================= */
-
-@media (max-width: 992px) {
-
-    .section-padding {
-        padding: 80px 0;
-    }
-
-
-    /* NAVBAR */
-
-    .nav-menu,
-    .nav-book-btn {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .mobile-menu {
-        position: fixed;
-        top: 86px;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-        padding: 18px 6%;
-        background: #ffffff;
-        box-shadow: 0 15px 30px rgba(0, 30, 60, 0.12);
-
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: 0.3s ease;
-    }
-
-    .mobile-menu.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .mobile-menu > a {
-        padding: 13px 5px;
-        border-bottom: 1px solid #edf0f4;
-        color: #17263c;
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .mobile-menu > a:hover {
-        color: #0878ca;
-    }
-
-    .mobile-menu .mobile-book {
-        margin-top: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border: none;
-        border-radius: 8px;
-        background: #f5bd20;
-        color: #142238;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        min-height: auto;
-        padding: 140px 0 70px;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .hero-text {
-        max-width: 750px;
-    }
-
-    .hero h1 {
-        font-size: clamp(45px, 7vw, 65px);
-    }
-
-    .booking-card {
-        width: min(600px, 100%);
-    }
-
-
-    /* TRUST BAR */
-
-    .trust-container {
-        grid-template-columns: 1fr 1fr;
-        padding: 15px 0;
-    }
-
-    .trust-item {
-        min-height: 75px;
-    }
-
-    .trust-item:nth-child(2) {
-        border-right: none;
-    }
-
-
-    /* ABOUT */
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .about-image {
-        max-width: 650px;
-    }
-
-    .about-content {
-        max-width: 750px;
-    }
-
-
-    /* SERVICES */
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    /* FLEET */
-
-    .fleet-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .fleet-card:last-child {
-        grid-column: 1 / -1;
-        max-width: 500px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-
-    /* WHY */
-
-    .why-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .why-content {
-        max-width: 750px;
-    }
-
-    .why-image {
-        max-width: 700px;
-    }
-
-
-    /* CORPORATE */
-
-    .corporate-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .corporate-image {
-        max-width: 700px;
-    }
-
-
-    /* TESTIMONIALS */
-
-    .testimonial-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .testimonial-card:last-child {
-        grid-column: 1 / -1;
-        max-width: 500px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-
-    /* CTA */
-
-    .cta-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-
-    /* CONTACT */
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .contact-info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    /* FOOTER */
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 45px;
-    }
-
+.st-logo img {
+  width: 100px;
+  height: 55px;
+  object-fit: contain;
+  display: block;
 }
 
+.st-logo::after {
+  content: "TAXI SERVICE";
+  display: block;
+  margin-top: 4px;
+  color: #f5bf00;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
+/* MOBILE VERSION */
 @media (max-width: 768px) {
-
-    .container {
-        width: 90%;
-    }
-
-    .section-padding {
-        padding: 65px 0;
-    }
-
-
-    /* NAVBAR */
-
-    .navbar {
-        background: rgba(255, 255, 255, 0.98);
-    }
-
-    .nav-container {
-        min-height: 75px;
-    }
-
-    @media (max-width: 700px) {
-
-    .brand {
-        width: 90px;
-        height: 42px;
-    }
-
-    .logo-img {
-        width: 90px;
-        max-height: 42px;
-    }
-
-}
-
-    .mobile-menu {
-        top: 75px;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        padding: 120px 0 55px;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-        letter-spacing: -0.5px;
-    }
-
-    .hero-text p {
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .hero-tag {
-        font-size: 10px;
-    }
-
-    .hero-buttons {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
-    }
-
-    .booking-card {
-        padding: 22px;
-        border-radius: 12px;
-    }
-
-    .booking-header h3 {
-        font-size: 18px;
-    }
-
-
-    /* FORM */
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-
-    /* TRUST */
-
-    .trust-container {
-        grid-template-columns: 1fr;
-    }
-
-    .trust-item {
-        justify-content: flex-start;
-        padding: 15px 5px;
-        border-right: none;
-        border-bottom: 1px solid #edf0f4;
-    }
-
-    .trust-item:last-child {
-        border-bottom: none;
-    }
-
-
-    /* SECTION HEADINGS */
-
-    .section-heading h2,
-    .about-content h2,
-    .why-content h2,
-    .corporate-content h2 {
-        font-size: 34px;
-    }
-
-    .section-heading p {
-        font-size: 13px;
-    }
-
-
-    /* ABOUT */
-
-    .about-image,
-    .about-image > img {
-        min-height: 380px;
-        height: 380px;
-    }
-
-    .experience-card {
-        right: 15px;
-        bottom: 20px;
-        width: 165px;
-        padding: 16px;
-    }
-
-    .experience-card strong {
-        font-size: 32px;
-    }
-
-    .experience-card span {
-        font-size: 10px;
-    }
-
-    .about-features {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* SERVICES */
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card p {
-        min-height: auto;
-    }
-
-
-    /* DESTINATIONS */
-
-    .destinations-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .destination-card {
-        height: 330px;
-    }
-
-
-    /* FLEET */
-
-    .fleet-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .fleet-card:last-child {
-        grid-column: auto;
-        max-width: none;
-    }
-
-
-    /* WHY */
-
-    .why-image > img {
-        height: 380px;
-    }
-
-    .rating-card {
-        left: 15px;
-        bottom: 20px;
-    }
-
-
-    /* PACKAGES */
-
-    .packages-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .package-card > img {
-        height: 220px;
-    }
-
-
-    /* CORPORATE */
-
-    .corporate-image img {
-        height: 360px;
-    }
-
-    .corporate-features {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* TESTIMONIALS */
-
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .testimonial-card:last-child {
-        grid-column: auto;
-        max-width: none;
-    }
-
-    .testimonial-card > p {
-        min-height: auto;
-    }
-
-
-    /* CTA */
-
-    .cta-section {
-        padding: 50px 0;
-    }
-
-    .cta-container h2 {
-        font-size: 31px;
-    }
-
-    .cta-buttons {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .cta-btn {
-        width: 100%;
-    }
-
-
-    /* CONTACT */
-
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-        padding: 22px;
-    }
-
-
-    /* FOOTER */
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 55px 0 40px;
-    }
-
-    .footer-about p {
-        max-width: 400px;
-    }
-
-    .footer-bottom-inner {
-        min-height: auto;
-        padding: 20px 0;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-
-    /* FLOATING BUTTONS */
-
-    .floating-whatsapp,
-    .floating-call {
-        width: 45px;
-        height: 45px;
-        right: 15px;
-        font-size: 17px;
-    }
-
-    .floating-whatsapp {
-        bottom: 72px;
-    }
-
-    .floating-call {
-        bottom: 17px;
-    }
-
+  .st-header-inner {
+    min-height: 70px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .st-logo img {
+    width: 75px;
+    height: 42px;
+  }
+
+  .st-logo::after {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+  }
+
+  .st-mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .st-header-actions {
+    display: none;
+  }
+
+  .st-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 18px 20px;
+    background: #0b1428;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .st-nav.open {
+    display: flex;
+  }
+
+  .st-nav a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+  }
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
 
-@media (max-width: 480px) {
-
-    .container {
-        width: 91%;
-    }
-
-    .hero {
-        padding-top: 110px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero-text p {
-        font-size: 13px;
-    }
-
-    .hero-tag {
-        padding: 7px 10px;
-        font-size: 9px;
-    }
-
-    .booking-card {
-        padding: 18px;
-    }
-
-    .booking-icon {
-        width: 42px;
-        height: 42px;
-    }
-
-    .section-heading h2,
-    .about-content h2,
-    .why-content h2,
-    .corporate-content h2 {
-        font-size: 30px;
-    }
-
-    .about-image,
-    .about-image > img {
-        height: 320px;
-        min-height: 320px;
-    }
-
-    .why-image > img {
-        height: 320px;
-    }
-
-    .corporate-image img {
-        height: 300px;
-    }
-
-    .destination-card {
-        height: 300px;
-    }
-
-    .footer-logo img {
-        width: 135px;
-    }
-
-}
