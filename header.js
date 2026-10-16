@@ -1,63 +1,73 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   const placeholder = document.getElementById("siteHeader");
-
   if (!placeholder) return;
 
-  try {
-    const response = await fetch("./header.html");
+  // Support both GitHub Pages and local Live Server.
+  const base = location.hostname === "chandanac1120.github.io"
+    ? "/smile/"
+    : "/";
 
-    if (!response.ok) {
-      throw new Error("Could not load header.html");
-    }
+  try {
+    const response = await fetch(base + "header.html");
+    if (!response.ok) throw new Error("Header could not load");
 
     placeholder.innerHTML = await response.text();
 
-    // Mobile menu
+    // Correct navigation paths for every page.
+    const pages = {
+      "home": "index.html",
+      "about": "pages/about.html",
+      "services": "pages/services.html",
+      "fleet": "index.html#fleet",
+      "tours": "pages/tour.html",
+      "areas we serve": "areas.html"
+    };
+
+    document.querySelectorAll("#mainNavigation a").forEach(link => {
+      const label = link.textContent.trim().toLowerCase();
+      const page = pages[label];
+
+      if (page) link.href = base + page;
+
+      link.classList.remove("active");
+
+      const target = new URL(link.href);
+      const current = location.pathname.replace(/\/+$/, "");
+      const destination = target.pathname.replace(/\/+$/, "");
+
+      if (
+        !target.hash &&
+        current === destination
+      ) {
+        link.classList.add("active");
+      }
+    });
+
+    // Mobile menu open / close.
     const menuButton = document.getElementById("menuToggle");
     const navigation = document.getElementById("mainNavigation");
 
-    menuButton?.addEventListener("click", () => {
-      if (!navigation) return;
+    if (menuButton && navigation) {
+      menuButton.setAttribute("aria-expanded", "false");
 
-      const isOpen = navigation.classList.toggle("open");
+      menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
 
-      menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
 
-      menuButton.innerHTML = isOpen
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-    });
-
-    // Highlight the correct navigation link
-    const currentPath =
-      window.location.pathname.replace(/\/+$/, "") || "/";
-
-    document.querySelectorAll("#mainNavigation a").forEach(link => {
-      const linkUrl = new URL(link.href);
-      const linkPath =
-        linkUrl.pathname.replace(/\/+$/, "") || "/";
-
-      const isHome =
-        currentPath === "/" ||
-        currentPath.endsWith("/index.html");
-
-      const isLinkHome =
-        linkPath === "/" ||
-        linkPath.endsWith("/index.html");
-
-      // Never highlight links pointing to page sections
-      const isSectionLink = linkUrl.hash !== "";
-
-      const shouldBeActive = isSectionLink
-        ? false
-        : isHome
-          ? isLinkHome
-          : linkPath === currentPath;
-
-      link.classList.toggle("active", shouldBeActive);
-    });
-
+      navigation.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          navigation.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+      });
+    }
   } catch (error) {
     console.error("Header loading failed:", error);
   }
