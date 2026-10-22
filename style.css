@@ -97,6 +97,8 @@ button{font:inherit}
     font-size: 15px;
 }
 
+
+
 /* MOBILE */
 
 @media (max-width: 768px) {
@@ -112,6 +114,9 @@ button{font:inherit}
         height: 200px;
     }
 }
+
+
+
 
 
 /* =================================
@@ -1564,13 +1569,13 @@ font-size: 71px;
 }
 
 .st-preview-info strong {
-    display: block;
+    display: inline;
 
-    font-size: 21px;
+    font-size: 18px;
 
-    line-height: 1.1;
+    line-height: 0.8;
 
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
@@ -2074,16 +2079,16 @@ img {
     }
 
     .st-preview-info {
-        left: 12px;
-        right: 12px;
-        bottom: 12px;
-        min-height: 70px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        min-height: 50px;
         padding: 12px;
         border-radius: 13px;
     }
 
     .st-preview-info strong {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .st-preview-info small {
