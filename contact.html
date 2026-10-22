@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Smile Taxi Service</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="./pages/contact.css">
+  <link rel="stylesheet" href="../responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+  <script src="../header.js"></script>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-hero-overlay"></div>
+      <div class="contact-hero-content">
+        <span class="contact-eyebrow"><i class="fa-solid fa-headset"></i> WE'RE HERE TO HELP</span>
+        <h1>Let's Plan Your <span>Next Journey.</span></h1>
+        <p>Have a question or need a taxi? Contact Smile Taxi Service for airport transfers, local rides, outstation trips and tour bookings from Bengaluru.</p>
+        <div class="contact-hero-buttons">
+          <a class="contact-btn contact-btn-primary" href="tel:+919019993283"><i class="fa-solid fa-phone"></i> CALL US NOW</a>
+          <a class="contact-btn contact-btn-secondary" href="https://wa.me/919019993283" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WHATSAPP US</a>
+        </div>
+      </div>
+      <div class="contact-hero-bottom">
+        <span>YOUR JOURNEY, OUR RESPONSIBILITY</span>
+        <span><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</span>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-heading">
+        <span class="contact-label">GET IN TOUCH</span>
+        <h2>We'd Love to <span>Hear From You</span></h2>
+        <p>Reach out to discuss your travel plans. We'll help you choose a suitable ride for your journey.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <article class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div><h3>Call Us</h3><p>Speak to us about your taxi requirements.</p><a href="tel:+919019993283">+91 90199 93283</a></div>
+          </article>
+          <article class="contact-info-card">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><h3>WhatsApp</h3><p>Send your trip details and questions.</p><a href="https://wa.me/919019993283" target="_blank" rel="noopener">Chat with us</a></div>
+          </article>
+          <article class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div><h3>Service Location</h3><p>Bengaluru, Karnataka, India</p><span>Local • Airport • Outstation • Tours</span></div>
+          </article>
+          <div class="contact-note">
+            <i class="fa-solid fa-car-side"></i>
+            <div><strong>Planning a trip?</strong><p>Share your pickup location, destination, travel date and passenger count when you contact us.</p></div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <span class="contact-label">SEND AN ENQUIRY</span>
+          <h2>Tell Us About Your Trip</h2>
+          <p>Fill in your details and continue through WhatsApp to send your enquiry.</p>
+
+          <div class="contact-form-grid">
+            <label>Full Name
+              <input type="text" id="contactName" name="name" placeholder="Enter your name" required>
+            </label>
+            <label>Phone Number
+              <input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number" required>
+            </label>
+            <label>Service Required
+              <select id="contactService" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Airport Taxi</option>
+                <option>Local Rental</option>
+                <option>Outstation Cab</option>
+                <option>Tour Package</option>
+                <option>Car Rental</option>
+                <option>Other Enquiry</option>
+              </select>
+            </label>
+            <label>Travel Date (optional)
+              <input type="date" id="contactDate" name="date">
+            </label>
+            <label class="contact-full">Pickup Location
+              <input type="text" id="contactPickup" name="pickup" placeholder="Where should we pick you up?">
+            </label>
+            <label class="contact-full">Destination
+              <input type="text" id="contactDestination" name="destination" placeholder="Where are you travelling to?">
+            </label>
+            <label class="contact-full">Message
+              <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us about your trip or question"></textarea>
+            </label>
+          </div>
+          <button class="contact-submit" type="submit">SEND ENQUIRY ON WHATSAPP <i class="fa-solid fa-arrow-right"></i></button>
+          <p class="contact-form-note">Your message will open in WhatsApp for you to review and send.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <div>
+        <span class="contact-label">READY WHEN YOU ARE</span>
+        <h2>Your Ride Is Just a Call Away.</h2>
+        <p>Contact Smile Taxi Service to discuss your next journey.</p>
+      </div>
+      <a href="tel:+919019993283" class="contact-btn contact-btn-primary"><i class="fa-solid fa-phone"></i> +91 90199 93283</a>
+    </section>
+  </main>
+
+  <footer class="contact-footer">
+    <a href="../index.html" class="st-logo">
+      <img src="../assets/images/taxi.png" alt="Smile Taxi">
+      <span class="st-logo-text">SMILE TAXI<br>SERVICE</span>
+    </a>
+    <p>Comfortable journeys. Memorable destinations.</p>
+    <div class="contact-footer-links">
+      <a href="../index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./services.html">Services</a>
+      <a href="./tour.html">Tours</a>
+      <a href="../areas.html">Areas We Serve</a>
+    </div>
+    <p class="contact-copyright">&copy; <span id="contactYear"></span> Smile Taxi Service. All rights reserved.</p>
+  </footer>
+
+  <a class="contact-floating-call" href="tel:+919019993283" aria-label="Call Smile Taxi"><i class="fa-solid fa-phone"></i></a>
+  <a class="contact-floating-whatsapp" href="https://wa.me/919019993283" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("contactYear").textContent = new Date().getFullYear();
+
+      const menu = document.getElementById("menuToggle");
+      const nav = document.getElementById("mainNavigation");
+      if (menu && nav) {
+        menu.addEventListener("click", function () {
+          const open = nav.classList.toggle("open");
+          menu.setAttribute("aria-expanded", String(open));
+          menu.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            nav.classList.remove("open");
+            menu.setAttribute("aria-expanded", "false");
+            menu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      const dateInput = document.getElementById("contactDate");
+      if (dateInput) dateInput.min = new Date().toISOString().split("T")[0];
+
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name = document.getElementById("contactName").value.trim();
+        const phone = document.getElementById("contactPhone").value.trim();
+        const service = document.getElementById("contactService").value;
+        const date = document.getElementById("contactDate").value;
+        const pickup = document.getElementById("contactPickup").value.trim();
+        const destination = document.getElementById("contactDestination").value.trim();
+        const message = document.getElementById("contactMessage").value.trim();
+
+        const text = [
+          "Hello Smile Taxi Service, I would like to make an enquiry.",
+          "Name: " + name,
+          "Phone: " + phone,
+          "Service: " + service,
+          date ? "Travel date: " + date : "",
+          pickup ? "Pickup: " + pickup : "",
+          destination ? "Destination: " + destination : "",
+          message ? "Message: " + message : ""
+        ].filter(Boolean).join("\\n");
+
+        window.open("https://wa.me/919019993283?text=" + encodeURIComponent(text), "_blank", "noopener");
+      });
+    });
+  </script>
+</body>
+</html>

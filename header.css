@@ -649,3 +649,58 @@ body {
   }
 }
 
+
+/* ===== SMILE TAXI LOGO FIX ===== */
+
+.st-header .st-logo {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  text-decoration: none !important;
+  line-height: 1.3 !important;
+}
+
+.st-header .st-logo img {
+  display: block !important;
+  width: 100px !important;
+  height: 65px !important;
+  object-fit: contain !important;
+}
+
+.st-header .st-logo .st-logo-text {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 3px !important;
+  color: #f5bd18 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  white-space: normal !important;
+}
+
+/* Mobile and tablet */
+@media (max-width: 1000px) {
+  .st-header .st-logo {
+    flex-basis: 125px !important;
+    width: 125px !important;
+  }
+
+  .st-header .st-logo img {
+    width: 82px !important;
+    height: 48px !important;
+  }
+
+  .st-header .st-logo .st-logo-text {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+}

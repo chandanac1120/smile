@@ -1,0 +1,85 @@
+/* Smile Taxi Service | Premium Rentals page */
+:root{
+  --rent-navy:#08172c;--rent-deep:#050d1b;--rent-gold:#efbd39;
+  --rent-cream:#f7f5ef;--rent-ink:#17243a;--rent-muted:#68758a;
+  --rent-line:#e4e8ee;
+}
+.rentals-page{color:var(--rent-ink);font-family:"DM Sans",sans-serif}
+.rentals-page *{box-sizing:border-box}
+.rental-hero{position:relative;isolation:isolate;min-height:630px;display:flex;align-items:center;overflow:hidden;padding:130px max(6%,calc((100% - 1220px)/2));color:white;background:linear-gradient(110deg,rgba(4,12,27,.98) 0%,rgba(6,19,40,.94) 48%,rgba(9,27,51,.73) 100%),url("../assets/images/why-taxi.png") center/cover no-repeat}
+.rental-hero:after{content:"";position:absolute;z-index:-1;right:-120px;bottom:-250px;width:620px;height:620px;border:1px solid rgba(239,189,57,.2);border-radius:50%;box-shadow:0 0 0 65px rgba(239,189,57,.035),0 0 0 130px rgba(239,189,57,.025)}
+.rental-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,10,23,.25),transparent);z-index:-1}
+.rental-hero-inner{max-width:740px;position:relative;z-index:1}
+.rental-kicker,.rental-section-tag{display:inline-flex;align-items:center;gap:10px;color:#dcae30;font-size:11px;font-weight:900;letter-spacing:2.2px}
+.rental-hero h1{font-size:clamp(54px,7.4vw,92px);line-height:.99;letter-spacing:-3.5px;margin:25px 0 22px;font-weight:900}
+.rental-hero h1 em,.rental-intro h2 em,.rental-centered-heading h2 em,.rental-enquiry h2 em{font-family:"Playfair Display",serif;color:var(--rent-gold);font-weight:600}
+.rental-hero-inner>p{max-width:580px;color:#cbd4e2;font-size:16px;line-height:1.85}
+.rental-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.rental-btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:0 22px;border-radius:5px;text-decoration:none;font-size:11px;letter-spacing:.8px;font-weight:900;transition:transform .2s,background .2s}
+.rental-btn:hover{transform:translateY(-2px)}
+.rental-btn-gold{background:var(--rent-gold);color:#111b2b}
+.rental-btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.045)}
+.rental-trust-row{display:flex;flex-wrap:wrap;gap:24px;margin-top:52px;padding-top:22px;border-top:1px solid rgba(255,255,255,.17);color:#d8deea;font-size:11px;font-weight:700}
+.rental-trust-row span{display:flex;align-items:center;gap:9px}.rental-trust-row i{color:var(--rent-gold)}
+.rental-hero-stamp{position:absolute;right:max(7%,calc((100% - 1220px)/2));bottom:58px;display:flex;align-items:center;gap:12px;padding:18px 20px;border:1px solid rgba(239,189,57,.5);background:rgba(5,14,29,.65);color:var(--rent-gold);font-size:10px;line-height:1.55;font-weight:900;letter-spacing:1.2px}
+.rental-hero-stamp i{font-size:29px}
+.section-shell{width:min(1220px,88%);margin-inline:auto}
+.rental-intro{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;padding-top:100px;padding-bottom:55px}
+.rental-intro h2,.rental-enquiry h2{margin:17px 0 0;font-size:clamp(35px,4.3vw,55px);line-height:1.08;letter-spacing:-1.8px}
+.rental-intro h2 em,.rental-centered-heading h2 em{color:#b58b1f}
+.rental-intro-copy p{color:var(--rent-muted);font-size:15px;line-height:1.85;margin:0 0 15px}
+.rental-small-note{display:flex;align-items:flex-start;gap:9px!important;font-size:12px!important}.rental-small-note i{color:#b58b1f;margin-top:4px}
+.rental-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding-bottom:105px}
+.rental-option{min-height:300px;padding:27px 23px 25px;border:1px solid var(--rent-line);background:#fff;position:relative;transition:transform .2s,box-shadow .2s}
+.rental-option:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(8,23,44,.09)}
+.rental-option-featured{background:var(--rent-navy);color:#fff;border-color:var(--rent-navy)}
+.rental-option-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#f8efcf;color:#7e6117;font-size:19px;margin-bottom:23px}
+.rental-option-no{font-size:10px;letter-spacing:1.5px;color:#a2832c;font-weight:900}
+.rental-option h3{font-size:20px;margin:11px 0;color:inherit;letter-spacing:-.5px}
+.rental-option p{font-size:13px;line-height:1.8;color:var(--rent-muted);min-height:70px}
+.rental-option-featured p{color:#c5cfdf}
+.rental-option a{display:inline-flex;gap:9px;align-items:center;margin-top:16px;color:#886915;text-decoration:none;font-size:11px;line-height:1.5;font-weight:900}
+.rental-option-featured a{color:var(--rent-gold)}
+.rental-process{background:var(--rent-cream);padding:86px 0 94px}
+.rental-centered-heading{text-align:center}
+.rental-centered-heading h2{font-size:clamp(32px,4vw,48px);letter-spacing:-1.4px;margin:16px 0 0}
+.rental-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:54px}
+.rental-steps article{padding:0 24px;border-left:1px solid #d7d0bf}
+.rental-steps article>span{display:inline-grid;place-items:center;width:43px;height:43px;border:1px solid #d7b54b;border-radius:50%;color:#98771c;font-size:12px;font-weight:900}
+.rental-steps h3{font-size:18px;margin:18px 0 8px}
+.rental-steps p{color:var(--rent-muted);font-size:13px;line-height:1.8;margin:0;max-width:300px}
+.rental-enquiry{display:grid;grid-template-columns:.82fr 1.18fr;gap:75px;padding-top:105px;padding-bottom:105px;align-items:start}
+.rental-enquiry h2{font-size:clamp(37px,4.3vw,54px)}
+.rental-enquiry h2 em{color:#a88320}
+.rental-enquiry-copy>p{max-width:390px;color:var(--rent-muted);font-size:14px;line-height:1.85;margin-top:22px}
+.rental-contact-lines{display:grid;gap:17px;margin-top:35px}
+.rental-contact-lines a{display:flex;align-items:center;gap:15px;text-decoration:none;color:var(--rent-ink);font-size:14px;font-weight:800}
+.rental-contact-lines>a>i{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#f8efcf;color:#816318;font-size:18px}
+.rental-contact-lines small{display:block;font-size:9px;letter-spacing:1.5px;color:#8b95a4;margin-bottom:5px}
+.rental-form{padding:34px;border:1px solid var(--rent-line);box-shadow:0 20px 60px rgba(7,24,47,.075);background:white;border-radius:8px}
+.rental-form-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:19px;border-bottom:1px solid var(--rent-line);margin-bottom:22px}
+.rental-form-heading span{font-size:12px;font-weight:900;letter-spacing:1.5px}
+.rental-form-heading p{margin:0;color:#8a94a3;font-size:10px}
+.rental-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px 15px}
+.rental-form label{display:flex;flex-direction:column;gap:8px;font-size:11px;font-weight:800;color:#29364b}
+.rental-form input,.rental-form select{width:100%;min-width:0;min-height:47px;padding:12px 13px;border:1px solid #dfe4ec;border-radius:4px;background:#fbfcfe;color:#17243a;font:inherit;font-size:12px;outline:none}
+.rental-form input:focus,.rental-form select:focus{border-color:#c39b2b;box-shadow:0 0 0 3px rgba(239,189,57,.14)}
+.rental-wide{grid-column:1/-1}
+.rental-submit{width:100%;min-height:53px;margin-top:22px;border:0;border-radius:4px;background:var(--rent-navy);color:#fff;display:flex;justify-content:center;align-items:center;gap:11px;font-size:11px;font-weight:900;letter-spacing:1px;cursor:pointer;transition:background .2s}
+.rental-submit:hover{background:#172e50}.rental-submit i{color:#69d89a;font-size:17px}
+.rental-privacy-note{text-align:center;color:#8791a0;font-size:10px;margin:14px 0 0}.rental-privacy-note i{margin-right:5px}
+.rental-bottom-cta{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:50px max(6%,calc((100% - 1220px)/2));background:#f6f3e9}
+.rental-bottom-cta>div>span{color:#94751f;font-size:10px;font-weight:900;letter-spacing:1.7px}
+.rental-bottom-cta h2{font-size:clamp(28px,3vw,38px);letter-spacing:-1px;margin:10px 0 7px}
+.rental-bottom-cta p{margin:0;color:var(--rent-muted);font-size:13px}
+.rental-btn-dark{background:var(--rent-navy);color:#fff;white-space:nowrap}
+.rental-footer{padding:43px 6% 24px;text-align:center;background:#050f20;color:#c9d1de}
+.rental-footer-brand{font-size:22px;font-weight:900;letter-spacing:2px;color:white;text-decoration:none}.rental-footer-brand span{color:var(--rent-gold);font-size:11px;letter-spacing:1.5px;margin-left:7px}
+.rental-footer>p{font-size:12px;color:#aab5c6;margin:12px 0 22px}
+.rental-footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;margin-bottom:24px}
+.rental-footer nav a{color:#e5e9f0;text-decoration:none;font-size:12px}.rental-footer nav a:hover{color:var(--rent-gold)}
+.rental-footer>small{display:block;padding-top:19px;border-top:1px solid rgba(255,255,255,.12);font-size:10px;color:#8f9aab}
+.rental-float-wa{position:fixed;z-index:999;right:22px;bottom:23px;width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:#20b95a;color:white;text-decoration:none;font-size:25px;box-shadow:0 8px 24px #0003}
+@media(max-width:1000px){.rental-options{grid-template-columns:repeat(2,minmax(0,1fr))}.rental-enquiry{gap:35px}.rental-hero-stamp{right:5%;bottom:35px}}
+@media(max-width:760px){.rental-hero{min-height:650px;padding:110px 6% 48px}.rental-hero h1{font-size:clamp(49px,12vw,76px);letter-spacing:-2.5px}.rental-hero-stamp{display:none}.rental-trust-row{gap:13px 18px;margin-top:36px}.rental-intro{grid-template-columns:1fr;gap:20px;padding-top:70px;padding-bottom:36px}.rental-options{padding-bottom:70px}.rental-process{padding:65px 0}.rental-steps{grid-template-columns:1fr;gap:28px;margin-top:36px}.rental-steps article{padding-left:20px}.rental-enquiry{grid-template-columns:1fr;gap:32px;padding-top:70px;padding-bottom:70px}.rental-bottom-cta{align-items:flex-start;flex-direction:column;padding:40px 6%}}
+@media(max-width:520px){.section-shell{width:88%}.rental-hero{min-height:610px;padding-top:95px}.rental-hero-inner>p{font-size:14px}.rental-hero-actions{flex-direction:column;align-items:stretch}.rental-trust-row{flex-direction:column;gap:12px}.rental-options{grid-template-columns:1fr;gap:12px}.rental-option{min-height:auto;padding:24px}.rental-option p{min-height:0}.rental-form{padding:24px 17px}.rental-form-grid{grid-template-columns:1fr}.rental-wide{grid-column:auto}.rental-form-heading{align-items:flex-start;flex-direction:column}.rental-footer nav{gap:14px 18px}.rental-footer-brand{font-size:19px}.rental-float-wa{right:15px;bottom:15px;width:47px;height:47px}}

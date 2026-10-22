@@ -17,7 +17,6 @@
 }
 
 .st-logo::after {
-  content: "TAXI SERVICE";
   display: block;
   margin-top: 4px;
   color: #f5bf00;

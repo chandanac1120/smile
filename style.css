@@ -113,6 +113,7 @@ button{font:inherit}
     }
 }
 
+
 /* HERO PREVIEW IMAGE — FULL CAR VISIBLE */
 
 .st-preview-img {
@@ -653,7 +654,7 @@ button{font:inherit}
 .stats b{display:block;font-size:28px;line-height:1.2;color:var(--navy)}
 .stats small{display:block;font-size:10px;color:#8993a2;letter-spacing:1px;font-weight:800;margin-top:5px}
 .about-pics{height:430px;position:relative;min-width:0}
-.about-pics img{position:absolute;width:53%;height:77%;object-fit:cover;border-radius:22px;box-shadow:0 16px 35px rgba(0,0,0,.15)}
+.about-pics img{position:absolute;width:48%;height:77%;object-fit:cover;border-radius:22px;box-shadow:0 16px 35px rgba(0,0,0,.15)}
 .pic-one{left:0;bottom:0}.pic-two{right:0;top:0}
 .services{background:var(--cream);padding:88px 0}
 .service-grid{width:min(1120px,calc(100% - 48px));margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}

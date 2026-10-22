@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Enquiry | Smile Taxi Service</title>
+  <meta name="description" content="Send your taxi, airport transfer, local rental or outstation travel enquiry to Smile Taxi Service in Bengaluru.">
+  <link rel="stylesheet" href="./enquiry.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<header class="topbar">
+ <a href="/index.html" class="st-logo">
+  <img src="./assets/images/taxi.png" alt="Smile Taxi">
+  <span class="st-logo-text">
+    SMILE TAXI<br>
+    SERVICE
+  </span>
+</a>
+ <a class="back-link" href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+</header>
+    <form class="form-panel" id="enquiryForm">
+      <div class="form-heading"><div><span class="form-kicker">TRAVEL ENQUIRY</span><h2>Plan your ride</h2><p>Fields marked * are required.</p></div><span class="step-icon"><i class="fa-regular fa-paper-plane"></i></span></div>
+      <div class="field-grid">
+        <label>Full name *<input id="fullName" name="fullName" type="text" placeholder="Your name" autocomplete="name" required></label>
+        <label>Contact number *<input id="phone" name="phone" type="tel" placeholder="+91" autocomplete="tel" required pattern="[0-9+() -]{8,20}" title="Enter a valid contact number"></label>
+        <label>Email address <span class="optional">OPTIONAL</span><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email"></label>
+        <label>Service required *<select id="service" name="service" required><option value="">Choose your service</option><option>Local Rental</option><option>Airport Transfer</option><option>Outstation Cab</option><option>Tour Package</option><option>Corporate Travel</option><option>Tempo Traveller / Bus Rental</option><option>Other Enquiry</option></select></label>
+        <label>Pickup location *<input id="pickup" name="pickup" type="text" placeholder="Area, airport or address" required></label>
+        <label>Destination<input id="destination" name="destination" type="text" placeholder="Where are you going?"></label>
+        <label>Travel date *<input id="travelDate" name="travelDate" type="date" required></label>
+        <label>Pickup time <span class="optional">OPTIONAL</span><input id="travelTime" name="travelTime" type="time"></label>
+        <label>Passengers<select id="passengers" name="passengers"><option>1 passenger</option><option>2 passengers</option><option>3 passengers</option><option>4 passengers</option><option>5 passengers</option><option>6 passengers</option><option>7 passengers</option><option>8+ passengers</option></select></label>
+        <label>Trip type<select id="tripType" name="tripType"><option>Not sure yet</option><option>One way</option><option>Round trip</option><option>Hourly / daily rental</option></select></label>
+        <label class="full">Additional details <span class="optional">OPTIONAL</span><textarea id="details" name="details" rows="4" placeholder="Return date, rental duration, luggage, vehicle preference or any questions…"></textarea></label>
+      </div>
+      <button class="submit-btn" type="submit">CONTINUE ON WHATSAPP <i class="fa-brands fa-whatsapp"></i></button>
+      <p class="privacy-note"><i class="fa-solid fa-lock"></i> Your details are used to respond to this enquiry.</p>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> Smile Taxi Service</span><span>Comfortable journeys. Memorable destinations.</span></footer>
+<script>
+  const dateField = document.getElementById("travelDate");
+  const today = new Date();
+  const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0,10);
+  dateField.min = localToday;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const value = id => document.getElementById(id).value.trim();
+    const rows = [
+      "Hello Smile Taxi Service, I would like to enquire about a trip.",
+      "Name: " + value("fullName"),
+      "Contact: " + value("phone"),
+      value("email") ? "Email: " + value("email") : "",
+      "Service: " + value("service"),
+      "Pickup: " + value("pickup"),
+      value("destination") ? "Destination: " + value("destination") : "",
+      "Travel date: " + value("travelDate"),
+      value("travelTime") ? "Pickup time: " + value("travelTime") : "",
+      "Passengers: " + value("passengers"),
+      "Trip type: " + value("tripType"),
+      value("details") ? "Additional details: " + value("details") : ""
+    ].filter(Boolean);
+    const whatsappUrl = "https://wa.me/919019993283?text=" + encodeURIComponent(rows.join("\n"));
+    const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    if (!opened) {
+      document.getElementById("formStatus").textContent = "WhatsApp didn't open automatically. Please allow pop-ups or call +91 90199 93283.";
+    } else {
+      document.getElementById("formStatus").textContent = "WhatsApp opened. Review your enquiry and tap Send.";
+    }
+  });
+</script>
+</body>
+</html>
