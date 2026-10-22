@@ -114,6 +114,133 @@ button{font:inherit}
 }
 
 
+/* =================================
+   SMILE TAXI - VIDEO HERO BACKGROUND
+   Keep existing hero design
+================================= */
+
+.st-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #050b18;
+}
+
+/* Video background */
+.st-hero-video {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.st-hero-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Dark overlay - keeps text readable */
+.st-hero .st-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        rgba(3, 9, 22, 0.78) 0%,
+        rgba(3, 9, 22, 0.55) 45%,
+        rgba(3, 9, 22, 0.25) 100%
+    );
+}
+
+/* Keep all existing hero elements visible */
+.st-hero-content,
+.st-preview,
+.st-prev,
+.st-next,
+.st-slider-info {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* MOBILE VIDEO FIX */
+@media (max-width: 768px) {
+
+    .st-hero-video {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background: #050b18;
+    }
+
+    .st-hero-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .st-hero .st-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(3, 9, 22, 0.45),
+            rgba(3, 9, 22, 0.78)
+        );
+    }
+}
+
+
+/* VIDEO BACKGROUND */
+.st-hero-video {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.st-hero-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Desktop */
+.st-video-desktop {
+    display: block;
+}
+
+.st-video-mobile {
+    display: none !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .st-video-desktop {
+        display: none !important;
+    }
+
+    .st-video-mobile {
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+
+
 /* HERO PREVIEW IMAGE — FULL CAR VISIBLE */
 
 .st-preview-img {
