@@ -27,6 +27,79 @@
 }
 
 
+/* =========================
+   MOBILE NAVBAR FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  .st-header {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .st-header-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Mobile menu button */
+  .st-mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10002;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 25px;
+  }
+
+  /* Navigation closed */
+  .st-nav {
+    display: none;
+  }
+
+  /* Navigation open */
+  .st-nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    background: #101b3f;
+    padding: 15px 20px;
+    gap: 0;
+    z-index: 10001;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .st-nav.open a {
+    display: block;
+    padding: 14px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .st-nav.open a:last-child {
+    border-bottom: none;
+  }
+
+  .st-nav.open a.active {
+    color: #f2c94c;
+  }
+}
+
 
 
 
