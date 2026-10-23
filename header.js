@@ -1,16 +1,16 @@
 
 (async function () {
-  const isGitHubPages =
-    location.hostname === "chandanac1120.github.io";
-
-  const base = isGitHubPages ? "/smile/" : "/";
-
   const placeholder = document.getElementById("siteHeader");
 
   if (!placeholder) {
     console.error("siteHeader placeholder not found");
     return;
   }
+
+  const isGitHubPages =
+    location.hostname === "chandanac1120.github.io";
+
+  const base = isGitHubPages ? "/smile/" : "/";
 
   try {
     const response = await fetch(base + "header.html");
@@ -21,7 +21,7 @@
 
     placeholder.innerHTML = await response.text();
 
-    // Correct navigation links
+    // Navigation links
     const pages = {
       "home": "index.html",
       "about": "pages/about.html",
@@ -34,25 +34,26 @@
 
     placeholder.querySelectorAll("a").forEach(link => {
       const label = link.textContent.trim().toLowerCase();
-      const page = pages[label];
 
-      if (page) {
-        link.href = base + page;
+      if (pages[label]) {
+        link.href = base + pages[label];
       } else if (link.classList.contains("st-logo")) {
         link.href = base + "index.html";
       }
     });
 
-    // Active page
-    const navigation = placeholder.querySelector("#mainNavigation");
+    // Active navigation link
+    const navigation =
+      placeholder.querySelector("#mainNavigation");
 
     if (navigation) {
+      const currentPath =
+        location.pathname.replace(/\/+$/, "") || "/";
+
       navigation.querySelectorAll("a").forEach(link => {
         link.classList.remove("active");
 
         const target = new URL(link.href);
-        const currentPath =
-          location.pathname.replace(/\/+$/, "") || "/";
 
         const targetPath =
           target.pathname.replace(/\/+$/, "") || "/";
@@ -70,19 +71,17 @@
   }
 })();
 
-// Mobile menu: event delegation
+// Mobile menu event delegation
 document.addEventListener("click", function (event) {
+
   const button = event.target.closest("#menuToggle");
 
-  // Toggle menu
   if (button) {
     const header = button.closest(".st-header");
-    const navigation = header?.querySelector("#mainNavigation");
+    const navigation =
+      header?.querySelector("#mainNavigation");
 
-    if (!navigation) {
-      console.error("Mobile navigation not found");
-      return;
-    }
+    if (!navigation) return;
 
     const isOpen = navigation.classList.toggle("open");
 
@@ -100,8 +99,11 @@ document.addEventListener("click", function (event) {
 
   if (link) {
     const header = link.closest(".st-header");
-    const navigation = header?.querySelector("#mainNavigation");
-    const menuButton = header?.querySelector("#menuToggle");
+    const navigation =
+      header?.querySelector("#mainNavigation");
+
+    const menuButton =
+      header?.querySelector("#menuToggle");
 
     navigation?.classList.remove("open");
 
@@ -111,4 +113,24 @@ document.addEventListener("click", function (event) {
         '<i class="fa-solid fa-bars"></i>';
     }
   }
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+  if (event.target.closest("#menuToggle")) return;
+  if (event.target.closest("#mainNavigation")) return;
+
+  document.querySelectorAll("#mainNavigation.open")
+    .forEach(navigation => {
+      navigation.classList.remove("open");
+
+      const header = navigation.closest(".st-header");
+      const button = header?.querySelector("#menuToggle");
+
+      if (button) {
+        button.setAttribute("aria-expanded", "false");
+        button.innerHTML =
+          '<i class="fa-solid fa-bars"></i>';
+      }
+    });
 });

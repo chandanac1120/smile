@@ -92,3 +92,190 @@
 
 
 
+
+/* =====================================
+   SMILE TAXI - FINAL MOBILE NAVBAR FIX
+   ===================================== */
+
+@media (max-width: 1000px) {
+
+  .st-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-height: 76px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #08172c !important;
+    z-index: 999999 !important;
+    box-sizing: border-box !important;
+  }
+
+  .st-header-inner {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 76px !important;
+    height: 76px !important;
+    padding: 6px 14px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* LOGO */
+  .st-header .st-logo {
+    display: flex !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 130px !important;
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .st-header .st-logo img {
+    width: 68px !important;
+    height: 43px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .st-header .st-logo .st-logo-text {
+    display: block !important;
+    margin-top: 2px !important;
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 1.2px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  /* HIDE PHONE + BOOK NOW */
+  .st-header .st-header-actions {
+    display: none !important;
+  }
+
+  /* HAMBURGER BUTTON */
+  .st-header #menuToggle {
+    display: flex !important;
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 42px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 1000001 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    background: #f5bd18 !important;
+    color: #101827 !important;
+    font-size: 21px !important;
+    cursor: pointer !important;
+  }
+
+  /* CLOSED MENU */
+  .st-header #mainNavigation {
+    display: none !important;
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    max-height: calc(100vh - 100px) !important;
+    overflow-y: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 3px !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255,255,255,.1) !important;
+    border-radius: 14px !important;
+    background: #19263d !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,.3) !important;
+    z-index: 1000000 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* OPEN MENU */
+  .st-header #mainNavigation.open {
+    display: flex !important;
+  }
+
+  .st-header #mainNavigation a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    height: auto !important;
+    padding: 12px 16px !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    color: #fff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .st-header #mainNavigation a.active {
+    color: #f5bd18 !important;
+    background: rgba(255,255,255,.10) !important;
+  }
+
+  body {
+    padding-top: 76px !important;
+  }
+
+  html {
+    scroll-padding-top: 85px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 360px) {
+
+  .st-header-inner {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 6px !important;
+  }
+
+  .st-header .st-logo img {
+    width: 62px !important;
+    height: 40px !important;
+  }
+
+  .st-header .st-logo .st-logo-text {
+    font-size: 7px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .st-header #menuToggle {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    flex-basis: 40px !important;
+  }
+}
