@@ -54,9 +54,8 @@ img {
 
 .about-hero {
     position: relative;
-
     height: 760px;
-    min-height: 100vh;
+    min-height: 0;
 
     display: flex;
     align-items: center;
@@ -69,7 +68,7 @@ img {
 .about-hero-image {
     position: absolute;
     inset: 0;
-    background-image: url("/assets/images/hero.jpg");
+   background-image: url("../assets/images/hero.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -1066,9 +1065,12 @@ img {
 
 @media(max-width: 600px) {
 
+   @media(max-width: 600px) {
     .about-hero {
-        min-height: 720px;
+        height: auto;
+        min-height: 650px;
     }
+}
 
     .about-hero-content {
         padding-top: 70px;

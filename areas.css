@@ -605,3 +605,235 @@ html {
     flex-basis: 40px;
   }
 }
+
+
+
+/* =====================================
+   BANGALORE - MYSORE ROUTE SECTION
+===================================== */
+
+.mysore-route-section {
+    padding: 25px 6%;
+    background: #f7f7f4;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.mysore-route-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mysore-route-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.mysore-eyebrow {
+    display: inline-block;
+    color: #a87924;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.mysore-route-heading h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+    color: #101b3f;
+    margin: 0 0 18px;
+    font-weight: 800;
+}
+
+.mysore-route-heading h2 em {
+    display: block;
+    color: #bd902f;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.mysore-route-heading p {
+    color: #687080;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.mysore-route-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.mysore-route-card {
+    position: relative;
+    padding: 36px;
+    background: #fff;
+    border: 1px solid #e9e5db;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(16, 27, 63, 0.06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.mysore-route-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(16, 27, 63, 0.12);
+}
+
+.mysore-route-card.featured {
+    border-color: #d4b76c;
+    background: linear-gradient(145deg, #fff 65%, #fbf7eb);
+}
+
+.mysore-route-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #101b3f;
+    color: #f0cf76;
+    font-size: 21px;
+    margin-bottom: 23px;
+}
+
+.mysore-route-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #a87924;
+    margin-bottom: 10px;
+}
+
+.mysore-route-card h3 {
+    color: #101b3f;
+    font-size: 24px;
+    margin: 0 0 25px;
+    font-weight: 800;
+}
+
+.mysore-route-path {
+    background: #f7f8fa;
+    border: 1px solid #eceef2;
+    border-radius: 13px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mysore-route-path > div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.mysore-route-path > div > i {
+    color: #bd902f;
+    width: 18px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.mysore-route-path > div span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mysore-route-path strong {
+    color: #101b3f;
+    font-size: 14px;
+}
+
+.mysore-route-path small {
+    color: #7a8290;
+    font-size: 12px;
+}
+
+.mysore-route-line {
+    height: 24px;
+    width: 1px;
+    background: #c7a34d;
+    margin: 5px 0 5px 8px;
+}
+
+.mysore-route-card > p {
+    color: #697282;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 22px 0;
+}
+
+.mysore-route-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #101b3f;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 19px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    transition: background .3s ease;
+}
+
+.mysore-route-btn i {
+    color: #f0cf76;
+}
+
+.mysore-route-btn:hover {
+    background: #243a70;
+}
+
+.mysore-route-note {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    color: #697282;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.mysore-route-note i {
+    color: #a87924;
+    margin-top: 3px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .mysore-route-section {
+        padding: 65px 5%;
+    }
+
+    .mysore-route-heading {
+        margin-bottom: 32px;
+    }
+
+    .mysore-route-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mysore-route-card {
+        padding: 25px 21px;
+    }
+
+    .mysore-route-card h3 {
+        font-size: 21px;
+    }
+
+    .mysore-route-note {
+        text-align: left;
+    }
+}

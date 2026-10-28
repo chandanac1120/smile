@@ -1,136 +1,106 @@
 
 (async function () {
-  const placeholder = document.getElementById("siteHeader");
+    const headerContainer = document.getElementById("siteHeader");
 
-  if (!placeholder) {
-    console.error("siteHeader placeholder not found");
-    return;
-  }
+    if (!headerContainer) return;
 
-  const isGitHubPages =
-    location.hostname === "chandanac1120.github.io";
+    const isGitHubPages = location.hostname === "chandanac1120.github.io";
+    const base = isGitHubPages ? "/smile/" : "/";
 
-  const base = isGitHubPages ? "/smile/" : "/";
+    try {
+        const response = await fetch(base + "header.html");
 
-  try {
-    const response = await fetch(base + "header.html");
-
-    if (!response.ok) {
-      throw new Error("Failed to load header.html");
-    }
-
-    placeholder.innerHTML = await response.text();
-
-    // Navigation links
-    const pages = {
-      "home": "index.html",
-      "about": "pages/about.html",
-      "services": "pages/services.html",
-      "rentals": "rentals.html",
-      "contact": "contact.html",
-      "areas we serve": "areas.html",
-      "book now": "enquiry.html"
-    };
-
-    placeholder.querySelectorAll("a").forEach(link => {
-      const label = link.textContent.trim().toLowerCase();
-
-      if (pages[label]) {
-        link.href = base + pages[label];
-      } else if (link.classList.contains("st-logo")) {
-        link.href = base + "index.html";
-      }
-    });
-
-    // Active navigation link
-    const navigation =
-      placeholder.querySelector("#mainNavigation");
-
-    if (navigation) {
-      const currentPath =
-        location.pathname.replace(/\/+$/, "") || "/";
-
-      navigation.querySelectorAll("a").forEach(link => {
-        link.classList.remove("active");
-
-        const target = new URL(link.href);
-
-        const targetPath =
-          target.pathname.replace(/\/+$/, "") || "/";
-
-        if (!target.hash && currentPath === targetPath) {
-          link.classList.add("active");
+        if (!response.ok) {
+            throw new Error("Could not load header.html");
         }
-      });
+
+        headerContainer.innerHTML = await response.text();
+
+        // Correct links for the website
+        const links = headerContainer.querySelectorAll("a");
+
+        links.forEach(function (link) {
+            const label = link.textContent.trim().toUpperCase();
+
+            const routes = {
+                "HOME": base + "index.html",
+                "ABOUT": base + "pages/about.html",
+                "SERVICES": base + "pages/services.html",
+                "RENTALS": base + "rentals.html",
+                "CONTACT": base + "contact.html",
+                "AREAS WE SERVE": base + "areas.html",
+                "BOOK NOW": base + "enquiry.html"
+            };
+
+            if (routes[label]) {
+                link.href = routes[label];
+            }
+        });
+
+        // Active navigation link
+        const currentPath = location.pathname.replace(/\/+$/, "") || "/";
+
+        headerContainer.querySelectorAll(".st-nav a").forEach(function (link) {
+            const linkPath = new URL(link.href).pathname.replace(/\/+$/, "") || "/";
+
+            if (linkPath === currentPath) {
+                link.classList.add("active");
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.classList.remove("active");
+                link.removeAttribute("aria-current");
+            }
+        });
+
+    } catch (error) {
+        console.error("Header loading error:", error);
+        headerContainer.innerHTML =
+            '<p style="padding:12px;color:#b00020;">Navigation could not load. Please refresh.</p>';
     }
-
-    console.log("Smile Taxi header loaded successfully");
-
-  } catch (error) {
-    console.error("Header loading failed:", error);
-  }
 })();
 
-// Mobile menu event delegation
+// Mobile menu
 document.addEventListener("click", function (event) {
+    const button = event.target.closest("#menuToggle");
+    const nav = document.getElementById("mainNavigation");
 
-  const button = event.target.closest("#menuToggle");
+    if (!nav) return;
 
-  if (button) {
-    const header = button.closest(".st-header");
-    const navigation =
-      header?.querySelector("#mainNavigation");
+    const menuButton = document.getElementById("menuToggle");
 
-    if (!navigation) return;
+    if (button) {
+        const isOpen = nav.classList.toggle("open");
 
-    const isOpen = navigation.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
 
-    button.setAttribute("aria-expanded", String(isOpen));
+        menuButton.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+            : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
 
-    button.innerHTML = isOpen
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
-
-    return;
-  }
-
-  // Close menu after selecting a link
-  const link = event.target.closest("#mainNavigation a");
-
-  if (link) {
-    const header = link.closest(".st-header");
-    const navigation =
-      header?.querySelector("#mainNavigation");
-
-    const menuButton =
-      header?.querySelector("#menuToggle");
-
-    navigation?.classList.remove("open");
-
-    if (menuButton) {
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.innerHTML =
-        '<i class="fa-solid fa-bars"></i>';
+        return;
     }
-  }
-});
 
-// Close menu when clicking outside
-document.addEventListener("click", function (event) {
-  if (event.target.closest("#menuToggle")) return;
-  if (event.target.closest("#mainNavigation")) return;
+    // Close menu after clicking a navigation link
+    if (event.target.closest("#mainNavigation a")) {
+        nav.classList.remove("open");
+        menuButton?.setAttribute("aria-expanded", "false");
 
-  document.querySelectorAll("#mainNavigation.open")
-    .forEach(navigation => {
-      navigation.classList.remove("open");
+        if (menuButton) {
+            menuButton.innerHTML =
+                '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        }
 
-      const header = navigation.closest(".st-header");
-      const button = header?.querySelector("#menuToggle");
+        return;
+    }
 
-      if (button) {
-        button.setAttribute("aria-expanded", "false");
-        button.innerHTML =
-          '<i class="fa-solid fa-bars"></i>';
-      }
-    });
+    // Close when clicking outside the menu
+    if (!event.target.closest("#mainNavigation")) {
+        nav.classList.remove("open");
+        menuButton?.setAttribute("aria-expanded", "false");
+
+        if (menuButton) {
+            menuButton.innerHTML =
+                '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        }
+    }
 });

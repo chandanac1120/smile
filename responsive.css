@@ -1,281 +1,244 @@
-/* LOGO */
-.st-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  text-decoration: none;
-  line-height: 1;
+
+/* =========================================
+   SMILE TAXI - RESPONSIVE HEADER
+   Shared responsive rules
+========================================= */
+
+/* Prevent unexpected sizing */
+.st-header,
+.st-header *,
+.st-header *::before,
+.st-header *::after {
+    box-sizing: border-box;
 }
 
-.st-logo img {
-  width: 100px;
-  height: 55px;
-  object-fit: contain;
-  display: block;
-}
-
-.st-logo::after {
-  display: block;
-  margin-top: 4px;
-  color: #f5bf00;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  white-space: nowrap;
-}
-
-/* MOBILE VERSION */
-@media (max-width: 768px) {
-  .st-header-inner {
-    min-height: 70px;
-    padding: 8px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .st-logo img {
-    width: 75px;
-    height: 42px;
-  }
-
-  .st-logo::after {
-    font-size: 8px;
-    letter-spacing: 1.5px;
-    margin-top: 3px;
-  }
-
-  .st-mobile-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    color: #fff;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-    padding: 8px;
-  }
-
-  .st-header-actions {
+/* Default: mobile button hidden on desktop */
+.st-header .st-mobile-menu {
     display: none;
-  }
-
-  .st-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 18px 20px;
-    background: #0b1428;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  .st-nav.open {
-    display: flex;
-  }
-
-  .st-nav a {
-    display: block;
-    width: 100%;
-    color: #fff;
-    font-size: 14px;
-  }
 }
 
-
-
-
-/* =====================================
-   SMILE TAXI - FINAL MOBILE NAVBAR FIX
-   ===================================== */
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
 
 @media (max-width: 1000px) {
 
-  .st-header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    min-height: 76px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: #08172c !important;
-    z-index: 999999 !important;
-    box-sizing: border-box !important;
-  }
+    /* Header */
+    .st-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        min-height: 76px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #08172c !important;
+        z-index: 99999 !important;
+    }
 
-  .st-header-inner {
-    position: relative !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 76px !important;
-    height: 76px !important;
-    padding: 6px 14px !important;
-    margin: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 10px !important;
-    box-sizing: border-box !important;
-  }
+    .st-header-inner {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 76px !important;
+        height: 76px !important;
+        margin: 0 !important;
+        padding: 8px 20px !important;
 
-  /* LOGO */
-  .st-header .st-logo {
-    display: flex !important;
-    flex: 0 1 auto !important;
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: 130px !important;
-    height: auto !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    line-height: 1 !important;
-  }
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 12px !important;
+    }
 
-  .st-header .st-logo img {
-    width: 68px !important;
-    height: 43px !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-  }
+    /* Logo */
+    .st-header .st-logo {
+        display: flex !important;
+        flex: 0 1 auto !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
 
-  .st-header .st-logo .st-logo-text {
-    display: block !important;
-    margin-top: 2px !important;
-    font-size: 8px !important;
-    line-height: 1.2 !important;
-    letter-spacing: 1.2px !important;
-    text-align: center !important;
-    white-space: normal !important;
-  }
+        width: auto !important;
+        max-width: 150px !important;
+        min-width: 0 !important;
+        height: auto !important;
 
-  /* HIDE PHONE + BOOK NOW */
-  .st-header .st-header-actions {
-    display: none !important;
-  }
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        text-decoration: none !important;
+    }
 
-  /* HAMBURGER BUTTON */
-  .st-header #menuToggle {
-    display: flex !important;
-    flex: 0 0 42px !important;
-    width: 42px !important;
-    min-width: 42px !important;
-    height: 42px !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-    z-index: 1000001 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
-    border-radius: 50% !important;
-    background: #f5bd18 !important;
-    color: #101827 !important;
-    font-size: 21px !important;
-    cursor: pointer !important;
-  }
+    .st-header .st-logo img {
+        display: block !important;
+        width: 75px !important;
+        max-width: 100% !important;
+        height: 44px !important;
+        object-fit: contain !important;
+    }
 
-  /* CLOSED MENU */
-  .st-header #mainNavigation {
-    display: none !important;
-    position: absolute !important;
-    top: calc(100% + 8px) !important;
-    left: 12px !important;
-    right: 12px !important;
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    max-height: calc(100vh - 100px) !important;
-    overflow-y: auto !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    justify-content: flex-start !important;
-    gap: 3px !important;
-    padding: 12px !important;
-    margin: 0 !important;
-    border: 1px solid rgba(255,255,255,.1) !important;
-    border-radius: 14px !important;
-    background: #19263d !important;
-    box-shadow: 0 12px 30px rgba(0,0,0,.3) !important;
-    z-index: 1000000 !important;
-    box-sizing: border-box !important;
-  }
+    .st-header .st-logo .st-logo-text {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 2px !important;
+        color: #f5bd18 !important;
+        font-size: 8px !important;
+        font-weight: 800 !important;
+        line-height: 1.2 !important;
+        letter-spacing: 1.2px !important;
+        text-align: center !important;
+        white-space: normal !important;
+    }
 
-  /* OPEN MENU */
-  .st-header #mainNavigation.open {
-    display: flex !important;
-  }
+    /* Hide desktop contact / booking actions */
+    .st-header .st-header-actions {
+        display: none !important;
+    }
 
-  .st-header #mainNavigation a {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    min-height: 46px !important;
-    height: auto !important;
-    padding: 12px 16px !important;
-    margin: 0 !important;
-    border: none !important;
-    border-radius: 8px !important;
-    background: transparent !important;
-    color: #fff !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    line-height: 1.4 !important;
-    text-align: left !important;
-    white-space: normal !important;
-    text-decoration: none !important;
-    box-sizing: border-box !important;
-  }
+    /* Hamburger */
+    .st-header #menuToggle {
+        display: inline-flex !important;
+        flex: 0 0 44px !important;
+        width: 44px !important;
+        min-width: 44px !important;
+        height: 44px !important;
 
-  .st-header #mainNavigation a.active {
-    color: #f5bd18 !important;
-    background: rgba(255,255,255,.10) !important;
-  }
+        align-items: center !important;
+        justify-content: center !important;
 
-  body {
-    padding-top: 76px !important;
-  }
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        border-radius: 50% !important;
 
-  html {
-    scroll-padding-top: 85px;
-  }
+        background: #f5bd18 !important;
+        color: #101827 !important;
+        font-size: 21px !important;
+        line-height: 1 !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 100002 !important;
+    }
+
+    .st-header #menuToggle i {
+        pointer-events: none;
+    }
+
+    /* Mobile navigation - closed */
+    .st-header #mainNavigation {
+        display: none !important;
+
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: 12px !important;
+        right: 12px !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        min-height: 0 !important;
+        max-height: calc(100vh - 100px) !important;
+        max-height: calc(100dvh - 100px) !important;
+
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        gap: 3px !important;
+
+        margin: 0 !important;
+        padding: 12px !important;
+
+        background: #19263d !important;
+        border: 1px solid rgba(255,255,255,.12) !important;
+        border-radius: 14px !important;
+        box-shadow: 0 12px 30px rgba(0,0,0,.30) !important;
+
+        z-index: 100001 !important;
+    }
+
+    /* Mobile navigation - open */
+    .st-header #mainNavigation.open {
+        display: flex !important;
+    }
+
+    /* Navigation links */
+    .st-header #mainNavigation a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        width: 100% !important;
+        min-height: 46px !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 12px 16px !important;
+
+        border: none !important;
+        border-radius: 8px !important;
+
+        background: transparent !important;
+        color: #ffffff !important;
+
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        line-height: 1.4 !important;
+        text-align: left !important;
+        text-decoration: none !important;
+        white-space: normal !important;
+    }
+
+    .st-header #mainNavigation a.active {
+        color: #f5bd18 !important;
+        background: rgba(255,255,255,.10) !important;
+    }
+
+    .st-header #mainNavigation a:hover {
+        color: #f5bd18 !important;
+        background: rgba(255,255,255,.07) !important;
+    }
+
+    /* Offset page content for fixed navbar */
+    body {
+        padding-top: 76px !important;
+    }
+
+    html {
+        scroll-padding-top: 86px;
+    }
 }
 
-/* EXTRA SMALL PHONES */
-@media (max-width: 360px) {
+/* =========================================
+   SMALL PHONES
+========================================= */
 
-  .st-header-inner {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    gap: 6px !important;
-  }
+@media (max-width: 380px) {
 
-  .st-header .st-logo img {
-    width: 62px !important;
-    height: 40px !important;
-  }
+    .st-header-inner {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        gap: 8px !important;
+    }
 
-  .st-header .st-logo .st-logo-text {
-    font-size: 7px !important;
-    letter-spacing: 1px !important;
-  }
+    .st-header .st-logo img {
+        width: 65px !important;
+        height: 42px !important;
+    }
 
-  .st-header #menuToggle {
-    width: 40px !important;
-    min-width: 40px !important;
-    height: 40px !important;
-    flex-basis: 40px !important;
-  }
+    .st-header .st-logo .st-logo-text {
+        font-size: 7px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .st-header #menuToggle {
+        flex-basis: 40px !important;
+        width: 40px !important;
+        min-width: 40px !important;
+        height: 40px !important;
+    }
 }
