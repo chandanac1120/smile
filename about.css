@@ -65,25 +65,28 @@ img {
     background: var(--navy-dark);
 }
 
+/* Background Image */
 .about-hero-image {
     position: absolute;
     inset: 0;
-   background-image: url("../assets/images/hero.jpg");
+    background-image: url("../images/about-hero.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
 }
 
+/* Dark Overlay */
 .about-hero-overlay {
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(2, 8, 23, .98),
-            rgba(2, 8, 23, .78) 45%,
-            rgba(2, 8, 23, .25)
-        );
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.78) 0%,
+        rgba(0, 0, 0, 0.48) 50%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
+    z-index: 1;
 }
 
 .about-hero-content {

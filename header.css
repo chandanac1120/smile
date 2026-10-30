@@ -107,6 +107,53 @@
 /* LOGO */
 
 
+/* ===== SMILE TAXI LOGO FIX ===== */
+
+.st-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.st-logo img {
+    display: block;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.st-logo-text {
+    display: block;
+    color: #f5bd18;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .st-logo {
+        gap: 8px;
+    }
+
+    .st-logo img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .st-logo-text {
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+}
+
+
 .st-logo {
   display: flex;
   flex-direction: column;

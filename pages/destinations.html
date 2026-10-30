@@ -1,867 +1,1376 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Destinations | Smile Taxi Bangalore</title>
+<title>Popular Outstation Destinations | Smile Taxi Bangalore</title>
 
-    <meta
-        name="description"
-        content="Explore popular destinations from Bangalore with Smile Taxi. Comfortable cab travel to Mysore, Coorg, Chikmagalur and Ooty."
-    >
+<meta name="description"
+content="Explore Bangalore, Mysore, Karnataka, Tamil Nadu and Kerala destinations with Smile Taxi. Enquire for comfortable outstation cab travel.">
 
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet"
-    >
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    >
+<style>
+:root {
+    --navy: #07152d;
+    --gold: #c99b00;
+    --cream: #faf9f5;
+    --text: #535967;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--navy);
+    background: var(--cream);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* HEADER */
+
+.dest-header {
+    background: var(--navy);
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.dest-nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.dest-nav a {
+    font-size: 12px;
+    color: white;
+    transition: .3s;
+}
+
+.dest-nav a:hover {
+    color: var(--gold);
+}
+
+.dest-nav .nav-cta {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 18px;
+    font-weight: 600;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.dest-hero {
+    min-height: 550px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    color: white;
+    background:
+    linear-gradient(90deg,
+    rgba(4,15,34,.90),
+    rgba(4,15,34,.40)),
+    url("assets/images/destinations-hero.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.dest-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5.5vw, 70px);
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.dest-hero h1 em {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.dest-hero p {
+    color: #e0e3e9;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 610px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 23px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* INTRO */
+
+.dest-intro {
+    padding: 85px 7% 40px;
+    text-align: center;
+}
+
+.dest-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.dest-intro p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--text);
+}
+
+/* CATEGORY NAVIGATION */
+
+.dest-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 25px 5% 65px;
+}
+
+.dest-categories a {
+    border: 1px solid #d9d8d1;
+    padding: 12px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.dest-categories a:hover {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+/* REGION SECTIONS */
+
+.region-section {
+    padding: 75px 7%;
+    border-top: 1px solid #e9e6dd;
+}
+
+.region-section:nth-of-type(even) {
+    background: #fff;
+}
+
+.region-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.region-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.region-head p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 650px;
+}
+
+.region-tag {
+    color: #967400;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.region-count {
+    color: #888;
+    font-size: 11px;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+
+/* DESTINATION GRID */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border: 1px solid #eeece6;
+    overflow: hidden;
+    transition: .35s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(7,21,45,.10);
+}
+
+.destination-image {
+    height: 235px;
+    position: relative;
+    overflow: hidden;
+    background: #e8e6df;
+}
+
+.destination-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.05);
+}
+
+.destination-body {
+    padding: 24px;
+}
+
+.destination-type {
+    color: #a17c00;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.destination-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.destination-body p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.place-list {
+    border-top: 1px solid #eceae4;
+    margin-top: 17px;
+    padding-top: 15px;
+}
+
+.place-list strong {
+    font-size: 11px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.place-list span {
+    font-size: 11px;
+    color: #656b77;
+    line-height: 2;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card-actions a {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    padding: 12px 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: .3s;
+}
+
+.explore-link {
+    background: var(--navy);
+    color: white;
+}
+
+.explore-link:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.quote-link {
+    border: 1px solid #d8d8d2;
+    color: var(--navy);
+}
+
+.quote-link:hover {
+    border-color: var(--gold);
+    background: #f8f1dc;
+}
+
+/* BOOKING CTA */
+
+.dest-cta {
+    margin: 75px 7%;
+    background: var(--navy);
+    color: white;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.dest-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.dest-cta p {
+    font-size: 12px;
+    line-height: 2;
+    color: #d5d9e2;
+    max-width: 600px;
+}
+
+.dest-cta .hero-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* FOOTER */
+
+.dest-footer {
+    background: #040d1d;
+    color: #d5d9e2;
+    text-align: center;
+    padding: 35px 6%;
+    font-size: 11px;
+    line-height: 2.2;
+}
+
+.dest-footer strong {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.dest-footer a {
+    color: var(--gold);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dest-header {
+        padding: 18px 4%;
+    }
+
+    .dest-nav {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .dest-header {
+        position: relative;
+        padding: 18px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dest-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 22px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        z-index: 100;
+    }
+
+    .dest-nav.active {
+        display: flex;
+    }
+
+    .dest-nav .nav-cta {
+        text-align: center;
+    }
+
+    .dest-hero {
+        min-height: 480px;
+        padding: 75px 6%;
+        background-position: center;
+    }
+
+    .dest-intro {
+        padding: 60px 6% 25px;
+    }
+
+    .dest-categories {
+        padding: 20px 5% 45px;
+        gap: 8px;
+    }
+
+    .dest-categories a {
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    .region-section {
+        padding: 55px 5%;
+    }
+
+    .region-head {
+        display: block;
+    }
+
+    .region-count {
+        display: block;
+        margin-top: 12px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .destination-image {
+        height: 240px;
+    }
+
+    .dest-cta {
+        margin: 50px 5%;
+        padding: 40px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- HEADER -->
 
-<header class="navbar">
-    <div class="container nav-container">
+<header class="dest-header">
 
-        <a href="../index.html" class="logo">
-            <img
-                src="../assets/images/smile.png"
-                alt="Smile Taxi"
-            >
-        </a>
+    <a href="index.html" class="brand">
+        SMILE <span>TAXI</span>
+    </a>
 
-        <nav class="nav-menu" id="navMenu">
+    <button class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="destNav">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-            <a href="../index.html">Home</a>
+    <nav class="dest-nav" id="destNav">
+        <a href="index.html">HOME</a>
+        <a href="index.html#about">ABOUT US</a>
+        <a href="index.html#services">SERVICES</a>
+        <a href="destinations.html">DESTINATIONS</a>
+        <a href="enquiry.html" class="nav-cta">BOOK A CAB</a>
+    </nav>
 
-            <a href="about.html">About</a>
-
-            <div class="nav-dropdown">
-                <button class="dropdown-btn">
-                    Services
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-
-                <div class="dropdown-menu">
-
-                    <a href="services.html#airport">
-                        Airport Transfers
-                    </a>
-
-                    <a href="services.html#local">
-                        Local Taxi
-                    </a>
-
-                    <a href="services.html#outstation">
-                        Outstation Cabs
-                    </a>
-
-                    <a href="services.html#rental">
-                        Car Rental
-                    </a>
-
-                    <a href="services.html#tempo">
-                        Tempo Traveller
-                    </a>
-
-                    <a href="services.html#bus">
-                        Bus Rental
-                    </a>
-
-                    <a href="services.html#corporate">
-                        Corporate Travel
-                    </a>
-
-                </div>
-            </div>
-
-            <a href="fleet.html">Fleet</a>
-
-            <a href="destinations.html" class="active">
-                Destinations
-            </a>
-
-            <a href="../index.html#packages">
-                Tour Packages
-            </a>
-
-            <a href="../index.html#corporate">
-                Corporate
-            </a>
-
-            <a href="../index.html#contact">
-                Contact
-            </a>
-
-            <a
-                href="tel:+919019993283"
-                class="nav-book-btn"
-            >
-                Book Now
-            </a>
-
-        </nav>
-
-        <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
-            aria-label="Open menu"
-        >
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-    </div>
 </header>
 
+<!-- HERO -->
 
-<!-- ================= PAGE HERO ================= -->
+<section class="dest-hero">
 
-<section class="page-hero destinations-page-hero">
+    <div class="hero-content">
 
-    <div class="page-hero-overlay"></div>
-
-    <div class="container page-hero-content">
-
-        <span class="page-hero-label">
-            EXPLORE WITH SMILE TAXI
+        <span class="eyebrow">
+            EXPLORE SOUTH INDIA
         </span>
 
         <h1>
-            Discover Beautiful
-            <span>Destinations</span>
+            Discover Your<br>
+            Next <em>Journey.</em>
         </h1>
 
         <p>
-            Comfortable cab journeys from Bangalore to some of
-            South India's most loved travel destinations.
+            From Bangalore's vibrant streets to Mysore's royal
+            heritage, Karnataka's wonders, Tamil Nadu's hill
+            stations and Kerala's beautiful landscapes.
+            Explore your next getaway with Smile Taxi.
         </p>
 
-        <div class="page-hero-buttons">
-
-            <a
-                href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20want%20to%20plan%20a%20trip."
-                class="primary-btn"
-                target="_blank"
-            >
-                <i class="fa-brands fa-whatsapp"></i>
-                Plan My Trip
-            </a>
-
-            <a
-                href="#destinations"
-                class="secondary-btn"
-            >
-                Explore Destinations
-            </a>
-
-        </div>
+        <a href="#regions" class="hero-btn">
+            EXPLORE DESTINATIONS
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
     </div>
 
 </section>
 
+<!-- INTRO -->
 
-<!-- ================= INTRO ================= -->
+<section class="dest-intro" id="regions">
 
-<section class="destinations-intro section-padding">
+    <span class="eyebrow">WHERE WOULD YOU LIKE TO GO?</span>
 
-    <div class="container">
+    <h2>Popular Outstation Destinations</h2>
 
-        <div class="section-heading center-heading">
+    <p>
+        Discover famous attractions, weekend getaways,
+        heritage destinations and scenic holiday spots.
+        Choose your destination and enquire about your
+        one-way drop or round-trip cab with Smile Taxi.
+    </p>
 
-            <span class="section-label">
-                WHERE WILL YOU GO?
-            </span>
+</section>
 
-            <h2>
-                Your Journey Starts
-                <span>With Smile Taxi</span>
-            </h2>
+<!-- CATEGORY NAVIGATION -->
 
+<nav class="dest-categories">
+
+    <a href="#bangalore">Bangalore</a>
+    <a href="#mysore">Mysore</a>
+    <a href="#karnataka">Karnataka</a>
+    <a href="#tamilnadu">Tamil Nadu</a>
+    <a href="#kerala">Kerala</a>
+
+</nav>
+
+<!-- =====================================================
+     BANGALORE
+===================================================== -->
+
+<section class="region-section" id="bangalore">
+
+    <div class="region-head">
+        <div>
+            <span class="region-tag">01 / CITY EXPLORATION</span>
+            <h2>Explore Bangalore</h2>
             <p>
-                Whether you are planning a family holiday, a weekend
-                escape, a couple's trip or a group journey, we make
-                your travel from Bangalore comfortable and convenient.
+                Discover the Garden City, from historic landmarks
+                and green spaces to popular city attractions.
             </p>
-
         </div>
-
+        <span class="region-count">CITY DESTINATIONS</span>
     </div>
 
-</section>
+    <div class="destination-grid">
 
-
-<!-- ================= DESTINATIONS ================= -->
-
-<section
-    class="destinations-section section-padding"
-    id="destinations"
->
-
-    <div class="container">
-
-        <div class="destinations-page-grid">
-
-
-            <!-- MYSORE -->
-
-            <article class="destination-detail-card">
-
-                <div class="destination-detail-image">
-
-                    <img
-                        src="../assets/images/mysore.jpg"
-                        alt="Mysore Palace"
-                    >
-
-                    <span class="destination-badge">
-                        Heritage Escape
-                    </span>
-
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/bangalore-palace.jpg"
+                     alt="Bangalore Palace"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Royal Heritage</span>
+                <h3>Bangalore Palace</h3>
+                <p>
+                    Experience royal architecture and
+                    historic charm in the heart of Bangalore.
+                </p>
+                <div class="place-list">
+                    <strong>Nearby attractions</strong>
+                    <span>Palace Grounds · Vidhana Soudha</span>
                 </div>
-
-                <div class="destination-detail-content">
-
-                    <span class="destination-number">
-                        01
-                    </span>
-
-                    <h3>
-                        Mysore
-                    </h3>
-
-                    <p>
-                        Discover royal architecture, beautiful
-                        gardens, cultural attractions and the
-                        timeless charm of Mysore.
-                    </p>
-
-                    <div class="destination-highlights">
-
-                        <span>
-                            <i class="fa-solid fa-landmark"></i>
-                            Heritage
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-camera"></i>
-                            Sightseeing
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-people-group"></i>
-                            Family Trips
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20want%20to%20plan%20a%20Mysore%20trip."
-                        class="destination-btn"
-                        target="_blank"
-                    >
-                        Plan Mysore Trip
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
                 </div>
+            </div>
+        </article>
 
-            </article>
-
-
-            <!-- COORG -->
-
-            <article class="destination-detail-card">
-
-                <div class="destination-detail-image">
-
-                    <img
-                        src="../assets/images/coorg.jpg"
-                        alt="Coorg greenery and hills"
-                    >
-
-                    <span class="destination-badge">
-                        Nature Escape
-                    </span>
-
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/lalbagh.jpg"
+                     alt="Lalbagh Botanical Garden"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Nature & Gardens</span>
+                <h3>Lalbagh Botanical Garden</h3>
+                <p>
+                    Enjoy lush greenery, beautiful walking
+                    paths and the iconic glass house.
+                </p>
+                <div class="place-list">
+                    <strong>Nearby attractions</strong>
+                    <span>Cubbon Park · MG Road</span>
                 </div>
-
-                <div class="destination-detail-content">
-
-                    <span class="destination-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Coorg
-                    </h3>
-
-                    <p>
-                        Enjoy misty hills, greenery, coffee plantations
-                        and peaceful surroundings on a relaxing Coorg
-                        getaway.
-                    </p>
-
-                    <div class="destination-highlights">
-
-                        <span>
-                            <i class="fa-solid fa-mountain"></i>
-                            Hills
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-leaf"></i>
-                            Nature
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-mug-hot"></i>
-                            Coffee
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20want%20to%20plan%20a%20Coorg%20trip."
-                        class="destination-btn"
-                        target="_blank"
-                    >
-                        Plan Coorg Trip
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
                 </div>
+            </div>
+        </article>
 
-            </article>
-
-
-            <!-- CHIKMAGALUR -->
-
-            <article class="destination-detail-card">
-
-                <div class="destination-detail-image">
-
-                    <img
-                        src="../assets/images/chikmagalur.jpg"
-                        alt="Chikmagalur hills and greenery"
-                    >
-
-                    <span class="destination-badge">
-                        Hill Getaway
-                    </span>
-
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/nandi-hills.jpg"
+                     alt="Nandi Hills scenic mountain views"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Scenic Getaway</span>
+                <h3>Nandi Hills</h3>
+                <p>
+                    Enjoy fresh mountain air, sunrise views
+                    and scenic drives near Bangalore.
+                </p>
+                <div class="place-list">
+                    <strong>Nearby attractions</strong>
+                    <span>Tipu's Drop · Nandi Hill viewpoints</span>
                 </div>
-
-                <div class="destination-detail-content">
-
-                    <span class="destination-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Chikmagalur
-                    </h3>
-
-                    <p>
-                        Escape into green hills, coffee country and
-                        refreshing landscapes with a comfortable
-                        private cab journey.
-                    </p>
-
-                    <div class="destination-highlights">
-
-                        <span>
-                            <i class="fa-solid fa-mountain-sun"></i>
-                            Viewpoints
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-leaf"></i>
-                            Greenery
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-mug-hot"></i>
-                            Coffee
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20want%20to%20plan%20a%20Chikmagalur%20trip."
-                        class="destination-btn"
-                        target="_blank"
-                    >
-                        Plan Chikmagalur Trip
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- OOTY -->
-
-            <article class="destination-detail-card">
-
-                <div class="destination-detail-image">
-
-                    <img
-                        src="../assets/images/ooty.jpg"
-                        alt="Ooty hills"
-                    >
-
-                    <span class="destination-badge">
-                        Mountain Escape
-                    </span>
-
-                </div>
-
-                <div class="destination-detail-content">
-
-                    <span class="destination-number">
-                        04
-                    </span>
-
-                    <h3>
-                        Ooty
-                    </h3>
-
-                    <p>
-                        Experience cool mountain landscapes, scenic
-                        roads and a refreshing hill-station holiday
-                        with Smile Taxi.
-                    </p>
-
-                    <div class="destination-highlights">
-
-                        <span>
-                            <i class="fa-solid fa-mountain"></i>
-                            Mountains
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-cloud"></i>
-                            Cool Weather
-                        </span>
-
-                        <span>
-                            <i class="fa-solid fa-camera"></i>
-                            Sightseeing
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20want%20to%20plan%20an%20Ooty%20trip."
-                        class="destination-btn"
-                        target="_blank"
-                    >
-                        Plan Ooty Trip
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
                     </a>
-
                 </div>
-
-            </article>
-
-        </div>
+            </div>
+        </article>
 
     </div>
-
 </section>
 
-
-<!-- ================= TRAVEL EXPERIENCE ================= -->
-
-<section class="destination-experience section-padding">
-
-    <div class="container">
-
-        <div class="destination-experience-grid">
-
-            <div class="destination-experience-content">
-
-                <span class="section-label">
-                    TRAVEL YOUR WAY
-                </span>
-
-                <h2>
-                    One Ride.
-                    <span>Many Adventures.</span>
-                </h2>
-
-                <p>
-                    Choose your destination and let Smile Taxi
-                    take care of the journey. From short getaways
-                    to multi-day trips, we offer comfortable travel
-                    options for individuals, families and groups.
-                </p>
-
-                <div class="experience-list">
-
-                    <div class="experience-item">
-
-                        <div class="experience-icon">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-
-                        <div>
-                            <h4>
-                                Private Cab Travel
-                            </h4>
-
-                            <p>
-                                Enjoy your trip with a vehicle
-                                dedicated to your journey.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="experience-item">
-
-                        <div class="experience-icon">
-                            <i class="fa-solid fa-route"></i>
-                        </div>
-
-                        <div>
-                            <h4>
-                                Flexible Travel Plans
-                            </h4>
-
-                            <p>
-                                Plan your route based on your
-                                travel needs and schedule.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="experience-item">
-
-                        <div class="experience-icon">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-
-                        <div>
-                            <h4>
-                                Vehicles For Every Group
-                            </h4>
-
-                            <p>
-                                Choose from comfortable cars and
-                                larger vehicles for group travel.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="destination-experience-card">
-
-                <div class="experience-card-inner">
-
-                    <span>
-                        READY FOR YOUR
-                    </span>
-
-                    <strong>
-                        NEXT GETAWAY?
-                    </strong>
-
-                    <p>
-                        Tell us your destination and travel dates.
-                        We'll help you choose the right vehicle.
-                    </p>
-
-                    <a
-                        href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20want%20help%20planning%20a%20trip."
-                        class="primary-btn"
-                        target="_blank"
-                    >
-                        <i class="fa-brands fa-whatsapp"></i>
-                        Get a Quote
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section class="destination-cta">
-
-    <div class="container">
-
-        <div class="destination-cta-inner">
-
-            <div>
-
-                <span>
-                    YOUR NEXT JOURNEY STARTS HERE
-                </span>
-
-                <h2>
-                    Let's Plan Your Trip
-                </h2>
-
-                <p>
-                    Comfortable travel, professional service and
-                    a journey planned around you.
-                </p>
-
-            </div>
-
-            <div class="cta-buttons">
-
-                <a
-                    href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20want%20to%20book%20a%20trip."
-                    class="primary-btn"
-                    target="_blank"
-                >
-                    <i class="fa-brands fa-whatsapp"></i>
-                    WhatsApp Us
-                </a>
-
-                <a
-                    href="tel:+919019993283"
-                    class="outline-light-btn"
-                >
-                    <i class="fa-solid fa-phone"></i>
-                    Call Now
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <div class="footer-about">
-
-                <a
-                    href="../index.html"
-                    class="footer-logo"
-                >
-                    <img
-                        src="../assets/images/smile.png"
-                        alt="Smile Taxi"
-                    >
-                </a>
-
-                <p>
-                    Your trusted travel partner for comfortable
-                    taxi, cab rental and outstation travel from
-                    Bangalore.
-                </p>
-
-                <div class="footer-social">
-
-                    <a href="#">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Quick Links
-                </h4>
-
-                <a href="../index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="fleet.html">Fleet</a>
-                <a href="destinations.html">Destinations</a>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Services
-                </h4>
-
-                <a href="services.html#airport">
-                    Airport Transfers
-                </a>
-
-                <a href="services.html#local">
-                    Local Taxi
-                </a>
-
-                <a href="services.html#outstation">
-                    Outstation Cabs
-                </a>
-
-                <a href="services.html#rental">
-                    Car Rental
-                </a>
-
-                <a href="services.html#corporate">
-                    Corporate Travel
-                </a>
-
-            </div>
-
-
-            <div class="footer-contact">
-
-                <h4>
-                    Contact Us
-                </h4>
-
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    Bangalore, Karnataka
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="tel:+919019993283">
-                        +91 90199 93283
-                    </a>
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:Smiletaxiservicetravelguru@gmail.com">
-                        Smiletaxiservicetravelguru@gmail.com
-                    </a>
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
+<!-- =====================================================
+     MYSORE
+===================================================== -->
+
+<section class="region-section" id="mysore">
+
+    <div class="region-head">
+        <div>
+            <span class="region-tag">02 / ROYAL HERITAGE</span>
+            <h2>Discover Mysore</h2>
             <p>
-                © 2026 Smile Taxi. All Rights Reserved.
+                Plan a memorable journey to Mysore for royal
+                palaces, cultural landmarks and beautiful gardens.
             </p>
-
-            <p>
-                Travel Better. Travel with Smile.
-            </p>
-
         </div>
+        <span class="region-count">MYSORE DESTINATIONS</span>
+    </div>
+
+    <div class="destination-grid">
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/mysore.jpg"
+                     alt="Mysore Palace"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Royal Heritage</span>
+                <h3>Mysore Palace</h3>
+                <p>
+                    Admire magnificent royal architecture
+                    and the cultural heritage of Mysore.
+                </p>
+                <div class="place-list">
+                    <strong>Explore nearby</strong>
+                    <span>Devaraja Market · St. Philomena's Church</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/chamundi-hills.jpg"
+                     alt="Chamundi Hills Mysore"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Hilltop Attraction</span>
+                <h3>Chamundi Hills</h3>
+                <p>
+                    Visit the famous Chamundeshwari Temple
+                    and enjoy panoramic city views.
+                </p>
+                <div class="place-list">
+                    <strong>Explore nearby</strong>
+                    <span>Nandi Statue · Mysore city viewpoints</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/brindavan.jpg"
+                     alt="Brindavan Gardens near Mysore"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Gardens & Leisure</span>
+                <h3>Brindavan Gardens</h3>
+                <p>
+                    Spend time among landscaped gardens
+                    near the famous Krishna Raja Sagara Dam.
+                </p>
+                <div class="place-list">
+                    <strong>Explore nearby</strong>
+                    <span>KRS Dam · Srirangapatna</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
 
     </div>
+</section>
+
+<!-- =====================================================
+     KARNATAKA
+===================================================== -->
+
+<section class="region-section" id="karnataka">
+
+    <div class="region-head">
+        <div>
+            <span class="region-tag">03 / LAND OF DIVERSITY</span>
+            <h2>Explore Karnataka</h2>
+            <p>
+                From ancient ruins and coffee plantations to
+                waterfalls and wildlife, discover Karnataka's
+                beautiful travel destinations.
+            </p>
+        </div>
+        <span class="region-count">KARNATAKA GETAWAYS</span>
+    </div>
+
+    <div class="destination-grid">
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/hampi.jpg"
+                     alt="Hampi heritage ruins"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">UNESCO Heritage</span>
+                <h3>Hampi</h3>
+                <p>
+                    Discover ancient temples, historic ruins
+                    and remarkable stone architecture.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Virupaksha Temple · Stone Chariot · Vittala Temple</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/coorg.jpg"
+                     alt="Coorg coffee plantations and hills"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Hill Station</span>
+                <h3>Coorg</h3>
+                <p>
+                    Enjoy coffee estates, misty hills,
+                    waterfalls and peaceful nature escapes.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Madikeri · Abbey Falls · Raja's Seat</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/chikmagalur.jpg"
+                     alt="Chikmagalur green hills"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Mountain Escape</span>
+                <h3>Chikmagalur</h3>
+                <p>
+                    Explore coffee country, green mountain
+                    landscapes and scenic viewpoints.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Mullayanagiri · Baba Budangiri · Coffee estates</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/jog-falls.jpg"
+                     alt="Jog Falls waterfall"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Nature & Waterfalls</span>
+                <h3>Jog Falls</h3>
+                <p>
+                    Witness the dramatic waterfall scenery
+                    and lush landscapes of the Western Ghats.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Jog Falls viewpoints · Sharavathi Valley</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/badami.jpg"
+                     alt="Badami cave temples and red sandstone cliffs"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">History & Architecture</span>
+                <h3>Badami</h3>
+                <p>
+                    Discover rock-cut cave temples, sandstone
+                    cliffs and the region's rich history.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Badami Caves · Agastya Lake · Pattadakal</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- =====================================================
+     TAMIL NADU
+===================================================== -->
+
+<section class="region-section" id="tamilnadu">
+
+    <div class="region-head">
+        <div>
+            <span class="region-tag">04 / CULTURE & MOUNTAINS</span>
+            <h2>Discover Tamil Nadu</h2>
+            <p>
+                Experience charming hill stations, historic
+                temples, beautiful coastlines and cultural
+                landmarks across Tamil Nadu.
+            </p>
+        </div>
+        <span class="region-count">TAMIL NADU GETAWAYS</span>
+    </div>
+
+    <div class="destination-grid">
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/ooty.jpg"
+                     alt="Ooty tea plantations and Nilgiri mountains"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Hill Station</span>
+                <h3>Ooty</h3>
+                <p>
+                    Enjoy cool weather, scenic tea gardens
+                    and relaxing mountain views.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Botanical Garden · Ooty Lake · Doddabetta</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/kodaikanal.jpg"
+                     alt="Kodaikanal lake and green hills"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Nature Retreat</span>
+                <h3>Kodaikanal</h3>
+                <p>
+                    Experience peaceful lakes, forest trails
+                    and beautiful hilltop scenery.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Kodai Lake · Coaker's Walk · Pillar Rocks</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/coonoor.jpg"
+                     alt="Coonoor tea estates in the Nilgiris"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Scenic Hill Escape</span>
+                <h3>Coonoor</h3>
+                <p>
+                    Discover tea plantations, green valleys
+                    and scenic viewpoints in the Nilgiris.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Sim's Park · Dolphin's Nose · Tea gardens</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/mahabalipuram.jpg"
+                     alt="Mahabalipuram Shore Temple by the sea"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Coastal Heritage</span>
+                <h3>Mahabalipuram</h3>
+                <p>
+                    Explore ancient stone monuments,
+                    remarkable carvings and coastal views.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Shore Temple · Arjuna's Penance · Five Rathas</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- =====================================================
+     KERALA
+===================================================== -->
+
+<section class="region-section" id="kerala">
+
+    <div class="region-head">
+        <div>
+            <span class="region-tag">05 / GOD'S OWN COUNTRY</span>
+            <h2>Experience Kerala</h2>
+            <p>
+                Discover tranquil backwaters, lush tea gardens,
+                waterfalls and tropical landscapes on your
+                next South India journey.
+            </p>
+        </div>
+        <span class="region-count">KERALA GETAWAYS</span>
+    </div>
+
+    <div class="destination-grid">
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/munnar.jpg"
+                     alt="Munnar tea plantations and misty mountains"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Hill Station</span>
+                <h3>Munnar</h3>
+                <p>
+                    Relax among tea plantations, misty hills
+                    and beautiful mountain landscapes.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Eravikulam · Mattupetty Dam · Tea Museum</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/alleppey.jpg"
+                     alt="Alleppey Kerala backwaters and houseboats"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Backwater Escape</span>
+                <h3>Alleppey</h3>
+                <p>
+                    Experience serene waterways, houseboats
+                    and the beautiful Kerala countryside.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Backwaters · Alappuzha Beach · Marari Beach</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/kochi.jpg"
+                     alt="Fort Kochi heritage streets"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Culture & Coast</span>
+                <h3>Kochi</h3>
+                <p>
+                    Explore historic streets, coastal charm,
+                    local culture and beautiful waterfronts.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Fort Kochi · Mattancherry Palace · Jew Town</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="destination-card">
+            <div class="destination-image">
+                <img src="assets/images/wayanad.jpg"
+                     alt="Wayanad forest covered mountains"
+                     loading="lazy">
+            </div>
+            <div class="destination-body">
+                <span class="destination-type">Nature Retreat</span>
+                <h3>Wayanad</h3>
+                <p>
+                    Discover forest landscapes, waterfalls,
+                    viewpoints and refreshing green escapes.
+                </p>
+                <div class="place-list">
+                    <strong>Explore</strong>
+                    <span>Edakkal Caves · Pookode Lake · Banasura Sagar Dam</span>
+                </div>
+                <div class="card-actions">
+                    <a href="./enquiry.html" class="explore-link">
+                        EXPLORE BY CAB
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="./enquiry.html" class="quote-link">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- BOOKING CTA -->
+
+<section class="dest-cta">
+
+    <div>
+        <span class="eyebrow">LET'S PLAN YOUR JOURNEY</span>
+
+        <h2>Your Destination.<br>Our Drive.</h2>
+
+        <p>
+            Looking for a one-way drop, round-trip cab,
+            family holiday travel or a comfortable
+            outstation ride? Get in touch with Smile Taxi
+            for your travel requirements.
+        </p>
+    </div>
+
+    <a href="./enquiry.html" class="hero-btn">
+        GET A CAB QUOTE
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="dest-footer">
+
+    <strong>SMILE TAXI</strong>
+
+    <p>
+        Your trusted travel partner for comfortable,
+        reliable and memorable journeys.
+    </p>
+
+    <p>
+        <a href="index.html">Home</a> ·
+        <a href="index.html#services">Services</a> ·
+        <a href="destinations.html">Destinations</a> ·
+        <a href="enquiry.html">Enquiry</a>
+    </p>
+
+    <p>
+        &copy; 2026 Smile Taxi. All rights reserved.
+    </p>
 
 </footer>
 
-
-<!-- ================= FLOATING BUTTONS ================= -->
-
-<a
-    href="https://wa.me/919019993283?text=Hello%20Smile%20Taxi%2C%20I%20need%20a%20cab."
-    class="floating-whatsapp"
-    target="_blank"
-    aria-label="WhatsApp"
->
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-
-<a
-    href="tel:+919019993283"
-    class="floating-call"
-    aria-label="Call"
->
-    <i class="fa-solid fa-phone"></i>
-</a>
-
-
-<!-- ================= MOBILE MENU ================= -->
-
 <script>
+const menuToggle = document.querySelector('.menu-toggle');
+const destNav = document.querySelector('.dest-nav');
 
-const mobileMenuBtn =
-    document.getElementById("mobileMenuBtn");
+menuToggle.addEventListener('click', () => {
+    const isOpen = destNav.classList.toggle('active');
 
-const navMenu =
-    document.getElementById("navMenu");
+    menuToggle.setAttribute('aria-expanded', isOpen);
 
-mobileMenuBtn.addEventListener("click", function () {
-
-    navMenu.classList.toggle("active");
-
-    const icon =
-        mobileMenuBtn.querySelector("i");
-
-    if (navMenu.classList.contains("active")) {
-
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
-
-    } else {
-
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-
-    }
-
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
 });
 
+destNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        destNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+});
 </script>
 
 </body>
