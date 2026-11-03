@@ -205,11 +205,11 @@
 
     /* Offset page content for fixed navbar */
     body {
-        padding-top: 76px !important;
+        padding-top: 85px !important;
     }
 
     html {
-        scroll-padding-top: 86px;
+        scroll-padding-top: 95px;
     }
 }
 

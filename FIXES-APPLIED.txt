@@ -1,0 +1,38 @@
+SMILE TAXI WEBSITE - FIXES APPLIED
+==================================
+
+1. Shared header logo path
+   - The logo path in header.html is now corrected by header.js for both
+     GitHub Pages (/smile/) and local Live Server (/).
+   - The shared logo link and every header navigation link are now built
+     from the project base path, so nested pages do not point to pages/index.html.
+
+2. Mobile header
+   - The mobile logo is positioned horizontally like the desktop version:
+     taxi image on the left, SMILE TAXI SERVICE on the right, and the tagline
+     below both.
+   - The mobile content offset now matches the 85px header height.
+
+3. Contact page
+   - Fixed the root-level Contact page stylesheet paths and header.js path.
+   - The shared header now loads on Contact.
+   - Removed the second Contact-only mobile menu click handler, which could
+     conflict with the shared header menu handler.
+   - Fixed the Contact footer logo path and guarded the optional year element.
+
+4. Shared footers and page links
+   - Fixed the taxi logo paths in root-level page footers.
+   - Corrected root footer links to the About and Services pages.
+   - Fixed selected root/nested page links and GitHub Pages asset paths.
+
+HOW TO APPLY
+------------
+1. Keep a backup of your current project folder.
+2. Extract this ZIP.
+3. Copy the files from the extracted "SMILE CABS" folder over your existing
+   project files. Do not delete your existing .git folder.
+4. Open index.html with Live Server and test Index, Contact, About, Services,
+   Areas and Rentals on desktop and mobile.
+5. Commit and push the updated files to GitHub Pages.
+
+The .git folder is not included in this ZIP so the download is smaller.

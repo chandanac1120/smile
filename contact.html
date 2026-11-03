@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Smile Taxi Service</title>
 
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./header.css">
   <link rel="stylesheet" href="./pages/contact.css">
-  <link rel="stylesheet" href="../responsive.css">
+  <link rel="stylesheet" href="./responsive.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 </head>
 <body>
   <div id="siteHeader"></div>
-  <script src="../header.js"></script>
+  <script src="./header.js"></script>
 
   <main>
     <section class="contact-hero">
@@ -135,7 +135,7 @@
 
              
     <a href="./index.html" class="st-logo">
-      <img src="../assets/images/taxi.png" alt="Smile Taxi">
+      <img src="./assets/images/taxi.png" alt="Smile Taxi">
       <span class="st-logo-text">
         SMILE TAXI<br>
         SERVICE
@@ -188,11 +188,11 @@
                 Home
             </a>
            
-            <a href="about.html">
+            <a href="pages/about.html">
                 About Us
             </a>
 
-            <a href="services.html">
+            <a href="pages/services.html">
                 Our Services
             </a>
 
@@ -308,7 +308,7 @@ Bengaluru 560010
     <div class="footer-bottom">
 
         <span>
-            © 2026 SmileTaxiService.
+            © <span id="contactYear">2026</span> SmileTaxiService.
             All Rights Reserved.
         </span>
 
@@ -343,29 +343,14 @@ Bengaluru 560010
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("contactYear").textContent = new Date().getFullYear();
-
-      const menu = document.getElementById("menuToggle");
-      const nav = document.getElementById("mainNavigation");
-      if (menu && nav) {
-        menu.addEventListener("click", function () {
-          const open = nav.classList.toggle("open");
-          menu.setAttribute("aria-expanded", String(open));
-          menu.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-        });
-        nav.querySelectorAll("a").forEach(function (link) {
-          link.addEventListener("click", function () {
-            nav.classList.remove("open");
-            menu.setAttribute("aria-expanded", "false");
-            menu.innerHTML = '<i class="fa-solid fa-bars"></i>';
-          });
-        });
-      }
+      const yearElement = document.getElementById("contactYear");
+      if (yearElement) yearElement.textContent = new Date().getFullYear();
 
       const dateInput = document.getElementById("contactDate");
       if (dateInput) dateInput.min = new Date().toISOString().split("T")[0];
 
-      document.getElementById("contactForm").addEventListener("submit", function (event) {
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
         const name = document.getElementById("contactName").value.trim();
         const phone = document.getElementById("contactPhone").value.trim();
@@ -384,7 +369,7 @@ Bengaluru 560010
           pickup ? "Pickup: " + pickup : "",
           destination ? "Destination: " + destination : "",
           message ? "Message: " + message : ""
-        ].filter(Boolean).join("\\n");
+        ].filter(Boolean).join("\n");
 
         window.open("https://wa.me/919019993283?text=" + encodeURIComponent(text), "_blank", "noopener");
       });
