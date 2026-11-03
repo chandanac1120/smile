@@ -1,788 +1,451 @@
 
-/* ===============================
-   SMILE TAXI - SHARED NAVBAR
-================================ */
+/* =========================================
+   SMILE TAXI - COMPLETE RESPONSIVE HEADER
+========================================= */
 
+.st-header,
+.st-header * {
+    box-sizing: border-box;
+}
 
 .st-header {
-  position: fixed !important;
-  top: 22px !important;
-  left: 0 !important;
-  width: 100% !important;
-  min-height: 100px !important;
-  z-index: 99999 !important;
-
-  
+    position: fixed;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    min-height: 90px;
+    z-index: 99999;
 }
 
 .st-header-inner {
-  width: min(1440px, calc(100% - 48px)) !important;
-  min-height: 100px !important;
-  margin: 0 auto !important;
-  padding: 12px 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 20px !important;
-}
-
-
-/* =========================
-   MOBILE NAVBAR FIX
-========================= */
-
-@media (max-width: 768px) {
-
-  .st-header {
-    position: relative;
-    z-index: 9999;
-  }
-
-  .st-header-inner {
-    position: relative;
+    width: min(1440px, calc(100% - 48px));
+    min-height: 90px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+    gap: 20px;
+}
 
-  /* Mobile menu button */
-  .st-mobile-menu {
+/* =========================================
+   LOGO - DESKTOP
+========================================= */
+
+.st-header .st-logo {
+    display: grid;
+    grid-template-columns: 65px 120px;
+    grid-template-rows: 48px 17px;
+    column-gap: 6px;
+    row-gap: 0;
+
+    width: 191px;
+    height: 65px;
+    flex: 0 0 auto;
+
+    align-items: center;
+    justify-content: start;
+
+    text-decoration: none;
+}
+
+/* Logo image */
+
+.st-header .st-logo img {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 65px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Brand name */
+
+.st-header .st-logo-text {
+    grid-column: 2;
+    grid-row: 1;
+
+    color: #f5bd18;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Tagline */
+
+.st-header .st-tagline {
+    grid-column: 1 / 3;
+    grid-row: 2;
+
+    width: 100%;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.st-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 10002;
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    color: #ffffff;
-    font-size: 25px;
-  }
+    gap: 4px;
 
-  /* Navigation closed */
-  .st-nav {
-    display: none;
-  }
+    padding: 8px;
+    min-height: 60px;
 
-  /* Navigation open */
-  .st-nav.open {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-    background: #101b3f;
-    padding: 15px 20px;
-    gap: 0;
-    z-index: 10001;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  }
-
-  .st-nav.open a {
-    display: block;
-    padding: 14px 10px;
-    color: #ffffff;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-  }
-
-  .st-nav.open a:last-child {
-    border-bottom: none;
-  }
-
-  .st-nav.open a.active {
-    color: #f2c94c;
-  }
-}
-
-
-
-
-
-/* LOGO */
-
-/* ===== SMILE TAXI LOGO ALIGNMENT FIX ===== */
-
-.st-header .st-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1px !important;
-    text-decoration: none;
-    flex-shrink: 0;
-    width: auto;
-}
-
-.st-header .st-logo img {
-    display: block;
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-    flex-shrink: 0;
-    margin: 0 !important;
-}
-
-.st-header .st-logo .st-logo-text {
-    display: block;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.25;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-align: center;
-    white-space: nowrap;
-    color: #f5bd18;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .st-header .st-logo {
-        gap: 1px !important;
-    }
-
-    .st-header .st-logo img {
-        width: 52px;
-        height: 52px;
-    }
-
-    .st-header .st-logo .st-logo-text {
-        font-size: 11px;
-        letter-spacing: 1px;
-    }
-}
-
-/* CENTER NAVIGATION */
-
-.st-nav {
-  justify-self: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-
-  padding: 8px 10px;
-  min-height: 66px;
-
-  background: #1b2539;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 50px;
-  box-shadow: 0 12px 30px rgba(10, 20, 38, .12);
+    background: #19263d;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50px;
+    box-shadow: 0 12px 30px rgba(10,20,38,0.12);
 }
 
 .st-nav a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 48px;
-  padding: 0 21px;
-
-  color: #cbd2df;
-  text-decoration: none;
-  white-space: nowrap;
-
-  font-size: 15px;
-  font-weight: 800;
-  transition: color .25s ease, background .25s ease;
-  border-radius: 40px;
-}
-
-.st-nav a:hover {
-  color: #ffffff;
-}
-
-.st-nav a.active {
-  color: #172033;
-  background: #ffffff;
-}
-
-/* RIGHT SIDE BUTTONS */
-
-.st-header-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 16px;
-}
-
-.st-phone {
-  flex: 0 0 60px;
-  width: 60px;
-  height: 60px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-  background: #ffffff;
-  color: #42516a;
-  text-decoration: none;
-  font-size: 20px;
-
-  box-shadow: 0 2px 8px rgba(0,0,0,.04);
-  transition: transform .25s ease;
-}
-
-.st-phone:hover {
-  transform: translateY(-2px);
-}
-
-.st-book {
-  min-width: 193px;
-  height: 57px;
-  padding: 0 27px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  border-radius: 40px;
-  background: #f5b900;
-  color: #101827;
-
-  text-decoration: none;
-  white-space: nowrap;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 1px;
-
-  box-shadow: 0 10px 24px rgba(245,185,0,.18);
-  transition: background .25s ease, transform .25s ease;
-}
-
-.st-book:hover {
-  background: #ffca24;
-  transform: translateY(-2px);
-}
-
-/* MOBILE MENU BUTTON */
-
-.st-mobile-menu {
-  display: none;
-  width: 46px;
-  height: 46px;
-  border: none;
-  border-radius: 50%;
-  background: #f5b900;
-  color: #101827;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* MEDIUM SCREENS */
-
-@media (max-width: 1350px) {
-  .st-header-inner {
-    grid-template-columns: 145px minmax(0, 1fr) 220px;
-    gap: 12px;
-    width: calc(100% - 48px);
-  }
-
-  .st-logo {
-    width: 140px;
-    height: 64px;
-  }
-
-  .st-nav {
-    gap: 1px;
-    padding: 7px;
-  }
-
-  .st-nav a {
-    padding: 0 13px;
-    font-size: 12px;
-  }
-
-  .st-header-actions {
-    gap: 10px;
-  }
-
-  .st-phone {
-    flex-basis: 48px;
-    width: 48px;
-    height: 48px;
-  }
-
-  .st-book {
-    min-width: 150px;
-    height: 50px;
-    padding: 0 17px;
-    font-size: 12px;
-  }
-}
-
-/* TABLET AND MOBILE */
-
-@media (max-width: 1000px) {
-  .st-header {
-    padding: 14px 0;
-  }
-
-  .st-header-inner {
-    width: calc(100% - 36px);
-    grid-template-columns: 1fr auto;
-    gap: 12px;
-  }
-
-  .st-logo {
-    width: 125px;
-    height: 60px;
-    justify-self: start;
-  }
-
-  .st-logo img {
-    width: 88px;
-    height: 37px;
-  }
-
-  .st-logo span {
-    font-size: 7px;
-  }
-
-  .st-header-actions {
-    display: none;
-  }
-
-  .st-mobile-menu {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  }
 
-  .st-nav {
-    display: none;
-    position: absolute;
-    top: calc(100% + 2px);
-    left: 18px;
-    right: 18px;
-
-    min-height: 0;
-    padding: 12px;
-    border-radius: 18px;
-
-    flex-direction: column;
-    align-items: stretch;
-    gap: 3px;
-
-    background: #1b2539;
-    box-shadow: 0 15px 35px rgba(0,0,0,.2);
-  }
-
-  .st-nav.open {
-    display: flex;
-  }
-
-  .st-nav a {
-    width: 100%;
     min-height: 44px;
-    justify-content: flex-start;
-    padding: 0 18px;
-    font-size: 13px;
-  }
+    padding: 0 15px;
+
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 40px;
+    transition: 0.25s ease;
 }
 
-/* SMALL PHONES */
+.st-nav a:hover,
+.st-nav a.active {
+    background: #ffffff;
+    color: #101b3f;
+}
 
-@media (max-width: 480px) {
-  .st-header-inner {
-    width: calc(100% - 28px);
-  }
+/* =========================================
+   RIGHT SIDE BUTTONS
+========================================= */
 
-  .st-logo {
-    width: 115px;
-    height: 56px;
-  }
+.st-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
 
-  .st-mobile-menu {
+.st-phone {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #ffffff;
+    color: #101b3f;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.st-book {
+    min-width: 155px;
+    height: 50px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 40px;
+    background: #f5b900;
+    color: #101827;
+
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.7px;
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.st-mobile-menu {
+    display: none;
+
     width: 42px;
     height: 42px;
-  }
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+    background: #f5b900;
+    color: #101827;
+    font-size: 19px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
+/* =========================================
+   SMILE TAXI - MOBILE HEADER FINAL LAYOUT
+   Desktop-style horizontal logo
+========================================= */
 
-/* ===== SHARED HEADER: SAME STYLE ON EVERY PAGE ===== */
+@media screen and (max-width: 768px) {
 
+    #siteHeader .st-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 85px !important;
+        min-height: 85px !important;
+        background: #08172c !important;
+        z-index: 999999 !important;
+    }
 
-.st-header *,
-.st-header *::before,
-.st-header *::after {
-  box-sizing: border-box;
+    #siteHeader .st-header-inner {
+        width: 100% !important;
+        height: 85px !important;
+        min-height: 85px !important;
+        padding: 0 14px !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+    }
+
+    /* LOGO CONTAINER */
+
+    #siteHeader .st-header .st-logo {
+        display: block !important;
+
+        position: relative !important;
+
+        width: 191px !important;
+        min-width: 191px !important;
+        max-width: 191px !important;
+        height: 65px !important;
+
+        flex: 0 0 191px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        overflow: visible !important;
+        transform: none !important;
+
+        text-decoration: none !important;
+    }
+
+    /* TAXI IMAGE - LEFT SIDE */
+
+    #siteHeader .st-header .st-logo img {
+        position: absolute !important;
+
+        left: 0 !important;
+        top: 0 !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        display: block !important;
+
+        width: 65px !important;
+        min-width: 65px !important;
+        max-width: 65px !important;
+
+        height: 48px !important;
+        max-height: 48px !important;
+
+        object-fit: contain !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    /* COMPANY NAME - RIGHT SIDE */
+
+    #siteHeader .st-header .st-logo .st-logo-text {
+        position: absolute !important;
+
+        left: 61px !important;
+        top: 15px !important;
+
+        right: auto !important;
+        bottom: auto !important;
+
+        display: block !important;
+
+        width: 120px !important;
+        min-width: 120px !important;
+        max-width: 120px !important;
+
+        color: #f5bd18 !important;
+
+        font-size: 9px !important;
+        font-weight: 800 !important;
+        letter-spacing: 1px !important;
+        line-height: 1.4 !important;
+
+        text-align: left !important;
+        white-space: nowrap !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    /* TAGLINE - BELOW LOGO AND COMPANY NAME */
+
+    #siteHeader .st-header .st-logo .st-tagline {
+        position: absolute !important;
+
+        left: 0 !important;
+        top: 48px !important;
+
+        right: auto !important;
+        bottom: auto !important;
+
+        display: block !important;
+
+        width: 191px !important;
+        min-width: 191px !important;
+        max-width: 191px !important;
+
+        height: 17px !important;
+
+        color: #ffffff !important;
+
+        font-size: 8px !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.2px !important;
+        line-height: 17px !important;
+
+        text-align: center !important;
+        white-space: nowrap !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    /* HIDE DESKTOP NAVIGATION */
+
+    #siteHeader .st-header .st-nav {
+        display: none !important;
+    }
+
+    /* MOBILE MENU BUTTON */
+
+    #siteHeader .st-header .st-mobile-menu {
+        display: flex !important;
+
+        position: relative !important;
+
+        width: 42px !important;
+        min-width: 42px !important;
+        height: 42px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        border: none !important;
+        border-radius: 50% !important;
+
+        background: #f5b900 !important;
+        color: #101827 !important;
+
+        font-size: 19px !important;
+        flex-shrink: 0 !important;
+
+        cursor: pointer !important;
+    }
+
+    /* HIDE DESKTOP ACTION BUTTONS */
+
+    #siteHeader .st-header .st-header-actions {
+        display: none !important;
+    }
+
+    /* MOBILE DROPDOWN */
+
+    #siteHeader .st-header .st-nav.open {
+        display: flex !important;
+
+        position: absolute !important;
+        top: 100% !important;
+        left: 12px !important;
+        right: 12px !important;
+
+        width: auto !important;
+        max-height: calc(100vh - 100px) !important;
+
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        overflow-y: auto !important;
+
+        padding: 12px !important;
+        gap: 3px !important;
+
+        background: #19263d !important;
+        border-radius: 14px !important;
+
+        box-shadow: 0 12px 30px rgba(0,0,0,0.25) !important;
+    }
+
+    #siteHeader .st-header .st-nav.open a {
+        display: flex !important;
+        width: 100% !important;
+        min-height: 44px !important;
+
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        padding: 12px 15px !important;
+
+        font-size: 13px !important;
+    }
 }
 
-.st-header-inner {
-  width: min(1440px, calc(100% - 48px)) !important;
-  min-height: 82px !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 20px !important;
-}
+/* VERY SMALL MOBILE SCREENS */
 
-.st-logo {
-  display: flex !important;
-  align-items: center !important;
-  flex-shrink: 0 !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
+@media screen and (max-width: 360px) {
 
-.st-logo img {
-  width: 62px !important;
-  height: 54px !important;
-  object-fit: contain !important;
-}
+    #siteHeader .st-header-inner {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
 
-.st-nav {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 4px !important;
-  padding: 7px !important;
-  margin: 0 !important;
-  border-radius: 40px !important;
-  background: #19263d !important;
-  flex-shrink: 0 !important;
-}
-
-.st-nav a {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 10px 13px !important;
-  margin: 0 !important;
-  border-radius: 25px !important;
-  color: #fff !important;
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  line-height: 1.2 !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-  background: transparent !important;
-}
-
-.st-nav a.active {
-  color: #071226 !important;
-  background: #fff !important;
-}
-
-.st-nav a:hover {
-  color: #071226 !important;
-  background: #fff !important;
-}
-
-.st-header a,
-.st-header button {
-  font-family: inherit;
-}
-
-@media (max-width: 900px) {
-  .st-header-inner {
-    width: calc(100% - 28px) !important;
-    gap: 12px !important;
-  }
-
-  .st-nav {
-    gap: 0 !important;
-  }
-
-  .st-nav a {
-    padding: 9px 8px !important;
-    font-size: 10px !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .st-header,
-  .st-header-inner {
-    min-height: 70px !important;
-  }
-
-  .st-logo img {
-    width: 54px !important;
-    height: 48px !important;
-  }
-
-  .st-nav {
-    display: none !important;
-  }
-
-  .st-nav.open {
-    display: flex !important;
-    position: absolute !important;
-    top: 70px !important;
-    left: 14px !important;
-    right: 14px !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    padding: 12px !important;
-    border-radius: 14px !important;
-    background: #19263d !important;
-  }
-
-  .st-nav.open a {
-    width: 100% !important;
-    justify-content: flex-start !important;
-    padding: 13px 16px !important;
-  }
-}
-
-
-body {
-  padding-top: 12px;
-}
-
-@media (max-width: 700px) {
-  body {
-    padding-top: 70px;
-  }
-}
-
-
-/* ===== MOBILE HEADER FIX ===== */
-@media (max-width: 700px) {
-  .st-header {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    min-height: 76px !important;
-    padding: 0 !important;
-    background: #08172c !important;
-    z-index: 999999 !important;
-  }
-
-  .st-header-inner {
-    width: 100% !important;
-    min-height: 76px !important;
-    padding: 8px 16px !important;
-    margin: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 12px !important;
-  }
-
-  .st-logo {
-    display: flex !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .st-logo img {
-    width: 82px !important;
-    height: 64px !important;
-    object-fit: contain !important;
-  }
-
-  #menuToggle {
-    position: relative !important;
-    flex-shrink: 0 !important;
-    width: 42px !important;
-    height: 42px !important;
-    margin: 0 !important;
-  }
-
-  .st-nav {
-    display: none !important;
-  }
-
-  .st-nav.open {
-    display: flex !important;
-    position: absolute !important;
-    top: 76px !important;
-    left: 12px !important;
-    right: 12px !important;
-    width: auto !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    padding: 12px !important;
-    background: #19263d !important;
-    border-radius: 14px !important;
-  }
-
-  .st-nav.open a {
-    width: 100% !important;
-    padding: 13px 16px !important;
-  }
-
-  body {
-    padding-top: 76px !important;
-  }
-
-  html {
-    scroll-padding-top: 76px !important;
-  }
-}
-
-
-/* MOBILE HEADER */
-@media (max-width: 700px) {
-  .st-header-inner {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 7px !important;
-    padding: 8px 10px !important;
-  }
-
-  .st-logo img {
-    width: 58px !important;
-    height: 52px !important;
-    object-fit: contain !important;
-  }
-
-  /* Show phone and booking buttons on mobile */
-  .st-header .st-phone,
-  .st-header .st-book,
-  .st-header .book-now,
-  .st-header .st-header-actions {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  .st-header .st-phone {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    border-radius: 50% !important;
-    background: #fff !important;
-    color: #08172c !important;
-  }
-
-  .st-header .st-book,
-  .st-header .book-now {
-    padding: 10px 11px !important;
-    border-radius: 24px !important;
-    background: #f5bd18 !important;
-    color: #08172c !important;
-    font-size: 10px !important;
-    font-weight: 800 !important;
-    white-space: nowrap !important;
-  }
-
-  #menuToggle {
-    display: flex !important;
-    flex-shrink: 0 !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 36px !important;
-    height: 36px !important;
-  }
-
-  .st-nav {
-    display: none !important;
-  }
-
-  .st-nav.open {
-    display: flex !important;
-  }
-}
-
-/* Desktop styles remain unchanged */
-@media (min-width: 701px) {
-  .st-header .st-phone,
-  .st-header .st-book,
-  .st-header .book-now {
-    /* Keep existing desktop styling */
-  }
-}
-
-
-@media (max-width: 700px) {
-  #mainNavigation {
-    display: none !important;
-  }
-
-  #mainNavigation.open {
-    display: flex !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 12px !important;
-    right: 12px !important;
-    width: auto !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    z-index: 999999 !important;
-    background: #19263d !important;
-    padding: 12px !important;
-    border-radius: 14px !important;
-  }
-
-  #mainNavigation.open a {
-    display: flex !important;
-    width: 100% !important;
-    padding: 13px 16px !important;
-  }
-}
-
-
-/* ===== SMILE TAXI LOGO FIX ===== */
-
-.st-header .st-logo {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex: 0 0 150px !important;
-  width: 150px !important;
-  height: auto !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  background: transparent !important;
-  text-decoration: none !important;
-  line-height: 1.3 !important;
-}
-
-.st-header .st-logo img {
-  display: block !important;
-  width: 100px !important;
-  height: 65px !important;
-  object-fit: contain !important;
-}
-
-.st-header .st-logo .st-logo-text {
-  display: block !important;
-  width: 100% !important;
-  margin-top: 3px !important;
-  color: #f5bd18 !important;
-  font-size: 11px !important;
-  font-weight: 800 !important;
-  letter-spacing: 2px !important;
-  line-height: 1.3 !important;
-  text-align: center !important;
-  white-space: normal !important;
-}
-
-/* Mobile and tablet */
-@media (max-width: 1000px) {
-  .st-header .st-logo {
-    flex-basis: 125px !important;
-    width: 125px !important;
-  }
-
-  .st-header .st-logo img {
-    width: 82px !important;
-    height: 48px !important;
-  }
-
-  .st-header .st-logo .st-logo-text {
-    font-size: 9px !important;
-    letter-spacing: 1.5px !important;
-  }
+    #siteHeader .st-header .st-logo {
+        transform: scale(0.88) !important;
+        transform-origin: left center !important;
+    }
 }

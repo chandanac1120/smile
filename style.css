@@ -489,20 +489,20 @@ button{font:inherit}
 
     background: #e9eef4;
 }
-
 .fleet-bg {
     display: block;
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 
+    transform: scale(1.03); /* Slight zoom in */
     transition: transform 0.5s ease;
 }
 
 .fleet-card:hover .fleet-bg {
-    transform: scale(1.045);
+    transform: scale(1.13); /* More zoom on hover */
 }
 
 .fleet-dark {
