@@ -69,7 +69,7 @@ img {
 .about-hero-image {
     position: absolute;
     inset: 0;
-    background-image: url("../images/about-hero.jpg");
+    background-image: url("./assets/images/railway.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -97,7 +97,8 @@ img {
     max-width: 1450px;
 
     margin: auto;
-    padding-top: 90px;
+   padding-top: 0;
+transform: translateY(-100px);
 }
 
 .about-label,
@@ -982,8 +983,22 @@ img {
 .footer-grid>div:not(:first-child)>a{display:block;font-size:12px;color:#b4bdcb;margin:10px 0;line-height:1.6;transition:color .2s}.footer-grid>div:not(:first-child)>a:hover{color:var(--gold)}
 .social{display:flex;gap:9px;margin-top:18px}.social a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#22314a;font-size:14px}.social a:hover{background:var(--gold);color:#111}
 .contact p{display:flex;gap:9px;align-items:flex-start}.contact i,.contact b{color:var(--gold);flex-shrink:0}.contact b{display:block;margin-top:17px}.contact>a{display:flex!important;gap:8px;align-items:center}
-.footer-bottom{width:min(1160px,calc(100% - 48px));margin:35px auto 0;padding-top:17px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;color:#8f9aac;font-size:11px}
-.footer-brand img {
+.footer-bottom {
+    width: min(1160px, calc(100% - 48px));
+    margin: 35px auto 0;
+    padding-top: 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    color: #8f9aac;
+    font-size: 13px;
+}.footer-brand img {
     width: 130px;
     height: auto;
     object-fit: contain;

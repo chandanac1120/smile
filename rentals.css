@@ -83,3 +83,19 @@
 @media(max-width:1000px){.rental-options{grid-template-columns:repeat(2,minmax(0,1fr))}.rental-enquiry{gap:35px}.rental-hero-stamp{right:5%;bottom:35px}}
 @media(max-width:760px){.rental-hero{min-height:650px;padding:110px 6% 48px}.rental-hero h1{font-size:clamp(49px,12vw,76px);letter-spacing:-2.5px}.rental-hero-stamp{display:none}.rental-trust-row{gap:13px 18px;margin-top:36px}.rental-intro{grid-template-columns:1fr;gap:20px;padding-top:70px;padding-bottom:36px}.rental-options{padding-bottom:70px}.rental-process{padding:65px 0}.rental-steps{grid-template-columns:1fr;gap:28px;margin-top:36px}.rental-steps article{padding-left:20px}.rental-enquiry{grid-template-columns:1fr;gap:32px;padding-top:70px;padding-bottom:70px}.rental-bottom-cta{align-items:flex-start;flex-direction:column;padding:40px 6%}}
 @media(max-width:520px){.section-shell{width:88%}.rental-hero{min-height:610px;padding-top:95px}.rental-hero-inner>p{font-size:14px}.rental-hero-actions{flex-direction:column;align-items:stretch}.rental-trust-row{flex-direction:column;gap:12px}.rental-options{grid-template-columns:1fr;gap:12px}.rental-option{min-height:auto;padding:24px}.rental-option p{min-height:0}.rental-form{padding:24px 17px}.rental-form-grid{grid-template-columns:1fr}.rental-wide{grid-column:auto}.rental-form-heading{align-items:flex-start;flex-direction:column}.rental-footer nav{gap:14px 18px}.rental-footer-brand{font-size:19px}.rental-float-wa{right:15px;bottom:15px;width:47px;height:47px}}
+.footer-bottom {
+    width: min(1160px, calc(100% - 48px));
+    margin: 35px auto 0;
+    padding-top: 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    color: #8f9aac;
+    font-size: 13px;
+}

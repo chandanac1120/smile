@@ -54,6 +54,34 @@
         );
 }
 
+.contact-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 570px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+    padding: 115px 7% 35px;
+
+    color: var(--contact-white);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 12, 25, 0.92) 0%,
+            rgba(8, 23, 44, 0.75) 50%,
+            rgba(8, 23, 44, 0.35) 100%
+        ),
+        url("../assets/images/mysurucabs.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Decorative glow */
 
 .contact-hero::before {
