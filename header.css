@@ -350,7 +350,7 @@
         margin: 0 !important;
         padding: 0 !important;
 
-        transform: none !important;
+       
     }
 
     /* HIDE DESKTOP NAVIGATION */
@@ -476,3 +476,30 @@
 }
 
 
+/* DESKTOP + MOBILE: RIGHT TO LEFT */
+
+.st-header .st-logo .st-tagline {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    animation: smileTaglineMove 5s linear infinite !important;
+    -webkit-animation: smileTaglineMove 5s linear infinite !important;
+    will-change: transform;
+}
+
+@keyframes smileTaglineMove {
+    from {
+        transform: translateX(30px);
+    }
+    to {
+        transform: translateX(-30px);
+    }
+}
+
+@-webkit-keyframes smileTaglineMove {
+    from {
+        -webkit-transform: translateX(30px);
+    }
+    to {
+        -webkit-transform: translateX(-30px);
+    }
+}
